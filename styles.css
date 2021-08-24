@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.menu_superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+#slide {
+    display: flex;
+    padding: 50px 200px 50px 200px;
+    width: auto;
+    justify-content: space-around;
+}
+
+#img_slide {
+    max-width: 800px;
+}
+
+.titulo_seccion {
+    background-color: hotpink;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 25px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido_seccion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel_fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    max-width: 90%;
+}
+
+.miniaturas_foto {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.texto_seccion {
+    width: 90%;
+    text-align: justify;
+    align-self: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bloque_servicio {
+    margin: 10px;
+    width: 300px;
+}
+
+.img_servicio {
+    width: 60px;
+    border-radius: 30px;
+}
+
+.sup_servicio {
+    display: flex;
+    justify-content: center;
+}
+
+.servicios {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.med_servicio {
+    margin: 10px;
+    text-align: center;
+}
+
+.inf_servicio {
+    text-align: center;
+}
+
+#precio {
+    text-align: center;
+}
+
+.img_packsyplanes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#foto_empleado {
+    /* max-width: 200px; */
+    margin: 10px;
+    border-radius: 20px;
+    ;
+}
+
+.empleado {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px;
+    align-content: center;
+}
+
+.contenedor_equipo {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: stretch;
+}

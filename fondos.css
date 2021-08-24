@@ -1,0 +1,59 @@
+.menu_superior {
+    background-color: aqua;
+}
+
+.menu {
+    background-color: coral;
+}
+
+.enlace_menu {
+    background-color: cornflowerblue;
+}
+
+#slide {
+    background-color: rgb(227, 250, 25);
+}
+
+#sec_laclinica {
+    background-color: dodgerblue;
+}
+
+#sec_servicios {
+    background-color: goldenrod;
+}
+
+.carrusel_fotos {
+    background-color: greenyellow
+}
+
+.texto_seccion {
+    background-color: rgb(100, 170, 100);
+}
+
+.bloque_servicio {
+    background-color: darkmagenta;
+}
+
+.sup_servicio {
+    background-color: darksalmon;
+}
+
+.med_servicio {
+    background-color: darkseagreen;
+}
+
+#precio {
+    background-color: darkslateblue;
+}
+
+.img_packsyplanes {
+    background-color: deeppink;
+}
+
+.empleado {
+    background-color: dodgerblue;
+}
+
+.contenedor_equipo {
+    background-color: firebrick;
+}

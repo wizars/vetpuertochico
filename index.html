@@ -6,6 +6,15 @@
     <meta name="description" content="Clinica veterinaria Puertochico">
     <title>Clinica veterinaria Puertochico</title>
     <link rel="icon" href="imagenes/marca/icono.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="fondos.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <!-- QUE HACER CON ESTA LINEA -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 </head>
 
 
@@ -14,30 +23,28 @@
 <body>
 
     <!-- MENU SUPERIOR -->
-    <nav>
-        <div class="menu_superior">
-            <div id="logo">
-                <img src="imagenes/marca/cabecera.png" alt="Logotipo Clínica Veterinaria Puertochico">
-            </div>
-            <div class="menu">
-                <a class="enlace_menu" href="#seccion_clinica">LA CLINICA</a>
-                <a class="enlace_menu" href="#seccion_servicios">SERVICIOS</a>
-                <a class="enlace_menu" href="#seccion_packsyplanes">PACKS/PLANES</a>
-                <a class="enlace_menu" href="#seccion_equipo">EQUIPO</a>
-                <a class="enlace_menu" href="#seccion_contacto">CONTACTO</a>
-            </div>
+    <nav class="menu_superior">
+        <div id="logo">
+            <img src="imagenes/marca/cabecera.png" alt="Logotipo Clínica Veterinaria Puertochico">
+        </div>
+        <div class="menu">
+            <a class="enlace_menu" href="#seccion_clinica">LA CLINICA</a>
+            <a class="enlace_menu" href="#seccion_servicios">SERVICIOS</a>
+            <a class="enlace_menu" href="#seccion_packsyplanes">PACKS/PLANES</a>
+            <a class="enlace_menu" href="#seccion_equipo">EQUIPO</a>
+            <a class="enlace_menu" href="#seccion_contacto">CONTACTO</a>
         </div>
     </nav>
 
     <!-- CABECERA CON FOTO -->
-    <div>
-        <img src="imagenes/slide/SLIDE_-1.jpg">
+    <div id="slide">
+        <img id="img_slide" src="imagenes/slide/SLIDE_-1.jpg">
     </div>
 
     <!--------------------------- SECCIONES --------------------------->
 
     <!-- LA CLINICA -->
-    <section class="seccion">
+    <section class="seccion" id="sec_laclinica">
         <div class="titulo_seccion">LA CLÍNICA</div>
         <div class="contenido_seccion">
             <div class="carrusel_fotos">
@@ -54,20 +61,20 @@
                 <a class="enlace_foto" title="Juguetes y acceorios" href="imagenes/clinica/foto_12.jpg" target="_blank"><img class="miniaturas_foto" src="imagenes/clinica/miniaturas/foto_12-150x150.jpg"></a>
                 <a class="enlace_foto" title="Alimentación" href="imagenes/clinica/foto_13.jpg" target="_blank"><img class="miniaturas_foto" src="imagenes/clinica/miniaturas/foto_13-150x150.jpg"></a>
             </div>
-        </div>
-        <div class="texto_seccion">
-            <h1>Nuestras mascotas son parte de nuestra familia y se merecen ser tratados como tales.</h1>
-            <p>Por eso desde la clínica Puertochico trabajamos cada día no solo para ofrecerte un servicio médico completo y de calidad, sino para hacerlo de forma comprensiva y cercana tanto para las mascotas como para sus propietarios.</p>
-            <p>Nuestro equipo está en formación contínua para mantener la práctica clínica al máximo nivel profesional, permaneciendo al corriente de los últimos avances médicos y técnicos en todo momento.Nos servimos de los equipos más modernos y los últimos
-                avances en la medicina y farmacia veterinaria para realizar nuestro trabajo ofreciendo así un diagnóstico preciso y una medicina eficaz accesible para la mayoría de los propietarios.</p>
 
-        </div>
+            <div class="texto_seccion">
+                <h1>Nuestras mascotas son parte de nuestra familia y se merecen ser tratados como tales.</h1>
+                <p>Por eso desde la clínica Puertochico trabajamos cada día no solo para ofrecerte un servicio médico completo y de calidad, sino para hacerlo de forma comprensiva y cercana tanto para las mascotas como para sus propietarios.</p>
+                <p>Nuestro equipo está en formación contínua para mantener la práctica clínica al máximo nivel profesional, permaneciendo al corriente de los últimos avances médicos y técnicos en todo momento.Nos servimos de los equipos más modernos y los
+                    últimos avances en la medicina y farmacia veterinaria para realizar nuestro trabajo ofreciendo así un diagnóstico preciso y una medicina eficaz accesible para la mayoría de los propietarios.</p>
+
+            </div>
     </section>
 
     <!-- SERVICIOS -->
-    <section class="seccion">
+    <section class="seccion" id="sec_servicios">
         <div class="titulo_seccion">SERVICIOS</div>
-        <div class="contenido_seccion">
+        <div class="contenido_seccion servicios">
 
             <div class="bloque_servicio">
                 <div class="sup_servicio"> <img class="img_servicio" src="imagenes/marca/logo.png" alt="Medicina General"> </div>
@@ -126,7 +133,7 @@
     <!-- PLANES -->
     <section class="seccion">
         <div class="titulo_seccion">PLANES DE SALUD</div>
-        <div class="contenido_seccion">
+        <div class="contenido_seccion planespacks">
 
             <div class="texto_seccion">
                 <h1>Duerme tranquilo!</h1>
@@ -182,7 +189,7 @@
 
     <!-- EQUIPO -->
     <section class="seccion">
-        <div class="titulo_seccion">PACKS DE CACHORRO</div>
+        <div class="titulo_seccion">EQUIPO</div>
         <div class="contenido_seccion">
             <div class="texto_seccion">
 
@@ -193,7 +200,7 @@
             <div class="contenedor_equipo">
 
                 <div class="empleado">
-                    <img src="imagenes/personal/raquel.jpg" alt="Raquel Hernandez">
+                    <img id="foto_empleado" src="imagenes/personal/raquel.jpg" alt="Raquel Hernandez">
                     <figcaption>Raquel</figcaption>
                     <div class="desc_empleado">
                         <ul class="paw_list">
@@ -208,7 +215,7 @@
                 </div>
 
                 <div class="empleado">
-                    <img src="imagenes/personal/alvaro.jpg" alt="Alvaro Gonzalo">
+                    <img id="foto_empleado" src="imagenes/personal/alvaro.jpg" alt="Alvaro Gonzalo">
                     <figcaption>Alvaro</figcaption>
                     <div class="desc_empleado">
                         <ul class="paw_list">
