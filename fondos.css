@@ -1,3 +1,7 @@
+body {
+    background-color: yellow;
+}
+
 .menu_superior {
     background-color: aqua;
 }
@@ -11,7 +15,7 @@
 }
 
 #slide {
-    background-color: rgb(227, 250, 25);
+    background-color: rgb(218, 129, 206);
 }
 
 #sec_laclinica {
@@ -57,3 +61,53 @@
 .contenedor_equipo {
     background-color: firebrick;
 }
+
+.bloque_contacto {
+    background-color: fuchsia;
+}
+
+#mapa {
+    background-color: gold;
+}
+
+.contacto {
+    background-color: lightgreen;
+}
+
+#direccion {
+    background-color: lime;
+}
+
+#dias {
+    background-color: mediumseagreen;
+}
+
+#horas {
+    background-color: slateblue;
+}
+
+#email {
+    background-color: tomato;
+}
+
+#cita_previa {
+    background-color: yellowgreen;
+}
+
+#telefono {
+    background-color: seagreen;
+}
+
+#facebook {
+    background-color: sienna;
+}
+
+#condiciones {
+    background-color: thistle;
+}
+
+#copyright {
+    background-color: violet
+}
+
+;

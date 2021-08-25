@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin: 4%;
 }
 
 .menu_superior {
@@ -39,12 +40,19 @@ body {
     align-items: center;
 }
 
+.servicios {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .contenido_seccion {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     justify-content: center;
-    align-items: center;
 }
 
 .carrusel_fotos {
@@ -61,9 +69,9 @@ body {
 }
 
 .texto_seccion {
-    width: 90%;
+    /* width: 90%; */
     text-align: justify;
-    align-self: center;
+    align-self: stretch;
 }
 
 h1 {
@@ -82,12 +90,6 @@ h1 {
 
 .sup_servicio {
     display: flex;
-    justify-content: center;
-}
-
-.servicios {
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -111,10 +113,14 @@ h1 {
 }
 
 #foto_empleado {
-    /* max-width: 200px; */
-    margin: 10px;
     border-radius: 20px;
-    ;
+    border: 3px;
+    border-style: solid;
+}
+
+figcaption {
+    margin-top: 5px;
+    text-align: center;
 }
 
 .empleado {
@@ -129,4 +135,87 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-self: stretch;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    align-self: stretch;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#mapa {
+    min-width: 300px;
+    min-height: 300px;
+    width: 40%;
+}
+
+.bloque_contacto {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: auto;
+    grid-template-areas: " direcc direcc" "dias horas " "email email" "cita telefono" "facebook facebook";
+    grid-gap: 2%;
+    width: 40%;
+    min-width: 300px;
+}
+
+#direccion {
+    grid-area: direcc;
+    text-align: center;
+    padding: 10px;
+}
+
+#dias {
+    grid-area: dias;
+    padding: 10px;
+    text-align: right;
+}
+
+#horas {
+    grid-area: horas;
+    padding: 10px;
+}
+
+#email {
+    grid-area: email;
+    text-align: center;
+}
+
+#cita_previa {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: cita;
+    align-self: stretch
+}
+
+#telefono {
+    grid-area: telefono;
+    padding: 10px;
+}
+
+#facebook {
+    grid-area: facebook;
+    text-align: center;
+    padding: 10px;
+}
+
+#condiciones {
+    text-align: center;
+}
+
+#copyright {
+    text-align: center;
+}
+
+.material-icons {
+    color: white;
+}
+
+.icono {
+    vertical-align: middle;
+    padding-right: 8px;
 }
