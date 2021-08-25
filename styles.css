@@ -140,10 +140,14 @@ figcaption {
 .contacto {
     display: flex;
     flex-direction: row;
-    /* width: 100%; */
     align-self: stretch;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
+}
+
+.paw_list {
+    list-style: none;
+    padding: 0;
 }
 
 #mapa {
