@@ -280,6 +280,10 @@ h2 {
 
 /* PLANES */
 
+#sec_planes .bloque_doble {
+    align-items: flex-end;
+}
+
 
 /* PACKS */
 
