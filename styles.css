@@ -1,126 +1,301 @@
+/*******************************/
+
+
+/* LAYOUT ESTRUCTURA PRINCIPAL */
+
+
+/*******************************/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #1e73be;
+}
+
 body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 4%;
+    align-items: center;
+    margin: 0;
+    min-width: 1200px;
+    /*QUITAR min-width*/
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+.container {
+    /* margin: 0px 150px; */
+    padding: 0 150px 50px 150px;
+    align-self: stretch;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid var(--azul);
+    padding-bottom: 50px;
+}
+
+.blanco {
+    background-color: white;
+    color: var(--azul);
+}
+
+.azul {
+    background-color: var(--azul);
+    color: white;
+}
+
+.bloque_doble {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#sec_planes img,
+#sec_packs img,
+.empleado {
+    width: 40%;
+}
+
+
+/*******************************/
+
+
+/* TEXTO */
+
+
+/*******************************/
+
+.texto_seccion {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif, sans;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.condiciones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.empleado p {
+    text-align: justify;
+}
+
+
+/*******************************/
+
+
+/* TITULOS */
+
+
+/*******************************/
+
+.titulo_seccion {
+    position: relative;
+    z-index: 99;
+    top: -53px;
+    margin-top: 25px;
+    margin-bottom: -50px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px 10px;
+    border: 5px solid var(--azul);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--azul);
+    background-color: white;
+}
+
+
+/*******************************/
+
+
+/*       MENU SUPERIOR         */
+
+
+/*******************************/
+
+.container.menu_superior {
+    padding: 0 150px 0 150px;
 }
 
 .menu_superior {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    align-content: stretch;
+    /* align-items: stretch; */
+    height: 100px;
 }
 
-#slide {
+.menu_superior ul {
     display: flex;
-    padding: 50px 200px 50px 200px;
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.menu_superior img {
     width: auto;
-    justify-content: space-around;
+    height: 100%;
 }
 
-#img_slide {
-    max-width: 800px;
+.menu_superior a {
+    display: block;
+    padding: 5px 10px;
+    color: #1e73be !important;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
 }
 
-.titulo_seccion {
-    background-color: hotpink;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 25px;
-    border-color: black;
-    border-width: 3px;
-    border-style: solid;
+.menu_superior a:hover {
+    border-bottom: 4px solid #1e73be !important;
+    transition: 0.5s ease;
 }
 
-.seccion {
+.menu_superior a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+
+/*******************************/
+
+
+/*            SLIDE            */
+
+
+/*******************************/
+
+.container.slide {
     display: flex;
-    flex-direction: column;
+    padding: 25px 50px 50px 25px;
+    justify-content: center;
     align-items: center;
 }
 
-.servicios {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+.slide img {
+    /* max-height: 500px; */
+    /* height: auto; */
+    /* max-width: 100%; */
+    width: 85%;
+    height: 100%;
 }
 
-.contenido_seccion {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    justify-content: center;
+.slide i {
+    color: var(--azul);
+    font-size: 50px;
 }
+
+.slide i:hover {
+    color: white;
+    text-shadow: 3px 3px var(--azul);
+}
+
+
+/*******************************/
+
+
+/* SECCIONES  */
+
+
+/*******************************/
+
+
+/* LA CLINICA */
 
 .carrusel_fotos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
-    max-width: 90%;
 }
 
-.miniaturas_foto {
+.carrusel_fotos img {
     border-radius: 10px;
-    margin: 10px;
+    margin: 4px;
+    border: transparent solid 6px;
 }
 
-.texto_seccion {
-    /* width: 90%; */
-    text-align: justify;
-    align-self: stretch;
+.carrusel_fotos img:hover {
+    border: var(--azul) solid 4px;
+    padding: 2px;
 }
 
-h1 {
-    text-align: center;
-}
 
-.bloque_servicio {
-    margin: 10px;
-    width: 300px;
-}
+/* SERVICIOS */
 
-.img_servicio {
-    width: 60px;
-    border-radius: 30px;
-}
-
-.sup_servicio {
+.lista_servicios {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-.med_servicio {
-    margin: 10px;
-    text-align: center;
-}
-
-.inf_servicio {
-    text-align: center;
-}
-
-#precio {
-    text-align: center;
-}
-
-.img_packsyplanes {
+.bloque_servicio {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 250px;
+    min-width: 100px;
+    margin: 10px;
 }
 
-#foto_empleado {
+.bloque_servicio img {
+    width: 60px;
+    border-radius: 40%;
+}
+
+.bloque_servicio h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    /* margin: 0 */
+}
+
+.bloque_servicio p {
+    margin-top: 0;
+}
+
+
+/* PLANES */
+
+
+/* PACKS */
+
+.bloque_doble img {
+    border: white 2px solid;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+/* EMPLEADOS */
+
+.empleado img {
     border-radius: 20px;
     border: 3px;
-    border-style: solid;
 }
 
 figcaption {
     margin-top: 5px;
     text-align: center;
+    font-weight: bold;
+    font-size: large;
 }
 
 .empleado {
@@ -129,13 +304,26 @@ figcaption {
     max-width: 400px;
     margin: 20px;
     align-content: center;
+    border-radius: 20px;
+    padding: 10px;
 }
 
-.contenedor_equipo {
-    display: flex;
-    justify-content: space-evenly;
-    align-self: stretch;
+.empleado ul {
+    list-style: none;
+    padding-inline-start: 0px;
 }
+
+.empleado li {
+    padding-bottom: 10px;
+}
+
+.empleado i {
+    font-size: 16px;
+    padding-right: 6px;
+}
+
+
+/* CONTACTO */
 
 .contacto {
     display: flex;
@@ -143,11 +331,19 @@ figcaption {
     align-self: stretch;
     justify-content: space-around;
     align-items: stretch;
+    margin-top: 20px;
 }
 
-.paw_list {
-    list-style: none;
-    padding: 0;
+.bloque_contacto {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: auto;
+    grid-template-areas: " direcc direcc" "horario horario" "email email" "cita telefono" "facebook facebook";
+    /* grid-gap: 2%; */
+    width: 40%;
+    min-width: 300px;
+    /* background-color: red; */
+    font-size: larger;
 }
 
 #mapa {
@@ -156,70 +352,62 @@ figcaption {
     width: 40%;
 }
 
-.bloque_contacto {
-    display: grid;
-    grid-template-columns: 49% 49%;
-    grid-template-rows: auto;
-    grid-template-areas: " direcc direcc" "dias horas " "email email" "cita telefono" "facebook facebook";
-    grid-gap: 2%;
-    width: 40%;
-    min-width: 300px;
-}
-
 #direccion {
     grid-area: direcc;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
+}
+
+#horario {
+    grid-area: horario;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    border: white 4px solid;
+    border-radius: 10px;
+    width: 350px;
+    margin-bottom: 10px;
 }
 
 #dias {
     grid-area: dias;
-    padding: 10px;
+    padding-right: 10px;
     text-align: right;
 }
 
 #horas {
     grid-area: horas;
-    padding: 10px;
+    padding-left: 10px;
 }
 
 #email {
     grid-area: email;
     text-align: center;
+    padding: 10px 0;
 }
 
 #cita_previa {
+    grid-area: cita;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    grid-area: cita;
-    align-self: stretch
 }
 
 #telefono {
     grid-area: telefono;
-    padding: 10px;
 }
 
 #facebook {
     grid-area: facebook;
     text-align: center;
-    padding: 10px;
 }
 
-#condiciones {
-    text-align: center;
+.icono {
+    color: white;
+    vertical-align: middle;
+    padding-right: 8px;
 }
 
 #copyright {
     text-align: center;
-}
-
-.material-icons {
-    color: white;
-}
-
-.icono {
-    vertical-align: middle;
-    padding-right: 8px;
 }
