@@ -40,11 +40,55 @@
 
     <!-- CABECERA CON FOTO -->
     <div class="container slide">
-        <i id="ver_anterior" class="icono material-icons">chevron_left</i>
-        <img src="imagenes/slide/SLIDE_-1.jpg">
-        <i id="ver_siguiente" class="icono material-icons">chevron_right</i>
+        <!-- <i id="ver_anterior" class="icono material-icons">chevron_left</i> -->
+        <button class="boton_slide" onclick="plusDivs(-1)">&#10094</button>
+        <img class="fotos_slide" src="imagenes/slide/SLIDE_-1.jpg">
+        <img class="fotos_slide" src="imagenes/slide/SLIDE_-2.jpg">
+        <img class="fotos_slide" src="imagenes/slide/SLIDE_-3.jpg">
+        <img class="fotos_slide" src="imagenes/slide/SLIDE_-5.jpg">
+        <img class="fotos_slide" src="imagenes/slide/SLIDE_-6.jpg">
+        <button class="boton_slide" onclick="plusDivs(1)">&#10095</button>
+        <!-- <i id="ver_siguiente" class="icono material-icons">chevron_right</i> -->
     </div>
 
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        carousel();
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("fotos_slide");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("fotos_slide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+                slideIndex = 1
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+        }
+    </script>
     <!--------------------------- SECCIONES --------------------------->
 
     <!-- LA CLINICA -->
@@ -157,7 +201,7 @@
 
         </div>
 
-        <div class="bloque_doble">
+        <div class="bloque_doble ">
             <img src="imagenes/packs_y_planes/Bloque_Perro.png" alt="Plan de Salud Perro">
             <img src="imagenes/packs_y_planes/Bloque_Gato.png" alt="Plan de Salud Gato">
         </div>
@@ -263,9 +307,8 @@
                     <a href="mailto:contacto@vetpuertochico.com"><i class="icono material-icons">email</i>contacto@vetpuertochico.com</a>
                 </div>
 
-                <div id="cita_previa">Cita previa:</div>
+                <div id="cita"><i class="icono material-icons">phone</i>942 05 07 09 Cita previa</div>
 
-                <div id="telefono"><i class="icono material-icons">phone</i>942 05 07 09</div>
 
                 <p id="facebook"><a href="http://facebook.com/vetpuertochico" target="_blank"><i class="icono material-icons">facebook</i>facebook.com/vetpuertochico</a></p>
 
@@ -277,6 +320,7 @@
     </section>
 </body>
 
+<!-- FOOTER -->
 <footer>
     <p id="copyright">Copyright © 2021 Clínica Veterinaria Puertochico</p>
 </footer>

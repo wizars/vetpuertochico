@@ -12,6 +12,8 @@
 
 :root {
     --azul: #1e73be;
+    --gris: rgb(89, 89, 89);
+    ;
 }
 
 body {
@@ -41,7 +43,7 @@ section {
 
 .blanco {
     background-color: white;
-    color: rgb(89, 89, 89);
+    color: var(--gris);
 }
 
 .azul {
@@ -71,7 +73,6 @@ section {
 /*******************************/
 
 .texto_seccion {
-    /* text-align: center; */
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif, sans;
     text-align: center;
@@ -182,6 +183,24 @@ h2 {
 
 /*******************************/
 
+.carro {
+    animation-duration: 30s;
+    animation-name: carrusel;
+}
+
+.boton_slide {
+    background-color: white;
+    border: 0;
+    color: var(--azul);
+    font-size: 50px;
+    padding: 0 20px;
+}
+
+.boton_slide:hover {
+    text-shadow: 5px 5px grey;
+    cursor: pointer;
+}
+
 .container.slide {
     display: flex;
     padding: 25px 50px 50px 25px;
@@ -195,16 +214,6 @@ h2 {
     /* max-width: 100%; */
     width: 85%;
     height: 100%;
-}
-
-.slide i {
-    color: var(--azul);
-    font-size: 50px;
-}
-
-.slide i:hover {
-    color: white;
-    text-shadow: 3px 3px var(--azul);
 }
 
 
@@ -348,11 +357,9 @@ figcaption {
     display: grid;
     grid-template-columns: 49% 49%;
     grid-template-rows: auto;
-    grid-template-areas: " direcc direcc" "horario horario" "email email" "cita telefono" "facebook facebook";
-    /* grid-gap: 2%; */
+    grid-template-areas: " direcc direcc" "horario horario" "email email" "facebook facebook" "cita cita";
     width: 40%;
     min-width: 300px;
-    /* background-color: red; */
     font-size: larger;
 }
 
@@ -365,7 +372,6 @@ figcaption {
 #direccion {
     grid-area: direcc;
     text-align: center;
-    /* padding: 10px; */
 }
 
 #horario {
@@ -393,18 +399,22 @@ figcaption {
 #email {
     grid-area: email;
     text-align: center;
-    padding: 10px 0;
+    padding-top: 15px;
 }
 
-#cita_previa {
+#cita {
     grid-area: cita;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#telefono {
-    grid-area: telefono;
+    text-align: center;
+    padding-left: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    color: var(--azul);
+    background-color: white;
+    padding: 5px 0;
+    border-radius: 10px;
+    width: 350px;
+    justify-self: center;
+    margin-bottom: 20px;
 }
 
 #facebook {
@@ -412,11 +422,29 @@ figcaption {
     text-align: center;
 }
 
+#sec_contacto a {
+    color: white;
+    text-decoration-line: none;
+}
+
+#sec_contacto a:visited {
+    color: white;
+    text-decoration-line: none;
+}
+
+#cita .icono {
+    font-size: larger;
+    color: var(--azul);
+}
+
 .icono {
     color: white;
     vertical-align: middle;
     padding-right: 8px;
 }
+
+
+/* FOOTER */
 
 #copyright {
     text-align: center;
