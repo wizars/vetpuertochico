@@ -2,7 +2,12 @@
 <html lang="es-ES">
 
 <head>
+
+    <!-- CONFIGURACION -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DATOS PROPIOS -->
     <meta name="description" content="Clinica veterinaria Puertochico">
     <title>Clinica veterinaria Puertochico</title>
     <link rel="icon" href="imagenes/marca/icono.png" type="image/x-icon">
@@ -40,7 +45,6 @@
 
     <!-- CABECERA CON FOTO -->
     <div class="container slide">
-        <!-- <i id="ver_anterior" class="icono material-icons">chevron_left</i> -->
         <button class="boton_slide" onclick="plusDivs(-1)">&#10094</button>
         <img class="fotos_slide" src="imagenes/slide/SLIDE_-1.jpg">
         <img class="fotos_slide" src="imagenes/slide/SLIDE_-2.jpg">
@@ -48,7 +52,6 @@
         <img class="fotos_slide" src="imagenes/slide/SLIDE_-5.jpg">
         <img class="fotos_slide" src="imagenes/slide/SLIDE_-6.jpg">
         <button class="boton_slide" onclick="plusDivs(1)">&#10095</button>
-        <!-- <i id="ver_siguiente" class="icono material-icons">chevron_right</i> -->
     </div>
 
     <script>
@@ -94,7 +97,7 @@
     <!-- LA CLINICA -->
     <section class="container blanco" id="sec_laclinica">
 
-        <div class="titulo_seccion">LA CLÍNICA</div>
+        <div class="titulo_seccion">La clínica</div>
 
         <div class="texto_seccion ">
             <h2>Nuestras mascotas son parte de nuestra familia y se merecen ser tratados como tales.</h2>
@@ -122,7 +125,7 @@
 
     <!-- SERVICIOS -->
     <section class="container azul" id="sec_servicios">
-        <div class="titulo_seccion">SERVICIOS</div>
+        <div class="titulo_seccion">Servicios</div>
         <div class="lista_servicios  ">
 
             <div class="bloque_servicio">
@@ -182,7 +185,7 @@
 
     <!-- PLANES -->
     <section class="container blanco" id="sec_planes">
-        <div class="titulo_seccion">PLANES DE SALUD</div>
+        <div class="titulo_seccion">Planes de salud</div>
 
         <div class="texto_seccion ">
             <h2>Duerme tranquilo!</h2>
@@ -211,7 +214,7 @@
 
     <!-- PACKS -->
     <section class="container  azul" id="sec_packs">
-        <div class="titulo_seccion">PACKS DE CACHORRO</div>
+        <div class="titulo_seccion">Packs de cachorro</div>
 
         <div class="texto_seccion ">
             <h2>Protégele desde el primer día!</h2>
@@ -223,8 +226,11 @@
             <p>Por si fuera poco nuestros packs incluyen <strong>descuentos</strong> en esterilización/castración, en alimentación y artículos de tienda (juguetes, correas, collares, productos de higiene, etc.) que podrás utilizar durante todo un año. Para
                 las familias numerosas tenemos descuentos en los packs a partir del segundo cachorro.</p>
 
-            <h3>Pack Cachorro:</strong> 189€</h3>
-            <h3>Pack Gatito:</strong> 179€</h3>
+            <ul>
+
+            </ul>
+            <h3>Pack Cachorro: 189€</h3>
+            <h3>Pack Gatito: 179€</h3>
 
         </div>
         <div class="bloque_doble">
@@ -239,7 +245,7 @@
 
     <!-- EQUIPO -->
     <section class="container blanco" id="sec_equipo">
-        <div class="titulo_seccion">EQUIPO</div>
+        <div class="titulo_seccion">Equipo</div>
 
         <div class="texto_seccion">
 
@@ -283,7 +289,7 @@
 
     <!-- CONTACTO -->
     <section class="container  azul" id="sec_contacto">
-        <div class="titulo_seccion">CONTACTO</div>
+        <div class="titulo_seccion">Contacto</div>
         <div class="contacto azul">
 
             <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1447.9040279834683!2d-3.796733605986577!3d43.464604297814454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd494bb18caeb8a7%3A0x8f50fdfe88a3ec19!2sCl%C3%ADnica%20Veterinaria%20Puertochico!5e0!3m2!1ses!2ses!4v1629903417188!5m2!1ses!2ses"
@@ -298,8 +304,9 @@
                     </div>
 
                     <div id="horas">
-                        <p>10:30 - 14:00</p>
-                        <p>10:30 - 14:00 <br> 17:00 - 20:00</p>
+                        <p><time datetime="10:30"> 10:30</time> - <time datetime="14:00">14:00</time></p>
+                        <p><time datetime="10:30"> 10:30</time> - <time datetime="14:00">14:00</time></p>
+                        <p><time datetime="17:00"> 17:00</time> - <time datetime="20:00">20:00</time></p>
                     </div>
                 </div>
 
@@ -307,7 +314,9 @@
                     <a href="mailto:contacto@vetpuertochico.com"><i class="icono material-icons">email</i>contacto@vetpuertochico.com</a>
                 </div>
 
-                <div id="cita"><i class="icono material-icons">phone</i>942 05 07 09 Cita previa</div>
+                <div id="cita">
+                    <a href="tel:942050709"><i class="icono material-icons">phone</i>942 05 07 09 Cita previa</a>
+                </div>
 
 
                 <p id="facebook"><a href="http://facebook.com/vetpuertochico" target="_blank"><i class="icono material-icons">facebook</i>facebook.com/vetpuertochico</a></p>
