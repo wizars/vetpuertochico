@@ -1,3 +1,16 @@
+/* 
+-etiqueta header para secciones en vez de div
+- precios en vez h3 lista 
+                                    X girar patas 45º 
+                                    X mayusculas en los titulos con css
+                                    X etiqueta time y date
+- horario como tabla
+                                    X etiqueta telefono llamar
+- bloques servicios como lista definicioens
+- longitud linea max 90caracteres
+*/
+
+
 /*******************************/
 
 
@@ -41,12 +54,12 @@ section {
     padding-bottom: 50px;
 }
 
-.blanco {
+.color_claro {
     background-color: white;
     color: var(--gris);
 }
 
-.azul {
+.color_oscuro {
     background-color: var(--azul);
     color: white;
 }
@@ -100,7 +113,7 @@ h2 {
 
 /*******************************/
 
-.titulo_seccion {
+section header {
     position: relative;
     z-index: 99;
     top: -53px;
@@ -117,6 +130,7 @@ h2 {
     font-weight: bold;
     color: var(--azul);
     background-color: white;
+    text-transform: uppercase;
 }
 
 
@@ -244,6 +258,7 @@ h2 {
 .carrusel_fotos img:hover {
     border: var(--azul) solid 4px;
     padding: 2px;
+    opacity: 0.6;
 }
 
 
@@ -293,13 +308,23 @@ h2 {
     align-items: flex-end;
 }
 
+.bloque {
+    display: flex;
+    background-color: red;
+    border: blue 2px solid;
+}
 
+.bloque
 /* PACKS */
 
 .bloque_doble img {
     border: white 2px solid;
     border-radius: 20px;
     background-color: white;
+}
+
+.paw {
+    transform: rotate(45deg);
 }
 
 
@@ -434,6 +459,10 @@ figcaption {
 
 #cita .icono {
     font-size: larger;
+    color: var(--azul);
+}
+
+#cita a {
     color: var(--azul);
 }
 
