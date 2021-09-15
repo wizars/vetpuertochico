@@ -14,44 +14,15 @@
 /*******************************/
 
 
-/* LAYOUT ESTRUCTURA PRINCIPAL */
+/* COLORES Y VARIABLES */
 
 
 /*******************************/
-
-* {
-    box-sizing: border-box;
-}
 
 :root {
     --azul: #1e73be;
     --gris: rgb(89, 89, 89);
     ;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin: 0;
-    min-width: 1200px;
-    /*QUITAR min-width*/
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
-}
-
-.container {
-    /* margin: 0px 150px; */
-    padding: 0 150px 50px 150px;
-    align-self: stretch;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    border-top: 5px solid var(--azul);
-    padding-bottom: 50px;
 }
 
 .color_claro {
@@ -64,16 +35,73 @@ section {
     color: white;
 }
 
+.paw {
+    transform: rotate(45deg);
+    padding-right: 6px;
+}
+
+
+/*******************************/
+
+
+/* LAYOUT ESTRUCTURA PRINCIPAL */
+
+
+/*******************************/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Formato general para todo el documento */
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 0;
+    min-width: 1200px;
+    /*QUITAR min-width*/
+}
+
+
+/* contenedor para cada bloque grande que forma la pagina */
+
+.container {
+    /* padding-bottom: 50px; */
+    align-self: center;
+    margin: 0px 50px;
+    width: 80%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border-top: 5px var(--azul) solid;
+    padding-bottom: 50px;
+}
+
 .bloque_doble {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+    margin-top: 30px;
 }
 
-#sec_planes img,
-#sec_packs img,
 .empleado {
     width: 40%;
+}
+
+dt,
+dd {
+    margin: 0;
+    ;
+}
+
+dl {
+    list-style: none;
 }
 
 
@@ -84,6 +112,10 @@ section {
 
 
 /*******************************/
+
+body {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
 
 .texto_seccion {
     text-align: justify;
@@ -117,14 +149,17 @@ section header {
     position: relative;
     z-index: 99;
     top: -53px;
+    /*  */
+    padding: 2px 10px;
     margin-top: 25px;
     margin-bottom: -50px;
-    width: auto;
-    margin-left: auto;
     margin-right: auto;
-    padding: 2px 10px;
+    margin-left: auto;
+    width: fit-content;
+    /*  */
     border: 5px solid var(--azul);
     border-radius: 25px;
+    /*  */
     text-align: center;
     font-size: 34px;
     font-weight: bold;
@@ -141,10 +176,6 @@ section header {
 
 
 /*******************************/
-
-.container.menu_superior {
-    padding: 0 150px 0 150px;
-}
 
 .menu_superior {
     display: flex;
@@ -264,11 +295,12 @@ section header {
 
 /* SERVICIOS */
 
-.lista_servicios {
+#sec_servicios dl {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
 }
 
 .bloque_servicio {
@@ -278,7 +310,7 @@ section header {
     align-items: center;
     width: 250px;
     min-width: 100px;
-    margin: 10px;
+    margin: 20px;
 }
 
 .bloque_servicio img {
@@ -289,42 +321,60 @@ section header {
 .bloque_servicio h3 {
     text-align: center;
     font-size: 18px;
-    font-weight: 100;
-    /* margin: 0 */
-}
-
-.bloque_servicio p {
-    margin-top: 0;
-}
-
-.lista_servicios p {
-    text-align: center;
+    font-weight: bold;
 }
 
 
-/* PLANES */
-
-#sec_planes .bloque_doble {
-    align-items: flex-end;
-}
+/* PLANES y PACKS*/
 
 .bloque {
     display: flex;
-    background-color: red;
-    border: blue 2px solid;
-}
-
-.bloque
-/* PACKS */
-
-.bloque_doble img {
-    border: white 2px solid;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+    padding: 0 10px;
+    border-width: 4px;
     border-radius: 20px;
-    background-color: white;
+    border-style: solid;
+    border-color: white;
 }
 
-.paw {
-    transform: rotate(45deg);
+.bloque h3 {
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+.bloque h4 {
+    font-size: xx-large;
+    margin: 0.5em 0;
+}
+
+.bloque dl {
+    padding: 10px 20px;
+    list-style: none;
+    border: var(--azul) 5px solid;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.bloque dt {
+    font-weight: bold;
+}
+
+.bloque dd {
+    font-size: small;
+    padding-inline-start: 2em;
+}
+
+.bloque i {
+    color: var(--azul);
+}
+
+.bloque img {
+    border-radius: 10px;
+    width: 80%;
 }
 
 
@@ -332,7 +382,6 @@ section header {
 
 .empleado img {
     border-radius: 20px;
-    border: 3px;
 }
 
 figcaption {
@@ -349,27 +398,27 @@ figcaption {
     margin: 20px;
     align-content: center;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .empleado ul {
     list-style: none;
     padding-inline-start: 0px;
+    margin-top: 0;
 }
 
 .empleado li {
     padding-bottom: 10px;
 }
 
-.empleado i {
-    font-size: 16px;
-    padding-right: 6px;
+.empleado h2 {
+    margin: 0.5em;
 }
 
 
 /* CONTACTO */
 
-.contacto {
+#sec_contacto .contenido {
     display: flex;
     flex-direction: row;
     align-self: stretch;
