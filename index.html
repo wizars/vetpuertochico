@@ -27,12 +27,13 @@
 <!-- CUERPO PRINCIPAL -->
 
 <body>
+<div>
 
     <!-- MENU SUPERIOR -->
-    <nav class="container menu_superior">
+    <nav class="container ">
 
         <img src="imagenes/marca/cabecera.png" alt="Logotipo Clínica Veterinaria Puertochico">
-
+        <!-- <div class="separador"></div> -->
         <ul>
             <li><a href="#sec_laclinica">LA CLINICA</a> </li>
             <li><a href="#sec_servicios">SERVICIOS</a></li>
@@ -446,7 +447,7 @@
 
                 <div class="bloque_doble ">
 
-                    <div class="empleado color_oscuro">
+                    <div class="bloque empleado color_oscuro">
                         <img src="imagenes/personal/raquel.jpg" alt="Raquel Hernandez">
                         <figcaption>
                             <h2>Raquel</h2>
@@ -465,7 +466,7 @@
                         </div>
                     </div>
 
-                    <div class="empleado color_oscuro">
+                    <div class="bloque empleado color_oscuro">
                         <img id="foto_empleado" src="imagenes/personal/alvaro.jpg" alt="Alvaro Gonzalo">
                         <figcaption>
                             <h2> Alvaro</h2>
@@ -478,6 +479,7 @@
                             </ul>
                             <p>Aunque se formó como ingeniero desde 2013 cambió de rumbo y se implicó de lleno en el proyecto de la clínica Puertochico. Desde entonces se ha formado ampliamente como gestor y administrador así como auxiliar veterinario bajo
                                 la tutela de Raquel y con la realización de numerosos cursos.</p>
+
                         </div>
                     </div>
 
@@ -499,7 +501,7 @@
                 <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1447.9040279834683!2d-3.796733605986577!3d43.464604297814454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd494bb18caeb8a7%3A0x8f50fdfe88a3ec19!2sCl%C3%ADnica%20Veterinaria%20Puertochico!5e0!3m2!1ses!2ses!4v1629903417188!5m2!1ses!2ses"
                     style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 <div class="bloque_contacto">
-                    <p id="direccion"><i class="icono material-icons">location_on</i>Calle Andrés del Río 7 bajo, 39004 Santander</p>
+                    <address><i class="icono material-icons">location_on</i>Calle Andrés del Río 7 bajo, 39004 Santander</address>
                     <table>
                         <tbody>
                             <tr>
@@ -508,30 +510,14 @@
                             <th></th>
                             <tr>
                                 <td> Lun, Mie, Vie: </td>
-                                <td> 10:30 - 14:00</td>
+                                <td> <time datetime="10:30">10:30</time> - <time datetime="14:00">14:00</time></td>
                             </tr>
                             <tr>
                                 <td>Martes y Jueves:</td>
-                                <td>10:30 - 14:00 <br> 17:00 - 20:00</td>
+                                <td><time datetime="10:30">10:30</time> - <time datetime="14:00">14:00</time> <br><time datetime="17:00">17:00</time> - <time datetime="20:00">20:00</time></td>
                             </tr>
-
-
-
                         </tbody>
                     </table>
-                    <!-- <div id="horario">
-
-                        <div id="dias">
-                            <p>Lun, Mie y Vie:</p>
-                            <p>Martes y Jueves:</p>
-                        </div>
-
-                        <div id="horas">
-                            <p><time datetime="10:30"> 10:30</time> - <time datetime="14:00">14:00</time></p>
-                            <p><time datetime="10:30"> 10:30</time> - <time datetime="14:00">14:00</time></p>
-                            <p><time datetime="17:00"> 17:00</time> - <time datetime="20:00">20:00</time></p>
-                        </div>
-                    </div> -->
 
                     <div id="email">
                         <a href="mailto:contacto@vetpuertochico.com"><i class="icono material-icons">email</i>contacto@vetpuertochico.com</a>
@@ -551,6 +537,8 @@
         </div>
 
     </section>
+</div>
+
 </body>
 
 <!-- FOOTER -->

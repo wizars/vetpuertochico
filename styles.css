@@ -1,10 +1,18 @@
 /* 
+- media queries
+    - diseño para moviles  
+- fuentes
+- formateo y tamaño de las imagenes
+-SEO
+    - metadatos html
+    - movidas del tiempo de carga LCP
+sugerencias iris
                                     X -etiqueta header para secciones en vez de div
                                     X cambio por completoprecios en vez h3 lista 
                                     X girar patas 45º 
                                     X mayusculas en los titulos con css
                                     X etiqueta time y date
-- horario como tabla
+                                    X - horario como tabla
                                     X etiqueta telefono llamar
                                     X - bloques servicios como lista definicioens
 - longitud linea max 90caracteres
@@ -22,7 +30,6 @@
 :root {
     --azul: #1e73be;
     --gris: rgb(89, 89, 89);
-    ;
 }
 
 .color_claro {
@@ -38,6 +45,10 @@
 .paw {
     transform: rotate(45deg);
     padding-right: 6px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -57,23 +68,29 @@
 /* Formato general para todo el documento */
 
 body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    margin: 0;
-    min-width: 1200px;
-    /*QUITAR min-width*/
+
+    
 }
 
-
+body>div{
+      display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+    max-width: 1400px;
+    min-width: 400px;
+    width: 100vw;
+    align-items: stretch;
+   /* background-color: red; */
+   border:5px green solid;
+}
 /* contenedor para cada bloque grande que forma la pagina */
 
 .container {
     /* padding-bottom: 50px; */
-    align-self: center;
-    margin: 0px 50px;
-    width: 80%;
+    /* margin: 0px 50px; */
+    /* align-self: center; */
+    /* width: 80vw; */
 }
 
 section {
@@ -88,8 +105,11 @@ section {
     justify-content: space-evenly;
     align-items: flex-start;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
-
+.bloque{
+    min-width: 350px;
+}
 .empleado {
     width: 40%;
 }
@@ -177,30 +197,59 @@ section header {
 
 /*******************************/
 
-.menu_superior {
+nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     /* align-items: stretch; */
-    height: 100px;
+    /* height: auto; */
     margin-top: 20px;
+    /* min-width: 80vw; */
+    /* width: 100%; */
+    /* overflow:hidden; */
+
 }
 
-.menu_superior ul {
+nav img {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    max-height: 100px;
+
+    object-fit: contain;
+    /* border: red 2px solid; */
+}
+nav ul {
+    flex-basis: 30%;
+    flex-grow: 9999;
+    flex-shrink: 0;
+    min-width: fit-content;
+
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
     list-style: none;
     padding: 0;
     margin: 0;
-    align-items: center;
+
+    /* background-color: rgb(245, 245, 94); */
 }
 
-.menu_superior img {
-    width: auto;
-    height: 100%;
+nav .separador {
+    flex-basis: 1%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    
+    /* background-color: rgb(241, 10, 10); */
 }
 
-.menu_superior a {
+
+nav a {
     display: block;
     padding: 5px 10px;
     color: #1e73be !important;
@@ -209,12 +258,12 @@ section header {
     text-decoration: none;
 }
 
-.menu_superior a:hover {
+nav a:hover {
     border-bottom: 4px solid #1e73be !important;
     transition: 0.5s ease;
 }
 
-.menu_superior a:visited {
+nav a:visited {
     text-decoration: none;
     outline: none;
 }
@@ -248,7 +297,7 @@ section header {
 
 .container.slide {
     display: flex;
-    padding: 25px 50px 50px 25px;
+    padding: 25px 50px 25px 50px;
     justify-content: center;
     align-items: center;
 }
@@ -333,10 +382,12 @@ section header {
     align-items: center;
     max-width: 40%;
     padding: 0 10px;
-    border-width: 4px;
+    border-width: 0px;
     border-radius: 20px;
     border-style: solid;
-    border-color: white;
+    /* border-color: rgb(184, 19, 19); */
+    /* padding: 20px; */
+    margin-bottom: 20px;
 }
 
 .bloque h3 {
@@ -392,13 +443,14 @@ figcaption {
 }
 
 .empleado {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     max-width: 400px;
     margin: 20px;
     align-content: center;
     border-radius: 20px;
-    padding: 20px;
+    
 }
 
 .empleado ul {
@@ -421,10 +473,13 @@ figcaption {
 #sec_contacto .contenido {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-self: stretch;
-    justify-content: space-around;
     align-items: stretch;
+    justify-content: center;
     margin-top: 20px;
+    row-gap: 20px;
+
 }
 
 .bloque_contacto {
@@ -443,34 +498,12 @@ figcaption {
     width: 40%;
 }
 
-#direccion {
+address {
     grid-area: direcc;
     text-align: center;
+    font-style: normal;
+    margin-bottom: 20px;
 }
-
-
-/* 
-#horario {
-    grid-area: horario;
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    border: white 4px solid;
-    border-radius: 10px;
-    width: 350px;
-    margin-bottom: 10px;
-}
-
-#dias {
-    grid-area: dias;
-    padding-right: 10px;
-    text-align: right;
-}
-
-#horas {
-    grid-area: horas;
-    padding-left: 10px;
-} */
 
 .bloque_contacto table {
     grid-area: horario;
@@ -480,10 +513,6 @@ figcaption {
     width: 325px;
     margin-bottom: 10px;
     padding: 10px;
-}
-
-.bloque_contacto caption {
-    margin-bottom: 10px;
 }
 
 .bloque_contacto td {
