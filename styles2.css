@@ -1,0 +1,515 @@
+/*******************************/
+
+/*           RESETS            */
+
+/*******************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,dd,dl,dt {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+}
+
+
+/*******************************/
+
+/* VARIABLES */
+
+/*******************************/
+
+:root {
+  --azul: #1e73be;
+  --gris: rgb(89, 89, 89);
+}
+
+.oscuro {
+  background-color: var(--azul);
+  color:white
+}
+
+.claro{
+  background-color: white;
+  color:var(--gris) 
+}
+
+
+/*******************************/
+
+
+/* TEXTO */
+
+
+/*******************************/
+
+body {
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  color: var(--gris)  ;
+}
+
+.texto_seccion {
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif, sans;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.condiciones {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.paw {
+  transform: rotate(45deg);
+  padding-right: 6px;
+}
+
+/*******************************/
+
+/* LAYOUT ESTRUCTURA PRINCIPAL */
+
+/*******************************/
+
+/* Contiene todo el cuerpo */
+body > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* contenedor para cada bloque, este define el fondo azul/blanco */
+.contenedor {
+  min-height: 50px;
+  width: 100%;
+  border-top: 5px var(--azul) solid;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+/* contenido de cada bloque, define los margenes tambien y el ensanchamiento max/min */
+.contenido {
+  max-width: 1440px;
+  min-width: 320px;
+  width: 100%;
+  margin: auto;
+}
+
+/* contenedor para distribuir en dos columnas bloques de contenido, usado en planes, packs y empleados*/
+.bloque_doble {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border-width: 0px;
+  border-radius: 20px;
+  border-style: solid;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+/*******************************/
+
+
+/* TITULOS */
+
+
+/*******************************/
+
+section header {
+  position: relative;
+  z-index: 99;
+  top: -67px;
+  /*  */
+  padding: 2px 10px;
+  margin-top: 25px;
+  margin-bottom: -50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+  /*  */
+  border: 5px solid var(--azul);
+  border-radius: 25px;
+  /*  */
+  text-align: center;
+  font-size:larger;
+  font-weight: bold;
+  color: var(--azul);
+  background-color: white;
+  text-transform: uppercase;
+}
+
+
+
+
+/*******************************/
+
+/*         CABECERA            */
+
+/*******************************/
+.contenedor:first-of-type{
+  border-top:0;
+}
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+.logotipo {
+  object-fit:contain;  
+  max-height: 100px;
+  max-width: 90%;
+  
+}
+
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+nav a{
+  display: block;
+  padding: 5px 10px ;
+  color: var(--azul);
+
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  border-bottom: 4px solid --azul !important;
+  transition: 0.5s ease;
+}
+
+nav a:visited {
+  text-decoration: none;
+  outline: none;
+}
+
+
+/*******************************/
+
+
+/*            SLIDE            */
+
+
+/*******************************/
+
+
+.slide {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-height: 70vh;
+}
+
+.slide img{
+  flex:9999 0 200px;
+  max-height: 60vh;
+  object-fit:cover;
+}
+
+.boton_slide {
+  flex: 1 0 auto;
+  background-color: white;
+  border: 0;
+  padding: 0 ;
+  margin:10px;
+  color: var(--azul);
+  font-size: 100px;
+
+}
+
+.boton_slide:hover {
+  text-shadow: 5px 5px grey;
+  cursor: pointer;
+}
+
+
+
+
+/*******************************/
+
+
+/* SECCIONES  */
+
+
+/*******************************/
+
+
+/* LA CLINICA */
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+
+.galeria img {
+  border-radius: 10px;
+  margin: 4px;
+  border: transparent solid 6px;
+  max-width: 150px;
+  min-width: 50px;
+
+}
+
+.galeria img:hover {
+  border: var(--azul) solid 4px;
+  padding: 2px;
+  opacity: 0.6;
+}
+
+
+/* SERVICIOS */
+
+.servicios dl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.bloque_servicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 250px;
+  min-width: 100px;
+  max-width: 80vw;
+  margin: 10px;
+  flex:999 0 250px
+}
+
+.bloque_servicio img {
+  width: 60px;
+  border-radius: 40%;
+}
+
+.bloque_servicio h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* PLANES y PACKS*/
+
+.bloque.packoplan img {
+  border-radius: 10px;
+  width: 90%;
+}
+
+.bloque.bloque.packoplan dl {
+  padding: 10px 20px;
+  list-style: none;
+  border: var(--azul) 5px solid;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.bloque.bloque.packoplan dt {
+  font-weight: bold;
+}
+
+.bloque.bloque.packoplan dd {
+  font-size: small;
+  /* padding-inline-start: 2em; */
+}
+.bloque.bloque.packoplan i {
+  color: var(--azul);
+}
+
+/* EQUIPO */
+
+.bloque.empleado img{
+  border-radius: 20px;
+  width: 100%;
+  
+}
+
+
+.bloque.empleado {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  align-content: center;
+  border-radius: 20px;
+  
+}
+
+.bloque.empleado ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin-top: 0;
+}
+
+.empleado li {
+  padding-bottom: 10px;
+}
+
+.empleado h2 {
+  margin: 0.5em;
+}
+
+
+/* CONTACTO */
+.bloque_doble.contacto{
+  /* flex:999 0 300px; */
+}
+.bloque.contacto {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-template-rows: auto;
+  grid-template-areas: " direcc direcc" "horario horario" "email email" "facebook facebook" "cita cita";
+  /* width: 40%; */
+  min-width: 300px;
+  max-width: 350px;
+  font-size: larger;
+  row-gap: 0.5em;
+  flex:1 0 auto;
+
+}
+
+
+#mapa {
+  flex:1 0 auto;
+margin:20px;
+  align-self: center;
+  min-width: 300px;
+  max-width: 350px;
+  min-height: 300px;
+  /* width: 40%; */
+}
+
+address {
+  grid-area: direcc;
+  text-align: center;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.bloque.contacto table {
+  grid-area: horario;
+  justify-self: center;
+  border: white 4px solid;
+  border-radius: 10px;
+  min-width: 300px;
+  margin:0 20px  10px 20px;
+  padding: 10px;
+}
+
+.bloque.contacto td {
+  vertical-align: top;
+  padding-top: 15px
+}
+
+.bloque.contacto td:last-child {
+  text-align: right;
+}
+
+#email {
+  grid-area: email;
+  text-align: center;
+}
+
+#cita {
+  grid-area: cita;
+  text-align: center;
+  padding-left: 10px;
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--azul);
+  background-color: white;
+  padding: 5px 0;
+  border-radius: 10px;
+  min-width: 300px;
+  justify-self: center;
+}
+
+#facebook {
+  grid-area: facebook;
+  text-align: center;
+}
+.contacto a {
+  color: white;
+  text-decoration-line: none;
+}
+
+.contacto a:visited {
+  color: white;
+  text-decoration-line: none;
+}
+
+#cita .icono {
+  font-size: larger;
+  color: var(--azul);
+}
+
+#cita a {
+  color: var(--azul);
+}
+
+.icono {
+  color: white;
+  vertical-align: middle;
+  padding-right: 8px;
+}
+
+
+/* FOOTER */
+
+#copyright {
+  text-align: center;
+
+}
