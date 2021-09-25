@@ -67,10 +67,6 @@ html {
 
 /* Formato general para todo el documento */
 
-body {
-
-    
-}
 
 body>div{
       display: flex;
@@ -83,14 +79,6 @@ body>div{
     align-items: stretch;
    /* background-color: red; */
    border:5px green solid;
-}
-/* contenedor para cada bloque grande que forma la pagina */
-
-.container {
-    /* padding-bottom: 50px; */
-    /* margin: 0px 50px; */
-    /* align-self: center; */
-    /* width: 80vw; */
 }
 
 section {
@@ -152,8 +140,8 @@ h2 {
     text-align: center;
 }
 
-.empleado p {
-    text-align: justify;
+.bloque.empleado>p {
+    text-align: right;
 }
 
 
@@ -458,7 +446,9 @@ figcaption {
     padding-inline-start: 0px;
     margin-top: 0;
 }
-
+.empleado p{
+    text-align: center;
+}
 .empleado li {
     padding-bottom: 10px;
 }

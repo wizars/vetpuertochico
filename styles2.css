@@ -1,3 +1,28 @@
+/* 
+- media queries
+    + diseño para moviles  
+- boton whatsapp
+- movidita de cristal sobre el carrusel poniendo frases piyunas
+- ancla para q al ir a una seccion lo haga bien
+- fuentes
+- longitud linea max 90caracteres
+- formateo y tamaño de las imagenes
+- SEO
+    + metadatos html
+    + movidas del tiempo de carga LCP
+sugerencias iris
+                                    X -etiqueta header para secciones en vez de div
+                                    X cambio por completoprecios en vez h3 lista 
+                                    X girar patas 45º 
+                                    X mayusculas en los titulos con css
+                                    X etiqueta time y date
+                                    X - horario como tabla
+                                    X etiqueta telefono llamar
+                                    X - bloques servicios como lista definicioens
+*/
+
+
+
 /*******************************/
 
 /*           RESETS            */
@@ -185,7 +210,6 @@ section header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20px;
 }
 
 
@@ -216,7 +240,7 @@ nav a{
 }
 
 nav a:hover {
-  border-bottom: 4px solid --azul !important;
+  border-bottom: 4px solid var(--azul) !important;
   transition: 0.5s ease;
 }
 
@@ -376,7 +400,9 @@ nav a:visited {
   
 }
 
-
+.bloque.empleado p {
+  text-align: justify;
+}
 .bloque.empleado {
   display: flex;
   flex-direction: column;
@@ -404,9 +430,7 @@ nav a:visited {
 
 
 /* CONTACTO */
-.bloque_doble.contacto{
-  /* flex:999 0 300px; */
-}
+
 .bloque.contacto {
   display: grid;
   grid-template-columns: 49% 49%;
