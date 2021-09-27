@@ -21,6 +21,50 @@
       rel="stylesheet"
     />
   </head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" language="javascript">
+    $( document ).ready(function() {
+       var menuBurguer = function() {
+          //Ocultamos o mostramos menús en función del ancho de la página
+          var winWith = $(window).outerWidth();
+          if(winWith <= 768) {
+             $('.menu').addClass('oculto'); //Ocultamos cualquier menú que haya en nuestra página
+          }
+          else {
+             $('.menu').removeClass('oculto');
+             }
+          
+       }
+       menuBurguer(); //Inicializamos menuBurguer
+       
+       var clickBurguer = function() {
+          //Ocultamos o mostramos el menú asociado a la hamburguesa que ha sido pulsada
+          $('.boton_menu').on('click', function(){
+             $('.menu').toggleClass('oculto');
+          });
+       }
+       clickBurguer();//Inicializamos clickBurguer
+       
+       var closeMenu = function(){ //Ocultamos y mostramos submenús
+          $('.menu > li').has('ul').addClass('closed'); //Cerramos todos los submenús
+       }
+       closeMenu();
+       $('.menu > li a').on('click', function(){
+          var dady = $(this).parent();
+          if($(dady).is('.closed')){
+             closeMenu();
+             $(dady).removeClass('closed');
+          } else {
+             closeMenu();
+             }
+          });
+       $(window).resize(function(){
+          menuBurguer();//Llamamos a menuBurguer al cambiar el tamaño de la ventana
+          });
+    });
+ </script>
+
+
 
   <body>
     <div>
@@ -33,14 +77,23 @@
               src="imagenes/marca/cabecera.png"
               alt="Logotipo Clínica Veterinaria Puertochico"
             />
-            <ul class="menu">
-              <li><a href="#sec_laclinica">LA CLINICA</a></li>
-              <li><a href="#sec_servicios">SERVICIOS</a></li>
-              <li><a href="#sec_planes">PLANES</a></li>
-              <li><a href="#sec_packs">PACKS</a></li>
-              <li><a href="#sec_equipo">EQUIPO</a></li>
-              <li><a href="#sec_contacto">CONTACTO</a></li>
-            </ul>
+            <div class="menu_bar">  
+
+                <button type="button" class="boton_menu">
+                    <span class="material-icons"> menu </span>
+                </button>
+            </div>
+<div class="cont_menu"> 
+
+    <ul class="menu">
+        <li><a href="#sec_laclinica">LA CLINICA</a></li>
+        <li><a href="#sec_servicios">SERVICIOS</a></li>
+        <li><a href="#sec_planes">PLANES</a></li>
+        <li><a href="#sec_packs">PACKS</a></li>
+        <li><a href="#sec_equipo">EQUIPO</a></li>
+        <li><a href="#sec_contacto">CONTACTO</a></li>
+    </ul>
+</div>
           </nav>
         </div>
       </div>
@@ -123,7 +176,7 @@
       <!-- LA CLINICA -->
       <div class="contenedor">
         <div class="contenido">
-            <div class="ancla" id="sec_laclinica">   </div>
+          <div class="ancla" id="sec_laclinica"></div>
 
           <section>
             <header>La clínica</header>
@@ -230,9 +283,9 @@
       <!-- SERVICIOS  -->
       <div class="contenedor oscuro">
         <div class="contenido servicios">
-            <div class="ancla" id="sec_servicios">   </div>
+          <div class="ancla" id="sec_servicios"></div>
 
-          <section >
+          <section>
             <header>Servicios</header>
 
             <dl>
@@ -385,9 +438,9 @@
       <!-- PLANES -->
       <div class="contenedor">
         <div class="contenido">
-            <div class="ancla" id="sec_planes">   </div>
+          <div class="ancla" id="sec_planes"></div>
 
-          <section >
+          <section>
             <header class>Planes de salud</header>
 
             <div class="texto_seccion">
@@ -550,9 +603,9 @@
       <!-- PACKS -->
       <div class="contenedor oscuro">
         <div class="contenido">
-            <div class="ancla" id="sec_packs">   </div>
+          <div class="ancla" id="sec_packs"></div>
 
-          <section >
+          <section>
             <header>Packs de cachorro</header>
 
             <div class="texto_seccion">
@@ -701,9 +754,9 @@
       <!-- EQUIPO -->
       <div class="contenedor">
         <div class="contenido equipo">
-            <div class="ancla" id="sec_equipo">   </div>
+          <div class="ancla" id="sec_equipo"></div>
 
-          <section >
+          <section>
             <header>Equipo</header>
 
             <div class="texto_seccion">
@@ -797,8 +850,8 @@
       <!-- CONTACTO -->
       <div class="contenedor oscuro">
         <div class="contenido contacto">
-            <div class="ancla" id="sec_contacto">   </div>
-          <section >
+          <div class="ancla" id="sec_contacto"></div>
+          <section>
             <header>Contacto</header>
             <div class="bloque_doble contacto">
               <iframe

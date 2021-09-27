@@ -403,6 +403,7 @@ nav a:visited {
 .bloque.empleado p {
   text-align: justify;
 }
+
 .bloque.empleado {
   display: flex;
   flex-direction: column;
@@ -536,4 +537,79 @@ address {
 #copyright {
   text-align: center;
 
+}
+
+
+
+
+/*******************************/
+
+
+/* RESPONSIVE  */
+
+
+/*******************************/
+
+
+.oculto{
+  display: none;
+}
+@media only screen and (min-width:768px){
+  .boton_menu{
+    display: none;
+  }
+}
+  
+
+
+@media only screen and (max-width:768px){
+
+  img.logotipo{
+    max-height: 40px;
+    border: blue 2px solid;
+    flex:0 1 auto;
+    background-position: left;
+  }
+  .menu_bar{
+    padding-right: 10px;
+
+    display: block;
+    text-align: right;
+    flex:9999 0 auto;
+  }
+  .cont_menu{
+background-color: rgb(206, 238, 207);
+    flex:9999 0100%;
+    flex-direction: column;
+    /* max-width: 200px; */
+    width: 100%;
+  }
+  .menu{
+    border:4px  solid var(--azul) ;
+    margin-top: 0;
+    margin-right: 10px;
+    max-width: 200px;
+    background-color: white;
+    position: absolute;
+    right: 0px;
+
+  }
+  .cabecera{
+    justify-content: flex-end;
+  }
+.menu li{
+  width: 100%;
+  text-align: center;
+    border-top:2px  solid var(--azul) ;
+
+  }
+  .menu li:first-child{
+    border-top: none;
+  }
+  .menu_bar span{
+    background-color: rgb(255, 255, 255);
+    color:var(--azul) ;
+    border:var(--azul)  2px solid;
+  }
+  
 }
