@@ -21,8 +21,6 @@ sugerencias iris
                                     X - bloques servicios como lista definicioens
 */
 
-
-
 /*******************************/
 
 /*           RESETS            */
@@ -35,13 +33,15 @@ sugerencias iris
 }
 
 ul,
-li,dd,dl,dt {
+li,
+dd,
+dl,
+dt {
   list-style: none;
   padding: 0;
   margin: 0;
   text-indent: 0;
 }
-
 
 /*******************************/
 
@@ -56,26 +56,23 @@ li,dd,dl,dt {
 
 .oscuro {
   background-color: var(--azul);
-  color:white
+  color: white;
 }
 
-.claro{
+.claro {
   background-color: white;
-  color:var(--gris) 
+  color: var(--gris);
 }
-
 
 /*******************************/
 
-
 /* TEXTO */
-
 
 /*******************************/
 
 body {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
-  color: var(--gris)  ;
+  color: var(--gris);
 }
 
 .texto_seccion {
@@ -159,16 +156,12 @@ body > div {
   max-width: 500px;
 }
 
-
-
 html {
   scroll-behavior: smooth;
 }
 /*******************************/
 
-
 /* TITULOS */
-
 
 /*******************************/
 
@@ -188,50 +181,46 @@ section header {
   border-radius: 25px;
   /*  */
   text-align: center;
-  font-size:larger;
+  font-size: larger;
   font-weight: bold;
   color: var(--azul);
   background-color: white;
   text-transform: uppercase;
 }
 
-
-
-
 /*******************************/
 
 /*         CABECERA            */
 
 /*******************************/
-.contenedor:first-of-type{
-  border-top:0;
+.contenedor:nth-of-type(1) {
+  border-top: 0;
 }
+
 .cabecera {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-
 .logotipo {
-  object-fit:contain;  
+  object-fit: contain;
   max-height: 100px;
   max-width: 90%;
-  
 }
 
-.menu{
+.menu {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   max-width: 600px;
 }
 
-nav a{
+nav a {
   display: block;
-  padding: 5px 10px ;
+  padding: 5px 10px;
   color: var(--azul);
 
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
@@ -249,15 +238,11 @@ nav a:visited {
   outline: none;
 }
 
-
 /*******************************/
-
 
 /*            SLIDE            */
 
-
 /*******************************/
-
 
 .slide {
   display: flex;
@@ -270,21 +255,20 @@ nav a:visited {
   max-height: 70vh;
 }
 
-.slide img{
-  flex:9999 0 200px;
+.slide img {
+  flex: 9999 0 200px;
   max-height: 60vh;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .boton_slide {
   flex: 1 0 auto;
   background-color: white;
   border: 0;
-  padding: 0 ;
-  margin:10px;
+  padding: 0;
+  margin: 10px;
   color: var(--azul);
   font-size: 100px;
-
 }
 
 .boton_slide:hover {
@@ -292,17 +276,11 @@ nav a:visited {
   cursor: pointer;
 }
 
-
-
-
 /*******************************/
-
 
 /* SECCIONES  */
 
-
 /*******************************/
-
 
 /* LA CLINICA */
 
@@ -319,7 +297,6 @@ nav a:visited {
   border: transparent solid 6px;
   max-width: 150px;
   min-width: 50px;
-
 }
 
 .galeria img:hover {
@@ -327,7 +304,6 @@ nav a:visited {
   padding: 2px;
   opacity: 0.6;
 }
-
 
 /* SERVICIOS */
 
@@ -348,7 +324,7 @@ nav a:visited {
   min-width: 100px;
   max-width: 80vw;
   margin: 10px;
-  flex:999 0 250px
+  flex: 999 0 250px;
 }
 
 .bloque_servicio img {
@@ -361,7 +337,6 @@ nav a:visited {
   font-size: 18px;
   font-weight: bold;
 }
-
 
 /* PLANES y PACKS*/
 
@@ -394,10 +369,9 @@ nav a:visited {
 
 /* EQUIPO */
 
-.bloque.empleado img{
+.bloque.empleado img {
   border-radius: 20px;
   width: 100%;
-  
 }
 
 .bloque.empleado p {
@@ -412,7 +386,6 @@ nav a:visited {
   padding: 20px;
   align-content: center;
   border-radius: 20px;
-  
 }
 
 .bloque.empleado ul {
@@ -429,7 +402,6 @@ nav a:visited {
   margin: 0.5em;
 }
 
-
 /* CONTACTO */
 
 .bloque.contacto {
@@ -442,14 +414,12 @@ nav a:visited {
   max-width: 350px;
   font-size: larger;
   row-gap: 0.5em;
-  flex:1 0 auto;
-
+  flex: 1 0 auto;
 }
 
-
 #mapa {
-  flex:1 0 auto;
-margin:20px;
+  flex: 1 0 auto;
+  margin: 20px;
   align-self: center;
   min-width: 300px;
   max-width: 350px;
@@ -470,13 +440,13 @@ address {
   border: white 4px solid;
   border-radius: 10px;
   min-width: 300px;
-  margin:0 20px  10px 20px;
+  margin: 0 20px 10px 20px;
   padding: 10px;
 }
 
 .bloque.contacto td {
   vertical-align: top;
-  padding-top: 15px
+  padding-top: 15px;
 }
 
 .bloque.contacto td:last-child {
@@ -531,85 +501,94 @@ address {
   padding-right: 8px;
 }
 
-
 /* FOOTER */
 
 #copyright {
   text-align: center;
-
 }
 
-
-
-
 /*******************************/
-
 
 /* RESPONSIVE  */
 
-
 /*******************************/
 
-
-.oculto{
-  display: none;
-}
-@media only screen and (min-width:768px){
-  .boton_menu{
+@media only screen and (min-width: 768px) {
+  .boton_menu {
     display: none;
   }
+  .menu{
+    display: flex !important;
+  }
 }
-  
 
-
-@media only screen and (max-width:768px){
-
-  img.logotipo{
+@media only screen and (max-width: 768px) {
+  .boton_menu{
+    border:0;
+    background-color: transparent;
+  }
+  img.logotipo {
     max-height: 40px;
-    border: blue 2px solid;
-    flex:0 1 auto;
+    flex: 0 1 auto;
     background-position: left;
   }
-  .menu_bar{
+  .menu_bar {
     padding-right: 10px;
 
     display: block;
     text-align: right;
-    flex:9999 0 auto;
+    flex: 9999 0 auto;
   }
-  .cont_menu{
-background-color: rgb(206, 238, 207);
-    flex:9999 0100%;
-    flex-direction: column;
-    /* max-width: 200px; */
-    width: 100%;
-  }
-  .menu{
-    border:4px  solid var(--azul) ;
-    margin-top: 0;
-    margin-right: 10px;
-    max-width: 200px;
-    background-color: white;
-    position: absolute;
-    right: 0px;
 
+  .menu {
+    display: flex;
+    position: absolute;
+    margin: 10px auto;
+    right: 0px;
+    top:40px;
+    max-width: 200px;
+    border: 4px solid var(--azul);
+    background-color: white;
   }
-  .cabecera{
+  .cabecera {
     justify-content: flex-end;
   }
-.menu li{
-  width: 100%;
-  text-align: center;
-    border-top:2px  solid var(--azul) ;
-
+  .menu li {
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid var(--azul);
   }
-  .menu li:first-child{
+  .menu li:first-child {
     border-top: none;
   }
-  .menu_bar span{
+  .menu_bar span {
+    display: block;
     background-color: rgb(255, 255, 255);
-    color:var(--azul) ;
-    border:var(--azul)  2px solid;
+    color: var(--azul);
+    border: var(--azul) 3px solid;
+  }
+
+
+  .contenedor:first-of-type {
+    padding: 5px 0;
+
+    position: sticky;
+    background-color: white;
+    top:0;
+    z-index: 9999;
+    border-bottom: var(--azul)  5px solid;
+  }
+  .contenedor:nth-of-type(2){
+
+    border-top: none;
+  }
+  .menu_bar{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
   }
   
+
 }
+
+
