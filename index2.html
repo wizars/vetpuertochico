@@ -22,26 +22,20 @@
     />
   </head>
 
-
   <!-- Scripts de java para desplegar el menu -->
   <script>
-
-    function Abrir() {
-
+ /*   function Abrir() {
       if (document.getElementById("menu").style.display == "none") {
         document.getElementById("menu").style.display = "flex";
       } else {
-        document.getElementById('menu').style.display = "none";
-
-
+        document.getElementById("menu").style.display = "none";
       }
     }
 
     function Cerrar() {
-        document.getElementById("menu").style.display = "none";
-    }
+      document.getElementById("menu").style.display = "none";
+    }*/
   </script>
-
 
   <body>
     <main>
@@ -59,18 +53,18 @@
                 <span class="material-icons" onclick="Abrir()"> menu </span>
               </button>
             </div>
-              <ul class="menu" id="menu">
-                <li>
-                  <a href="#sec_laclinica" onclick="Cerrar()">LA CLINICA</a>
-                </li>
-                <li>
-                  <a href="#sec_servicios" onclick="Cerrar()">SERVICIOS</a>
-                </li>
-                <li><a href="#sec_planes" onclick="Cerrar()">PLANES</a></li>
-                <li><a href="#sec_packs" onclick="Cerrar()">PACKS</a></li>
-                <li><a href="#sec_equipo" onclick="Cerrar()">EQUIPO</a></li>
-                <li><a href="#sec_contacto" onclick="Cerrar()">CONTACTO</a></li>
-              </ul>
+            <ul class="menu" id="menu">
+              <li>
+                <a href="#sec_laclinica" onclick="Cerrar()">LA CLINICA</a>
+              </li>
+              <li>
+                <a href="#sec_servicios" onclick="Cerrar()">SERVICIOS</a>
+              </li>
+              <li><a href="#sec_planes" onclick="Cerrar()">PLANES</a></li>
+              <li><a href="#sec_packs" onclick="Cerrar()">PACKS</a></li>
+              <li><a href="#sec_equipo" onclick="Cerrar()">EQUIPO</a></li>
+              <li><a href="#sec_contacto" onclick="Cerrar()">CONTACTO</a></li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -79,7 +73,9 @@
       <div class="contenedor">
         <div class="contenido">
           <div class="slide">
-            <button class="boton_slide" onclick="plusDivs(-1)">&lsaquo;</button>
+            <button class="boton_slide atras" onclick="plusDivs(-1)">
+              &lsaquo;
+            </button>
             <img
               class="fotos_slide"
               width="50"
@@ -105,48 +101,60 @@
               width="50"
               src="imagenes/slide/SLIDE_-6.jpg"
             />
-            <button class="boton_slide" onclick="plusDivs(1)">&rsaquo;</button>
 
-            <!-- script para los botones de atras y adelante -->
-            <script>
-              var slideIndex = 1;
-              showDivs(slideIndex);
-              carousel();
-
-              function plusDivs(n) {
-                showDivs((slideIndex += n));
-              }
-
-              function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("fotos_slide");
-                if (n > x.length) {
-                  slideIndex = 1;
-                }
-                if (n < 1) {
-                  slideIndex = x.length;
-                }
-                for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";
-                }
-                x[slideIndex - 1].style.display = "block";
-              }
-
-              function carousel() {
-                var i;
-                var x = document.getElementsByClassName("fotos_slide");
-                for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > x.length) {
-                  slideIndex = 1;
-                }
-                x[slideIndex - 1].style.display = "block";
-                setTimeout(carousel, 3000); // Change image every 2 seconds
-              }
-            </script>
+            <button class="boton_slide alante" onclick="plusDivs(1)">
+              &rsaquo;
+            </button>
           </div>
+
+          <form name="pro" class="progreso">
+            <label class="contprogreso">
+              <input
+                type="radio"
+                onchange="showDivs(1)"
+                checked="checked"
+                name="radio-group"
+                id="b1"
+
+              /><span class="bolita"></span>
+            </label>
+            <label class="contprogreso">
+              <input
+                type="radio"
+                onchange="showDivs(2)"
+                name="radio-group"
+                id="b2"
+              /><span class="bolita"></span> </label
+            ><label class="contprogreso">
+              <input
+                type="radio"
+                onchange="showDivs(3)"
+                name="radio-group"
+                id="b3"
+
+              /><span class="bolita"></span> </label
+            ><label class="contprogreso">
+              <input
+                type="radio"
+                onchange="showDivs(4)"
+                name="radio-group"
+                id="b4"
+
+              /><span class="bolita"></span> </label
+            ><label class="contprogreso">
+              <input
+                type="radio"
+                onchange="showDivs(5)"
+                name="radio-group"
+                id="b5"
+
+              /><span class="bolita"></span>
+            </label>
+          </form>
+
+          <!-- script para los botones de atras y adelante -->
+          <script src="scripts.js">
+          </script>
         </div>
       </div>
 
@@ -751,14 +759,13 @@
             <div class="bloque_doble">
               <div class="bloque empleado oscuro">
                 <figure>
-
-                    <img
+                  <img
                     src="imagenes/personal/raquel.jpg"
                     alt="Raquel Hernandez"
-                    />
-                    <figcaption>
-                        <h2>Raquel</h2>
-                    </figcaption>
+                  />
+                  <figcaption>
+                    <h2>Raquel</h2>
+                  </figcaption>
                 </figure>
 
                 <div>
@@ -795,15 +802,14 @@
 
               <div class="bloque empleado oscuro">
                 <figure>
-
-                    <img
+                  <img
                     id="foto_empleado"
                     src="imagenes/personal/alvaro.jpg"
                     alt="Alvaro Gonzalo"
-                    />
-                    <figcaption>
-                        <h2>Alvaro</h2>
-                    </figcaption>
+                  />
+                  <figcaption>
+                    <h2>Alvaro</h2>
+                  </figcaption>
                 </figure>
 
                 <div>
