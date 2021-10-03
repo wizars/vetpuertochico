@@ -1,0 +1,213 @@
+/*******************************/
+
+/*         CABECERA            */
+
+/*******************************/
+
+/* contenedor principal del la cabecera y el menu*/
+.cabecera {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  border-bottom: 5px var(--azul) solid;
+  position: sticky;
+  top: 0px;
+}
+
+/* contenedor del la cabecera, osea logo y boton */
+.cab {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* logo */
+.logotipo {
+  object-fit: contain;
+  max-height: 50px;
+  max-width: 90%;
+}
+
+/* boton desplegar menu */
+.boton_menu {
+  border: 0;
+  background-color: transparent;
+  margin: 5px;
+}
+.boton_menu span {
+  background-color: rgb(255, 255, 255);
+  color: var(--azul);
+  border: var(--azul) 3px solid;
+}
+
+/* oculta boton de cerrar menu en version movil */
+.boton_cerrar {
+  display: none;
+}
+
+/* menu desplegable */
+.menu {
+  max-height: 0; /* quitar esto al final!!!!!*/
+  height: auto;
+  max-width: auto;
+  width: auto;
+
+  position: fixed;
+  right: 0;
+  top: 55px;
+  transition: max-height 0.8s;
+  overflow-y: hidden;
+}
+
+/* boton de whatsapp */
+.whatsapp {
+  display: flex;
+  align-items: center;
+}
+.whatsapp img {
+  margin-left: 10px;
+  width: 1em;
+}
+
+/* enlaces del menu */
+nav li {
+  padding: 5px 10px;
+  color: var(--azul);
+  background-color: var(--azul);
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px white solid;
+}
+nav a {
+  color: white;
+}
+nav a:hover {
+  border-bottom: 4px solid var(--azul) !important;
+  transition: 0.5s ease;
+}
+nav a:visited {
+  color: white;
+}
+
+/* CABECERA PARA TABLETS */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    max-height: 100vh;
+    height: 100vh;
+    max-width: 0;
+    width: 160px;
+
+    left: 0;
+    overflow-x: hidden;
+    transition: max-width 0.8s;
+    background-color: var(--azul);
+  }
+  /* enlaces del menu */
+  nav li {
+    padding: 5px 10px;
+    color: var(--gris);
+    background-color: var(--azul);
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px var(--azul) solid;
+  }
+  nav a {
+    color: white;
+  }
+  nav a:hover {
+    border-bottom: 4px solid var(--azul) !important;
+    transition: 0.5s ease;
+  }
+  nav a:visited {
+    color: white;
+  }
+
+  /* muestro boton de cerrar menu  */
+  .boton_cerrar {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    margin: 5px;
+    text-align: end;
+  }
+  .boton_cerrar span {
+    color: white;
+    background-color: transparent;
+  }
+}
+  /* CABECERA DESKTOP */
+  @media only screen and (min-width: 1025px) {
+    /* oculto los botones de cerrar y de menu */
+    .boton_cerrar,
+    .boton_menu {
+      display: none;
+    }
+    
+    /* logo */
+    .logotipo {
+      object-fit: contain;
+      max-height: 100px;
+      max-width: 90%;
+    }
+    .cabecera{
+      display: flex;
+      position: static;
+      justify-content:space-between;
+      
+    }
+
+    .menu {
+      position:static;
+      overflow-y: visible;
+      width: auto;
+      max-height: fit-content;
+      max-width: fit-content;
+      margin: auto 0  auto 0;
+    }
+    .lista_menu{
+      display: flex;
+      flex-direction: row;
+    }
+.cab{
+  background-color: red;
+  width:fit-content;
+}
+.whatsapp{
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  margin: 5px;
+  padding: 0;
+  background-color: transparent;
+}
+.whatsapp img{
+  margin: 0;
+  width: 3em;
+}
+.txtwhatsapp{
+  display: none;
+}
+    /* contenedor principal del la cabecera y el menu*/
+    /*.cabecera {
+   display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  border-bottom: 5px var(--azul) solid;
+  position: sticky;
+  top: 0px;
+} */
+    /*
+contenedor del la cabecera, osea logo y boton
+.cab {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}*/
+  }
+

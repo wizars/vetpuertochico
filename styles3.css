@@ -1,0 +1,45 @@
+
+
+
+/*******************************/
+
+/* VARIABLES */
+
+/*******************************/
+
+:root {
+  --azul: #1e73be;
+  --gris: rgb(89, 89, 89);
+}
+
+.oscuro {
+  background-color: var(--azul);
+  color: white;
+}
+
+.claro {
+  background-color: white;
+  color: var(--gris);
+}
+
+
+/*******************************/
+
+/* LAYOUT ESTRUCTURA PRINCIPAL */
+
+/*******************************/
+
+/* Contiene todo el cuerpo */
+body > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+

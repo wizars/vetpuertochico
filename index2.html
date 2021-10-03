@@ -11,9 +11,10 @@
     <link rel="icon" href="imagenes/marca/icono.png" type="image/x-icon" />
 
     <!-- HOJAS DE ESTILO CSS -->
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="fondos2.css" />
-    <link rel="stylesheet" href="styles2.css" />
-    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="styles3.css" />
+    <link rel="stylesheet" href="styles_header.css" />
 
     <!-- IMPORTACION ICONOS GOOGLE -->
     <link
@@ -22,54 +23,87 @@
     />
   </head>
 
-  <!-- Scripts de java para desplegar el menu -->
-  <script>
- /*   function Abrir() {
-      if (document.getElementById("menu").style.display == "none") {
-        document.getElementById("menu").style.display = "flex";
-      } else {
-        document.getElementById("menu").style.display = "none";
-      }
-    }
-
-    function Cerrar() {
-      document.getElementById("menu").style.display = "none";
-    }*/
-  </script>
-
+  <!-- CUERPO PRINCIPAL -->
   <body>
     <main>
       <!-- MENU SUPERIOR -->
-      <div class="contenedor">
-        <div class="contenido">
-          <nav class="cabecera">
-            <img
-              class="logotipo"
-              src="imagenes/marca/cabecera.png"
-              alt="Logotipo Clínica Veterinaria Puertochico"
-            />
-            <div class="menu_bar">
-              <button type="button" class="boton_menu">
-                <span class="material-icons" onclick="Abrir()"> menu </span>
-              </button>
-            </div>
-            <ul class="menu" id="menu">
-              <li>
-                <a href="#sec_laclinica" onclick="Cerrar()">LA CLINICA</a>
-              </li>
-              <li>
-                <a href="#sec_servicios" onclick="Cerrar()">SERVICIOS</a>
-              </li>
-              <li><a href="#sec_planes" onclick="Cerrar()">PLANES</a></li>
-              <li><a href="#sec_packs" onclick="Cerrar()">PACKS</a></li>
-              <li><a href="#sec_equipo" onclick="Cerrar()">EQUIPO</a></li>
-              <li><a href="#sec_contacto" onclick="Cerrar()">CONTACTO</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <!-- <div class="contenedor">
+        <div class="contenido">-->
+      <nav class="cabecera">
+        
+        <div class="cab">
 
-      <!-- CARRUSEL -->
+          <img
+            class="logotipo"
+            src="imagenes/marca/cabecera.png"
+            alt="Logotipo Clínica Veterinaria Puertochico"
+          />
+        
+        
+            <button type="button" class="boton_menu">
+              <span class="material-icons" onclick="Abrir()"> menu </span>
+            </button>
+
+        </div>
+
+
+        <!-- <div class="menu"> -->
+        <div class="menu" id="menu">
+
+          <!-- boton de cerrar menu -->
+          <button type="button" class="boton_cerrar">
+            <span class="material-icons" onclick="Cerrar()"> close </span>
+          </button>
+
+          <!-- elementos del menu -->
+          <ul class="lista_menu" >
+            <li class="whatsapp">
+              <a href="https://wa.me/0034650098245/?text=Hola%20"
+                ><span class="txtwhatsapp">
+                    Escribenos
+                </span>
+                <img src="imagenes/otros/WhatsApp_Logo.png" />
+            </a>
+            </li>
+            <li><a href="#sec_laclinica" onclick="Cerrar()">LA CLINICA</a></li>
+            <li><a href="#sec_servicios" onclick="Cerrar()">SERVICIOS</a></li>
+            <li><a href="#sec_planes" onclick="Cerrar()">PLANES</a></li>
+            <li><a href="#sec_packs" onclick="Cerrar()">PACKS</a></li>
+            <li><a href="#sec_equipo" onclick="Cerrar()">EQUIPO</a></li>
+            <li><a href="#sec_contacto" onclick="Cerrar()">CONTACTO</a></li>
+          </ul>
+        </div>
+      </nav>
+      Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y
+      Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova
+      y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi
+      Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy
+      Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y
+      Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova
+      y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi
+      Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy
+      Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y
+      Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova
+      y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi
+      Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy
+      Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y
+      Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova
+      y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi
+      Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy
+      Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y
+      Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova
+      y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi
+      Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy
+      Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y
+      Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova
+      y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi
+      Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy
+      Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y Mandy Katxi Cova y
+      Mandy Katxi Cova y Mandy
+      <!-- </div>
+      </div> -->
+
+      <!-- CARRUSEL 
       <div class="contenedor">
         <div class="contenido">
           <div class="slide">
@@ -105,6 +139,12 @@
             <button class="boton_slide alante" onclick="plusDivs(1)">
               &rsaquo;
             </button>
+
+            <span class="frases" id="frase1">Cuidamos de los tuyos!</span>
+            <span class="frases" id="frase2">Trato personalizado!</span>
+            <span class="frases" id="frase3">Pasión animal!</span>
+            <span class="frases" id="frase4">Siempre contigo!</span>
+            <span class="frases" id="frase5">Duerme tranquilo!</span>
           </div>
 
           <form name="pro" class="progreso">
@@ -115,7 +155,6 @@
                 checked="checked"
                 name="radio-group"
                 id="b1"
-
               /><span class="bolita"></span>
             </label>
             <label class="contprogreso">
@@ -131,7 +170,6 @@
                 onchange="showDivs(3)"
                 name="radio-group"
                 id="b3"
-
               /><span class="bolita"></span> </label
             ><label class="contprogreso">
               <input
@@ -139,7 +177,6 @@
                 onchange="showDivs(4)"
                 name="radio-group"
                 id="b4"
-
               /><span class="bolita"></span> </label
             ><label class="contprogreso">
               <input
@@ -147,18 +184,13 @@
                 onchange="showDivs(5)"
                 name="radio-group"
                 id="b5"
-
               /><span class="bolita"></span>
             </label>
           </form>
-
-          <!-- script para los botones de atras y adelante -->
-          <script src="scripts.js">
-          </script>
         </div>
       </div>
 
-      <!-- LA CLINICA -->
+      <!-- LA CLINICA 
       <div class="contenedor">
         <div class="contenido">
           <div class="ancla" id="sec_laclinica"></div>
@@ -265,7 +297,7 @@
         </div>
       </div>
 
-      <!-- SERVICIOS  -->
+      <!-- SERVICIOS  
       <div class="contenedor oscuro">
         <div class="contenido servicios">
           <div class="ancla" id="sec_servicios"></div>
@@ -420,7 +452,7 @@
         </div>
       </div>
 
-      <!-- PLANES -->
+      <!-- PLANES 
       <div class="contenedor">
         <div class="contenido">
           <div class="ancla" id="sec_planes"></div>
@@ -585,7 +617,7 @@
         </div>
       </div>
 
-      <!-- PACKS -->
+      <!-- PACKS 
       <div class="contenedor oscuro">
         <div class="contenido">
           <div class="ancla" id="sec_packs"></div>
@@ -736,7 +768,7 @@
         </div>
       </div>
 
-      <!-- EQUIPO -->
+      <!-- EQUIPO 
       <div class="contenedor">
         <div class="contenido equipo">
           <div class="ancla" id="sec_equipo"></div>
@@ -837,7 +869,7 @@
         </div>
       </div>
 
-      <!-- CONTACTO -->
+       CONTACTO 
       <div class="contenedor oscuro">
         <div class="contenido contacto">
           <div class="ancla" id="sec_contacto"></div>
@@ -907,7 +939,10 @@
             </div>
           </section>
         </div>
-      </div>
+      </div>-->
     </main>
   </body>
+
+  <!-- IMPORTACION DE SCRIPTS PARA MENU Y CARRUSEL -->
+  <script src="scripts.js"></script>
 </html>
