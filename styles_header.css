@@ -6,9 +6,6 @@
 
 /* contenedor principal del la cabecera y el menu*/
 .cabecera {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
   border-bottom: 5px var(--azul) solid;
   position: sticky;
   top: 0px;
@@ -41,9 +38,9 @@
 }
 
 /* oculta boton de cerrar menu en version movil */
-.boton_cerrar {
-  display: none;
-}
+ .btn_cerrar { 
+  display: none ;
+} 
 
 /* menu desplegable */
 .menu {
@@ -98,17 +95,17 @@ nav a:visited {
     max-height: 100vh;
     height: 100vh;
     max-width: 0;
-    width: 160px;
+    width: 200px;
 
     left: 0;
     overflow-x: hidden;
     transition: max-width 0.8s;
     background-color: var(--azul);
+    
   }
   /* enlaces del menu */
   nav li {
     padding: 5px 10px;
-    color: var(--gris);
     background-color: var(--azul);
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -128,86 +125,101 @@ nav a:visited {
     color: white;
   }
 
-  /* muestro boton de cerrar menu  */
-  .boton_cerrar {
-    display: block;
+  /* .boton_cerrar {
+    display: inline-block;
     border: 0;
     background-color: transparent;
     margin: 5px;
-    text-align: end;
+    width: 180px;
+    overflow:auto;
+    text-align: right;
   }
   .boton_cerrar span {
     color: white;
     background-color: transparent;
+  } */
+}
+/* CABECERA DESKTOP */
+@media only screen and (min-width: 1025px) {
+  
+  
+  /* cabecera */
+  .cabecera {
+    display: flex;
+    position: static;
+    justify-content: space-between;
   }
-}
-  /* CABECERA DESKTOP */
-  @media only screen and (min-width: 1025px) {
-    /* oculto los botones de cerrar y de menu */
-    .boton_cerrar,
-    .boton_menu {
-      display: none;
-    }
-    
-    /* logo */
-    .logotipo {
-      object-fit: contain;
-      max-height: 100px;
-      max-width: 90%;
-    }
-    .cabecera{
-      display: flex;
-      position: static;
-      justify-content:space-between;
-      
-    }
-
-    .menu {
-      position:static;
-      overflow-y: visible;
-      width: auto;
-      max-height: fit-content;
-      max-width: fit-content;
-      margin: auto 0  auto 0;
-    }
-    .lista_menu{
-      display: flex;
-      flex-direction: row;
-    }
-.cab{
-  background-color: red;
-  width:fit-content;
-}
-.whatsapp{
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  margin: 5px;
-  padding: 0;
-  background-color: transparent;
-}
-.whatsapp img{
-  margin: 0;
-  width: 3em;
-}
-.txtwhatsapp{
-  display: none;
-}
-    /* contenedor principal del la cabecera y el menu*/
-    /*.cabecera {
-   display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  border-bottom: 5px var(--azul) solid;
-  position: sticky;
-  top: 0px;
-} */
-    /*
-contenedor del la cabecera, osea logo y boton
-.cab {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}*/
+  .cab {
+    width: fit-content;
+  }
+  
+  
+  /* oculto los botones de cerrar y de menu */
+  .boton_cerrar,
+  .boton_menu {
+    display: none;
   }
 
+  /* logo */
+  .logotipo {
+    object-fit: contain;
+    max-height: 100px;
+    max-width: 90%;
+  }
+
+
+  /* Menu */
+  .menu {
+    position: static;
+    overflow-y: visible;
+    width: 100%;
+    max-height: fit-content;
+    max-width: fit-content;
+    margin: auto 0 auto 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lista_menu {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+  }
+   /* enlaces del menu */
+   nav li {
+    padding: 5px 10px;
+    background-color: white;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    border:0;
+  }
+  nav a {
+    color: var(--azul);
+  }
+  nav a:hover {
+    border-bottom: 4px solid var(--azul) !important;
+    transition: 0.5s ease;
+  }
+  nav a:visited {
+    color: var(--azul);
+  }
+
+  /* Icono de Whatsapp */
+  .whatsapp {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    margin: 5px;
+    padding: 0;
+    background-color: transparent;
+  }
+  .whatsapp img {
+    margin: 0;
+    width: 3em;
+  }
+  .txtwhatsapp {
+    display: none;
+  }
+}

@@ -70,8 +70,13 @@ function Abrir() {
 
     if (document.getElementById("menu").style.maxHeight == "100%") {
       document.querySelector(".menu").style.maxHeight = "0";
+      document.querySelector(".btn_menu").style.display="block";
+      document.querySelector(".btn_cerrar").style.display="none";
+      
     } else {
       document.getElementById("menu").style.maxHeight = "100%";
+      document.querySelector(".btn_menu").style.display="none";
+      document.querySelector(".btn_cerrar").style.display="block";
     }
 
     // Nos aseguramos de limpiar lode cambios del modo Tablet

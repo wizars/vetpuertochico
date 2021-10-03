@@ -4,3 +4,7 @@
   background-color:red;
   padding: 2px;
 }
+.contenido{
+  max-width: 1440px;
+  margin: 0 auto 0 auto;
+}
