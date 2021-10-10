@@ -116,22 +116,6 @@ body > div {
   width: 100%;
 }
 
-/* contenedor para cada bloque, este define el fondo azul/blanco */
-.contenedor {
-  min-height: 50px;
-  width: 100%;
-  border-top: 5px var(--azul) solid;
-  padding-bottom: 10px;
-  padding-top: 20px;
-}
-
-/* contenido de cada bloque, define los margenes tambien y el ensanchamiento max/min */
-.contenido {
-  max-width: 1440px;
-  min-width: 320px;
-  width: 100%;
-  margin: auto;
-}
 
 /* contenedor para distribuir en dos columnas bloques de contenido, usado en planes, packs y empleados*/
 .bloque_doble {

@@ -7,8 +7,8 @@
 /* contenedor principal del la cabecera y el menu*/
 .cabecera {
   border-bottom: 5px var(--azul) solid;
-  position: sticky;
   top: 0px;
+  background-color: white;
 }
 
 /* contenedor del la cabecera, osea logo y boton */
@@ -17,7 +17,15 @@
   justify-content: space-between;
   width: 100%;
 }
-
+nav.contenido {
+  border-top: 0;
+  margin: 0 auto;
+  position: sticky;
+  max-height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
 /* logo */
 .logotipo {
   object-fit: contain;
@@ -25,28 +33,27 @@
   max-width: 90%;
 }
 
-/* boton desplegar menu */
-.boton_menu {
-  border: 0;
-  background-color: transparent;
-  margin: 5px;
-}
-.boton_menu span {
-  background-color: rgb(255, 255, 255);
+/* boton desplegar/cerrar menu */
+span.boton_menu {
+  /* background-color: rgb(255, 255, 255); */
+  /* border: var(--azul) 3px solid; */
+  font-size: xx-large;
   color: var(--azul);
-  border: var(--azul) 3px solid;
+  margin: auto 5px auto 0;
+  cursor: pointer;
+  content: "menu";
 }
 
-/* oculta boton de cerrar menu en version movil */
- .btn_cerrar { 
-  display: none ;
-} 
+/* cambia el texto del span boton menu para mostrar el simbolo de menu o la X en version movil */
+.btn_cerrar {
+  content: "close";
+}
 
 /* menu desplegable */
 .menu {
-  max-height: 0; /* quitar esto al final!!!!!*/
+  max-height: 100%; /* quitar esto al final!!!!!*/
   height: auto;
-  max-width: auto;
+  max-width: 0%;
   width: auto;
 
   position: fixed;
@@ -54,6 +61,7 @@
   top: 55px;
   transition: max-height 0.8s;
   overflow-y: hidden;
+  z-index: 9;
 }
 
 /* boton de whatsapp */
@@ -92,27 +100,36 @@ nav a:visited {
 /* CABECERA PARA TABLETS */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .menu {
-    max-height: 100vh;
-    height: 100vh;
+    max-height: auto;
+    height: 100%;
     max-width: 0;
-    width: 200px;
-
+    width: 100%;
     left: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     transition: max-width 0.8s;
     background-color: var(--azul);
-    
+    border-right: 2px white solid;
+    background: transparent;
+    background: linear-gradient(
+      90deg,
+      rgba(30, 115, 190, 1) 0%,
+      transparent 100%
+    );
+  }
+  nav.ul {
+    background-color: transparent;
   }
   /* enlaces del menu */
   nav li {
     padding: 5px 10px;
-    background-color: var(--azul);
+    /* background-color: var(--azul); */
+    background-color: transparent;
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-size: 16px;
 
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px var(--azul) solid;
+    border: 0;
   }
   nav a {
     color: white;
@@ -124,25 +141,9 @@ nav a:visited {
   nav a:visited {
     color: white;
   }
-
-  /* .boton_cerrar {
-    display: inline-block;
-    border: 0;
-    background-color: transparent;
-    margin: 5px;
-    width: 180px;
-    overflow:auto;
-    text-align: right;
-  }
-  .boton_cerrar span {
-    color: white;
-    background-color: transparent;
-  } */
 }
 /* CABECERA DESKTOP */
 @media only screen and (min-width: 1025px) {
-  
-  
   /* cabecera */
   .cabecera {
     display: flex;
@@ -152,11 +153,10 @@ nav a:visited {
   .cab {
     width: fit-content;
   }
-  
-  
+
   /* oculto los botones de cerrar y de menu */
-  .boton_cerrar,
-  .boton_menu {
+
+  span.boton_menu {
     display: none;
   }
 
@@ -166,7 +166,6 @@ nav a:visited {
     max-height: 100px;
     max-width: 90%;
   }
-
 
   /* Menu */
   .menu {
@@ -184,8 +183,8 @@ nav a:visited {
     flex-direction: row;
     margin-right: 20px;
   }
-   /* enlaces del menu */
-   nav li {
+  /* enlaces del menu */
+  nav li {
     padding: 5px 10px;
     background-color: white;
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
@@ -193,7 +192,7 @@ nav a:visited {
 
     text-decoration: none;
     text-transform: uppercase;
-    border:0;
+    border: 0;
   }
   nav a {
     color: var(--azul);
