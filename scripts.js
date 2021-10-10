@@ -12,16 +12,8 @@ var slideIndex = 1;
 showDivs(slideIndex);
 carousel();
 
-document.querySelector("span.boton_slide.atras").addEventListener('click', () => { showDivs(slideIndex + 1) }, false);
-document.querySelector("span.boton_slide.alante").addEventListener('click', function () { showDivs(slideIndex + 1); });
-
-function sld_atras() { PlusDivs(-1); }
-function sld_alante() { PlusDivs(1); }
-
-// Avanza a la siguiente imagen
-function plusDivs(n) {
-  showDivs(slideIndex + n);
-}
+document.querySelector("span.boton_slide.atras").addEventListener('click', () => { showDivs(slideIndex - 1) });
+document.querySelector("span.boton_slide.alante").addEventListener('click', () => { showDivs(slideIndex + 1); });
 
 // muestra la imagen adecuada y oculta las otras
 function showDivs(n) {
@@ -74,8 +66,6 @@ function carousel() {
 /*******************************/
 /*           MENU              */
 /*******************************/
-
-
 
 //Añadimos el evento click al span que forma el boton del menu
 document.querySelector("span.boton_menu").addEventListener('click', ToggleMenu);
@@ -132,9 +122,6 @@ function ToggleMenu() {
 /*         ACORDEON            */
 /*******************************/
 
-
-
-
 // Menu acordeon desplegable   
 
 const accordion = document.getElementsByClassName('bloque_servicio');
@@ -154,66 +141,35 @@ for (i = 0; i < accordion.length; i++) {
 //añadimos los eventos de click a las imagenes
 const galeria = document.querySelectorAll('.galeria img');
 const visor = document.querySelector('#visor');
-const foto_completa = document.querySelector('#foto_completa');
-visor.addEventListener('click',function(){this.style.display='none'})
+var indice_visor = 1;
 
+// evento para cerrar el visor al hace click en la foto o su marco
+document.querySelector('.contenedor_foto').addEventListener('click', function () {
+   visor.style.display = 'none' ;
+   document.querySelector('body').style.overflow='initial';
+
+  })
+
+// eventos para los botones de pasar foto
+document.querySelector('#visor_alante').addEventListener('click', () => { Visor(1) })
+document.querySelector('#visor_atras').addEventListener('click', () => { Visor(-1) })
+
+// evento para mostrar la foto adecuada al hacer click
 for (i = 0; i < galeria.length; i++) {
   galeria[i].addEventListener('click', function () {
-    foto_completa.src = this.dataset.src
-    visor.style.display = 'block'
-  }
-  )
-
+    document.querySelector('#foto_completa').src = this.dataset.src
+    visor.style.display = 'flex'
+    document.querySelector('#titulo_foto').innerHTML = this.alt;
+    document.querySelector('body').style.overflow='hidden';
+  })
 }
 
-
-/*
-function AbreVisor(img){
-img.src=img.dataset.src
+// funcion que para pasar las fotos
+function Visor(n) {
+  indice_visor = indice_visor + n;
+  if (indice_visor > galeria.length) { indice_visor = 1; }
+  if (indice_visor < 1) { indice_visor = galeria.length; }
+  var foto_activa = galeria[indice_visor - 1];
+  document.querySelector('#foto_completa').src = foto_activa.dataset.src;
+  document.querySelector('#titulo_foto').innerHTML = foto_activa.alt;
 }
-*/
-
-/*
-$(".galeria img").click(function(){
-  $("#full-image").attr("src", $(this).attr("src"));
-  $('#visor').show();
-});
-
-$("#visor .close").click(function(){
-  $('#visor').hide();
-});
-*/
-
-/*******************************/
-/*         LAZY            */
-/*******************************/
-
-document.addEventListener("DOMContentLoaded", function () {
-  var lazyloadImages = document.querySelectorAll("img.lazy");
-  var lazyloadThrottleTimeout;
-
-  function lazyload() {
-    if (lazyloadThrottleTimeout) {
-      clearTimeout(lazyloadThrottleTimeout);
-    }
-
-    lazyloadThrottleTimeout = setTimeout(function () {
-      var scrollTop = window.pageYOffset;
-      lazyloadImages.forEach(function (img) {
-        if (img.offsetTop < (window.innerHeight + scrollTop)) {
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-        }
-      });
-      if (lazyloadImages.length == 0) {
-        document.removeEventListener("scroll", lazyload);
-        window.removeEventListener("resize", lazyload);
-        window.removeEventListener("orientationChange", lazyload);
-      }
-    }, 20);
-  }
-
-  document.addEventListener("scroll", lazyload);
-  window.addEventListener("resize", lazyload);
-  window.addEventListener("orientationChange", lazyload);
-});

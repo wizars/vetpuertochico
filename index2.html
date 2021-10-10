@@ -183,11 +183,23 @@
                 medicina eficaz accesible para la mayoría de los propietarios.
               </p>
             </div>
-            
+
             <!-- este sera el visro q se abra para mostrar las imagenes en grnade -->
             <div id="visor">
-              <span class="close">&times;</span>
-              <img id="foto_completa" />
+
+              <div class="barra_visor">
+                <span class=" material-icons boton_visor" id="visor_atras">chevron_left </span>
+                  
+                <span id="titulo_foto"></span>
+                <span class="material-icons boton_visor" id="visor_alante">chevron_right </span>
+
+              </div>
+
+              <div class="contenedor_foto">
+                <span class="close">&times;</span>
+                <img id="foto_completa" />
+              </div>
+
             </div>
 
             <!-- declaro todas las imagenes en miniatura, tmb cotiene la ruta de la imagen a tamaó real -->
