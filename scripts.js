@@ -173,3 +173,16 @@ function Visor(n) {
   document.querySelector('#foto_completa').src = foto_activa.dataset.src;
   document.querySelector('#titulo_foto').innerHTML = foto_activa.alt;
 }
+
+
+/* 
+-bocadillo para el icono de whatsapp
+  - replantear donde poner lo del whatsapp, quiza sacarlo del menu normla en modo movil tmb y q siempre sea flotante en la esquina de abajo con un bocadillo q se abre al principio o cuando hace hover sobre el icono de whatsapp
+-animaciones bien hechas cuando se abre el menu o alguna otra pollada
+- tema de las comillas de la frase en la clinica, en mi movil estaba mal dimensionado y quedan un poco cortadas por arriba las comillas, posicionar relativamente?
+
+-lazy loadin y optimizacion de las imagenes de carrusel
+-iconos de servicios
+- responsive en modo movil de los servicio y quiza algo distinto en modo tablet
+
+*/
