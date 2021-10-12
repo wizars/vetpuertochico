@@ -136,7 +136,7 @@ q {
   font-size: larger;
   font-weight: 800;
   line-height: 1;
-  font-style:italic;
+  font-style: italic;
 }
 
 /*******************************/
@@ -320,6 +320,8 @@ span.boton_slide {
 
 /* LA CLINICA */
 
+/* la galeria muestra todas las fotos en el cuerpo de la pagina en thumnail */
+
 .galeria {
   margin-top: 20px;
   display: flex;
@@ -331,7 +333,7 @@ span.boton_slide {
 .galeria img {
   margin: 4px;
   width: 80px;
-  transition: 0.5s;;
+  transition: 0.5s;
 }
 
 .galeria img:hover {
@@ -340,54 +342,115 @@ span.boton_slide {
   opacity: 0.6;
 }
 
+/* el visor se abre al clickear una foto y ocupa toda la pantalla */
 #visor {
   display: none;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
   position: fixed;
   z-index: 99;
-  padding-top: 100px;
   left: 0;
   top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* contiene el titulo de la foto y los botones*/
+.barra_visor {
+  display: flex;
+  width: 100%;
+  /* height: 60px; */
+  background-color: var(--azul);
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 15px;
+}
+
+#titulo_foto {
+  width: 100vw;
+  font-size: xx-large;
+  text-align: center;
+}
+
+/* botones para pasar de foto*/
+.boton_visor {
+  /* margin-top: -10px; */
+  color: white;
+  opacity: 80%;
+  cursor: pointer;
+  font-size: 40px !important;
+
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: top;
+  margin:5px 0 5px 0;
+}
+.boton_visor:focus,
+.boton_visor:hover {
+  color: var(--azul);
+  text-decoration: none;
+  background-color: white;
+}
+.boton_visor.atras {
+  left: 10px;
+}
+.boton_visor.alante {
+  right: 10px;
+}
+
+/* contenedor que nos ayuda a centrar la foto y sobretodo a detectar los clicks fuera de la barra_visor */
+.contenedor_foto {
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
-}
-#foto_completa {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-
+  overflow: hidden;
   animation-name: zoom;
   animation-duration: 0.6s;
-}
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  display: flex;
 }
 
-#visor .close {
+#foto_completa {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* animacion al abrir el visor */
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+ 
+/* boton para cerrar el visor */
+.contenedor_foto .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 60px;
+  right: 8px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  border-radius: 50%;
 }
-#visor .close:hover,
-#visor .close:focus {
-  color: #bbb;
+.contenedor_foto .close:hover,
+.contenedor_foto .close:focus {
+  color: var(--azul);
   text-decoration: none;
   cursor: pointer;
+  background-color: white;
 }
 
-@media only screen and (max-width: 700px){
-  .modal-content {
-      width: 100%;
-  }
-}
 
 
 /* SERVICIOS */
