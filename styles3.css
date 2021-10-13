@@ -1,27 +1,5 @@
 /*******************************/
 
-/* VARIABLES */
-
-/*******************************/
-
-:root {
-  --azul: red;
-  --gris: rgb(89, 89, 89);
-  --fuente: "PT Sans", Arial, Helvetica, sans-serif;
-}
-
-.oscuro {
-  background-color: var(--azul);
-  color: white;
-}
-
-.claro {
-  background-color: white;
-  color: var(--gris);
-}
-
-/*******************************/
-
 /* LAYOUT ESTRUCTURA PRINCIPAL */
 
 /*******************************/
@@ -41,20 +19,21 @@ html {
 /* contenedor para cada bloque, este define el fondo azul/blanco */
 .contenedor {
   min-height: 50px;
+  height: fit-content;
   width: 100%;
-  margin-top: 20px;
-  z-index: -100;
+  z-index: 0;
+  border-top: 5px var(--azul) solid;
+  background-color: white;
 }
-
 /* contenido de cada bloque, define los margenes tambien y el ensanchamiento max/min */
 .contenido {
   max-width: 1440px;
-  min-width: 280px;
+  min-width: 270px;
   width: 100%;
-  margin: 0 auto 0 auto;
-  border-top: 5px var(--azul) solid;
+  padding: 0px 5px 20px 5px;
+  /* border-top: 5px var(--azul) solid; */
+  z-index: 1;
 }
-
 
 /* contenedor para distribuir en dos columnas bloques de contenido, usado en planes, packs y empleados*/
 .bloque_doble {
@@ -75,10 +54,18 @@ html {
   border-width: 0px;
   border-radius: 20px;
   border-style: solid;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 270px;
+  max-width: 350px;
 }
 
+.ancla {
+  /* display: none; */
+  position: relative;
+  top: -90px;
+  left: 10px;
+  width: 0;
+  height: 0;
+}
 /*******************************/
 
 /* TEXTO */
@@ -186,13 +173,11 @@ section header {
 
 /*******************************/
 
-.contenedor:nth-of-type(2) {
-  /* Eliminamos margen pq no tiene titulo este contenedor*/
-  margin-top: 0;
 
-}
 .contenido.sld {
+  padding-bottom: 0;
   border-top: 0;
+  border-bottom: 0;
   position: relative;
 }
 .slide {
@@ -202,7 +187,6 @@ section header {
   align-items: center;
   width: 100%;
   max-height: 70vh;
-  z-index: -1;
 }
 
 .slide img {
@@ -466,16 +450,19 @@ span.boton_slide {
   background-color: white;
 }
 
-/* SERVICIOS */
+
+
+
+/* SERVICIOS PARA MOVIL*/
+
 
 .servicios dl {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   width: fit-content;
-  margin: auto  auto;
+  margin: auto auto;
   padding: 0 10px;
   min-width: 250px;
   max-width: 500px;
@@ -497,7 +484,6 @@ span.boton_slide {
   margin: 0 50px;
   width: 100%;
   flex: 999 1 20px;
-  
 
   border-color: white;
   border-width: 2px 2px 0 2px;
@@ -516,11 +502,6 @@ span.boton_slide {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.bloque_servicio img {
-  /* width: 60px;
-  border-radius: 40%; */
-  display: none;
-}
 
 .bloque_servicio h3 {
   font-size: larger;
@@ -528,15 +509,14 @@ span.boton_slide {
   color: var(--azul);
   text-transform: capitalize;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 /* cuando se despliega el conteido */
 .bloque_servicio.abierto dd {
   height: initial;
   padding: 10px;
-
   /* transition: height 2s; */
-  /* display: block; */
 }
 
 .bloque_servicio.abierto span::before {
@@ -551,4 +531,430 @@ span.boton_slide {
   font-weight: bold;
   position: relative;
   top: 4px;
+}
+
+/* creamos los iconos de los servicios */
+.icono_servicio {
+  display: none;
+  width: 60px;
+  filter: brightness(100);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}
+
+/* cargamos cada icono de servicio y lo ajustamos en su posicion */
+#icono_servicio_1 {
+  background-image: url("imagenes/servicios/medicina_general.png");
+  background-size: 28px;
+}
+#icono_servicio_2 {
+  background-image: url("imagenes/servicios/medicina_preventiva.png");
+  background-size: 28px;
+}
+#icono_servicio_3 {
+  background-image: url("imagenes/servicios/diagnostico_imagen.png");
+  background-size: 28px;
+}
+#icono_servicio_4 {
+  background-image: url("imagenes/servicios/analisis.png");
+  background-size: 28px;
+  background-position-x: 18px;
+  background-position-y: 10px;
+}
+#icono_servicio_5 {
+  background-image: url("imagenes/servicios/cirugia.png");
+  background-size: 28px;
+}
+#icono_servicio_6 {
+  background-image: url("imagenes/servicios/hospi.png");
+  background-size: 28px;
+
+  background-position-x: 16px;
+  background-position-y: 13px;
+}
+#icono_servicio_7 {
+  background-image: url("imagenes/servicios/odonto.png");
+  background-size: 28px;
+}
+#icono_servicio_8 {
+  background-image: url("imagenes/servicios/gato.png");
+  background-size: 28px;
+  background-position-y: 12px;
+  background-position-x: 18px;
+}
+#icono_servicio_9 {
+  background-image: url("imagenes/servicios/nutricion.png");
+  background-size: 28px;
+  background-position-y: 12px;
+}
+#icono_servicio_10 {
+  background-image: url("imagenes/servicios/tienda.png");
+  background-size: 28px;
+}
+
+
+/* SERVICIOS PARA TABLETS */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .servicios dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    /* background-color: red; */
+    max-width: 100%;
+    min-width: 700px;
+  }
+  .servicios dd {
+    /* display: none; */
+    background-color: var(--azul);
+    height: initial;
+    overflow-y: hidden;
+    transition: 0.7s;
+    text-align: center;
+    padding: 0;
+  }
+  .bloque_servicio img {
+    display: block;
+  }
+  .bloque_servicio.bloque_servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    max-width: 250px;
+    flex: 999 0 250px;
+    margin: 10px;
+    height: initial;
+    /*  */
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+    /* border:1px black solid; */
+  }
+
+  .bloque_servicio h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 15px 0;
+    /* font-size: 18px; */
+  }
+
+  .bloque_servicio span {
+    display: none;
+  }
+}
+
+/* SERVICIOS PARA DESKTOP */
+@media only screen and (min-width: 1025px) {
+  /* contiene la lista de los bloques de servicios */
+  .servicios dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    /* background-color: red; */
+    max-width: 100%;
+    min-width: 700px;
+  }
+
+  /* estilo de cada bloque completo */
+  .bloque_servicio.bloque_servicio {
+    display: grid;
+    grid-template-rows: 40px auto;
+    grid-template-areas: "logo  titulo" "logo texto";
+    align-items: start;
+    /*  */
+    min-width: 370px;
+    max-width: 370px;
+    margin: 10px;
+    height: 205px;
+    min-height: 160px;
+    /*  */
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--azul);
+    border: 2px white solid;
+  }
+
+/* contenedor del icono de servicio */
+  .cont_icono {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 60px;
+    background-color: white;
+    margin: 0 auto;
+    grid-area: logo;
+  }
+
+  /* desactiva el filtro q cambia de color */
+  .icono_servicio {
+    filter: none;
+  }
+
+  /* logo del servicio */
+  .bloque_servicio img {
+    display: block;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    /* border: 2px solid white; */
+    border: 0;
+    object-fit: contain;
+    overflow: hidden;
+  }
+  /* titulos */
+  .bloque_servicio h3 {
+    grid-area: titulo;
+    padding: 10px 0;
+    margin: 0 auto;
+    min-width: 150px;
+    /*  */
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: initial;
+    border-bottom: 1px white solid;
+    width: fit-content;
+  }
+
+  /* texto de la descripcion */
+  .bloque_servicio.bloque_servicio dd {
+    grid-area: texto;
+    grid-template-rows: auto;
+    background-color: transparent;
+    height: auto;
+    padding: 10px;
+    /*  */
+    color: white;
+    transition: 0.7s;
+    text-align: left;
+  }
+
+  /* oculta el marcador del menu acordeon*/
+  .bloque_servicio span {
+    display: none;
+  }
+}
+
+
+/* PLANES y PACKS*/
+
+.bloque.packoplan img {
+  border-radius: 10px;
+  width: 90%;
+}
+
+.bloque.bloque.packoplan dl {
+  padding: 10px 20px;
+  list-style: none;
+  border: var(--azul) 5px solid;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.bloque.bloque.packoplan dt {
+  font-weight: bold;
+}
+
+.bloque.bloque.packoplan dd {
+  font-size: small;
+  /* padding-inline-start: 2em; */
+}
+.bloque.bloque.packoplan i {
+  color: var(--azul);
+}
+.bloque.bloque.bloque.packoplan h3{
+font-size: x-large;
+font-weight: bolder;
+padding-top: 15px;;
+}
+.bloque.bloque.bloque.packoplan h4{
+  font-size: x-large;
+  font-weight: bolder;
+  padding: 10px 0 ;
+}
+
+
+
+
+/* EQUIPO */
+
+.bloque.empleado img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.bloque.empleado p {
+  text-align: justify;
+}
+
+.bloque.empleado {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  /* margin: 20px; */
+  padding: 0 20px 20px 20px ;
+  align-content: center;
+  border-radius: 20px;
+}
+
+.bloque.empleado ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin: 15px 0;
+}
+
+.empleado li {
+  padding-bottom: 10px;
+}
+
+.empleado h2 {
+  margin: 0.5em;
+  font-size: x-large;
+}
+
+
+
+
+
+/* CONTACTO */
+
+.bloque.contacto {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-template-rows: auto;
+  grid-template-areas: " direcc direcc" "horario horario" "email email" "facebook facebook" "cita cita";
+  /* width: 40%; */
+  min-width: 300px;
+  max-width: 350px;
+  font-size: larger;
+  row-gap: 0.5em;
+  flex: 1 0 auto;
+}
+
+#mapa {
+  flex: 1 0 auto;
+  margin: 20px;
+  align-self: center;
+  min-width: 300px;
+  max-width: 350px;
+  min-height: 300px;
+  /* width: 40%; */
+}
+
+address {
+  grid-area: direcc;
+  text-align: center;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+table {
+  grid-area: horario;
+  justify-self: center;
+  border: rgb(255, 255, 255) 4px solid;
+  border-radius: 10px;
+  min-width: 300px;
+  margin: 0 20px 10px 20px;
+  padding: 10px;
+  border-collapse: initial;
+  border-spacing: initial;
+}
+
+.bloque.contacto td {
+  vertical-align: top;
+  padding-top: 15px;
+}
+
+.bloque.contacto td:last-child {
+  text-align: right;
+}
+
+#email {
+  grid-area: email;
+  text-align: center;
+}
+
+#cita {
+  grid-area: cita;
+  text-align: center;
+  padding-left: 10px;
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--azul);
+  background-color: white;
+  padding: 5px 0;
+  border-radius: 10px;
+  min-width: 300px;
+  justify-self: center;
+}
+
+#facebook {
+  grid-area: facebook;
+  text-align: center;
+}
+.contacto a,.contacto a:visited {
+  color: white;
+  text-decoration-line: none;
+}
+
+
+#cita .icono, #cita a {
+  color: var(--azul);
+}
+
+
+.icono {
+
+  color: white;
+  vertical-align: middle;
+  padding-right: 8px;
+}
+
+/* FOOTER */
+
+#copyright {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************/
+
+/* VARIABLES */
+
+/*******************************/
+
+:root {
+  --azul: #1e73be;
+  --gris: rgb(89, 89, 89);
+  --fuente: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+.oscuro {
+  background-color: var(--azul);
+  color: white;
+}
+
+.claro {
+  background-color: white;
+  color: var(--gris);
 }

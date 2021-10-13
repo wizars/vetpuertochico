@@ -712,3 +712,115 @@ address {
     justify-content: flex-end;
   }
 }
+
+#sec_contacto .contenido {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: stretch;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 20px;
+  row-gap: 20px;
+
+}
+
+.bloque_contacto {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-template-rows: auto;
+  grid-template-areas: " direcc direcc" "horario horario" "email email" "facebook facebook" "cita cita";
+  width: 40%;
+  min-width: 300px;
+  font-size: larger;
+}
+
+#mapa {
+  min-width: 300px;
+  min-height: 300px;
+  width: 40%;
+}
+
+address {
+  grid-area: direcc;
+  text-align: center;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.bloque_contacto table {
+  grid-area: horario;
+  justify-self: center;
+  border: white 4px solid;
+  border-radius: 10px;
+  width: 325px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.bloque_contacto td {
+  vertical-align: top;
+  padding-top: 15px
+}
+
+.bloque_contacto td:last-child {
+  text-align: right;
+}
+
+#email {
+  grid-area: email;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#cita {
+  grid-area: cita;
+  text-align: center;
+  padding-left: 10px;
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--azul);
+  background-color: white;
+  padding: 5px 0;
+  border-radius: 10px;
+  width: 350px;
+  justify-self: center;
+  margin-bottom: 20px;
+}
+
+#facebook {
+  grid-area: facebook;
+  text-align: center;
+}
+
+#sec_contacto a {
+  color: white;
+  text-decoration-line: none;
+}
+
+#sec_contacto a:visited {
+  color: white;
+  text-decoration-line: none;
+}
+
+#cita .icono {
+  font-size: larger;
+  color: var(--azul);
+}
+
+#cita a {
+  color: var(--azul);
+}
+
+.icono {
+  color: white;
+  vertical-align: middle;
+  padding-right: 8px;
+}
+
+
+/* FOOTER */
+
+#copyright {
+  text-align: center;
+}

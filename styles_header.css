@@ -3,12 +3,25 @@
 /*         CABECERA            */
 
 /*******************************/
+.contenedor:first-of-type{
+  position: sticky;
+  top: 0;  
+  z-index: 999;
+  margin-top:0 ;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px var(--azul) solid;
+  border-top: 0;
+
+}
+.contenedor:nth-of-type(2){
+  border-top: 0
+}
 
 /* contenedor principal del la cabecera y el menu*/
 .cabecera {
-  border-bottom: 5px var(--azul) solid;
-  top: 0px;
-  background-color: white;
+  width: 100%;
+  background-color: white; 
 }
 
 /* contenedor del la cabecera, osea logo y boton */
@@ -17,14 +30,12 @@
   justify-content: space-between;
   width: 100%;
 }
+
 nav.contenido {
   border-top: 0;
-  margin: 0 auto;
-  position: sticky;
-  max-height: 100px;
-  top: 0;
-  left: 0;
-  z-index: 10;
+  max-height: 80px;
+  padding-bottom: 0;
+
 }
 /* logo */
 .logotipo {
@@ -99,21 +110,22 @@ nav a:visited {
 
 /* CABECERA PARA TABLETS */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
   .menu {
     max-height: auto;
     height: 100%;
-    max-width: 0;
+    max-width: 250px;
     width: 100%;
     left: 0;
-    /* overflow-x: hidden; */
     transition: max-width 0.8s;
     background-color: var(--azul);
     border-right: 2px white solid;
-    background: transparent;
-    background: linear-gradient(
+    background-color: var(azul);
+    /* background: transparent; */
+    /* background: linear-gradient(
       90deg,
       rgba(30, 115, 190, 1) 0%,
-      transparent 100%
+      transparent 100% */
     );
   }
   nav.ul {
@@ -144,11 +156,14 @@ nav a:visited {
 }
 /* CABECERA DESKTOP */
 @media only screen and (min-width: 1025px) {
+  
   /* cabecera */
+
   .cabecera {
     display: flex;
     position: static;
     justify-content: space-between;
+    border-bottom: 0
   }
   .cab {
     width: fit-content;
@@ -163,7 +178,7 @@ nav a:visited {
   /* logo */
   .logotipo {
     object-fit: contain;
-    max-height: 100px;
+    max-height: 80px;
     max-width: 90%;
   }
 
@@ -171,12 +186,13 @@ nav a:visited {
   .menu {
     position: static;
     overflow-y: visible;
-    width: 100%;
+    width: auto;
     max-height: fit-content;
     max-width: fit-content;
     margin: auto 0 auto 0;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
   .lista_menu {
     display: flex;
