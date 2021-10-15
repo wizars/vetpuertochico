@@ -135,7 +135,7 @@ for (i = 0; i < accordion.length; i++) {
 
 
 /*******************************/
-/*         VISOR            */
+/*           VISOR             */
 /*******************************/
 
 //añadimos los eventos de click a las imagenes
@@ -145,10 +145,10 @@ var indice_visor = 1;
 
 // evento para cerrar el visor al hace click en la foto o su marco
 document.querySelector('.contenedor_foto').addEventListener('click', function () {
-   visor.style.display = 'none' ;
-   document.querySelector('body').style.overflow='initial';
+  visor.style.display = 'none';
+  document.querySelector('body').style.overflow = 'initial';
 
-  })
+})
 
 // eventos para los botones de pasar foto
 document.querySelector('#visor_alante').addEventListener('click', () => { Visor(1) })
@@ -160,7 +160,7 @@ for (i = 0; i < galeria.length; i++) {
     document.querySelector('#foto_completa').src = this.dataset.src
     visor.style.display = 'flex'
     document.querySelector('#titulo_foto').innerHTML = this.alt;
-    document.querySelector('body').style.overflow='hidden';
+    document.querySelector('body').style.overflow = 'hidden';
   })
 }
 
@@ -173,4 +173,22 @@ function Visor(n) {
   document.querySelector('#foto_completa').src = foto_activa.dataset.src;
   document.querySelector('#titulo_foto').innerHTML = foto_activa.alt;
 }
+
+
+
+/*******************************/
+/*     BURBUJA WHATSAPP        */
+/*******************************/
+var boton = document.getElementById("boton_whatsapp");
+var burbuja = document.getElementById("burbuja_whatsapp");
+
+boton.addEventListener('mouseover', () => {
+  burbuja.style.animationName = "expand-bounce";
+  burbuja.style.animationDuration = "0.25s"
+});
+boton.addEventListener('mouseout', () => {
+  burbuja.style.animationName = "shrink";
+  burbuja.style.animationDuration = "0.1s";
+});
+
 

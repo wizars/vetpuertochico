@@ -9,13 +9,13 @@
     <meta name="description" content="Clinica veterinaria Puertochico" />
     <title>Clinica veterinaria Puertochico</title>
     <link rel="icon" href="imagenes/marca/icono.png" type="image/x-icon" />
-    <meta name="theme-color" content="#ff6600" />
+    <meta name="theme-color" content="#1e73be" />
 
     <!-- HOJAS DE ESTILO CSS -->
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="fondos2.css" />
     <link rel="stylesheet" href="styles3.css" />
     <link rel="stylesheet" href="styles_header.css" />
+    <link rel="stylesheet" href="style_whatsapp.css" />
 
     <!-- IMPORTACION ICONOS GOOGLE -->
     <link
@@ -32,6 +32,14 @@
       <!-- MENU SUPERIOR -->
       <div class="contenedor">
         <nav class="contenido">
+          <a
+            id="boton_whatsapp"
+            href="https://wa.me/0034650098245/?text=Hola%20"
+          >
+            <i class="material-icons"> whatsapp</i>
+            <div id="burbuja_whatsapp">Hablamos?</div>
+          </a>
+
           <div class="cabecera">
             <div class="cab">
               <img
@@ -39,20 +47,12 @@
                 src="imagenes/marca/cabecera.png"
                 alt="Logotipo Clínica Veterinaria Puertochico"
               />
-
               <span class="material-icons boton_menu"> menu </span>
             </div>
 
-            <!-- <div class="menu"> -->
             <div class="menu" id="menu">
               <!-- elementos del menu -->
               <ul class="lista_menu">
-                <li class="whatsapp">
-                  <a href="https://wa.me/0034650098245/?text=Hola%20"
-                    ><span class="txtwhatsapp"> Escribenos </span>
-                    <img src="imagenes/otros/WhatsApp_Logo.png" />
-                  </a>
-                </li>
                 <li>
                   <a href="#sec_laclinica" onclick="Cerrar()">LA CLINICA</a>
                 </li>
@@ -212,74 +212,87 @@
                 src="imagenes/clinica/miniaturas/foto_1-150x150.jpg"
                 data-src="imagenes/clinica/foto_1.jpg"
                 alt="Recepción"
+                class="sombra"
               />
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_2-150x150.jpg"
                 data-src="imagenes/clinica/foto_2.jpg"
                 alt="Escaparate"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_3-150x150.jpg"
                 data-src="imagenes/clinica/foto_3.jpg"
                 alt="Vista exterior"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_4-150x150.jpg"
                 data-src="imagenes/clinica/foto_4.jpg"
                 alt="Consulta"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_5-150x150.jpg"
                 data-src="imagenes/clinica/foto_5.jpg"
                 alt="Recepción"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_6-150x150.jpg"
                 data-src="imagenes/clinica/foto_6.jpg"
                 alt="Sala de Rayos X"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_7-150x150.jpg"
                 data-src="imagenes/clinica/foto_7.jpg"
                 alt="Laboratorio"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_8-150x150.jpg"
                 data-src="imagenes/clinica/foto_8.jpg"
                 alt="Laboratorio"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_9-150x150.jpg"
                 data-src="imagenes/clinica/foto_9.jpg"
                 alt="Sala de hospitalización"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_10-150x150.jpg"
                 data-src="imagenes/clinica/foto_10.jpg"
                 alt="Quirofano"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_11-150x150.jpg"
                 data-src="imagenes/clinica/foto_11.jpg"
                 alt="Juguetes"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_12-150x150.jpg"
                 data-src="imagenes/clinica/foto_12.jpg"
                 alt="Juguetes y acceorios"
               />
 
               <img
+                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_13-150x150.jpg"
                 data-src="imagenes/clinica/foto_13.jpg"
                 alt="Alimentación"
@@ -584,7 +597,7 @@
             </div>
 
             <div class="bloque_doble">
-              <div class="bloque packoplan oscuro">
+              <div class="bloque packoplan oscuro sombra">
                 <h3>Plan de Salud Perro</h3>
 
                 <img
@@ -593,7 +606,7 @@
                   width="200px"
                 />
 
-                <dl class="claro">
+                <dl class="claro sombra">
                   <dt>
                     <i class="paw material-icons">pets</i>CONSULTAS ILIMITADAS
                   </dt>
@@ -639,7 +652,7 @@
                 <h4>Plan Perro: 249€/año</h4>
               </div>
 
-              <div class="bloque packoplan oscuro">
+              <div class="bloque packoplan oscuro sombra">
                 <h3>Plan de Salud Gato</h3>
 
                 <img
@@ -648,7 +661,8 @@
                   width="200px"
                 />
 
-                <dl class="claro">
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+                <dl class="claro sombra">
                   <dt>
                     <i class="paw material-icons">pets</i>CONSULTAS ILIMITADAS
                   </dt>
@@ -741,7 +755,7 @@
             </div>
 
             <div class="bloque_doble">
-              <div class="bloque packoplan claro">
+              <div class="bloque packoplan claro sombra">
                 <h3>Pack Cachorro</h3>
 
                 <img
@@ -749,7 +763,7 @@
                   alt="Pack Cachorro"
                 />
 
-                <dl>
+                <dl class="sombra">
                   <dt>
                     <i class="paw material-icons">pets</i>Primera revisión
                   </dt>
@@ -791,7 +805,7 @@
                 <h4>Pack Cachorro: 189€</h4>
               </div>
 
-              <div class="bloque packoplan claro">
+              <div class="bloque packoplan claro sombra">
                 <h3>Pack Gatito</h3>
 
                 <img
@@ -799,7 +813,7 @@
                   alt="Pack Gatito"
                 />
 
-                <dl>
+                <dl class="sombra">
                   <dt>
                     <i class="paw material-icons">pets</i>Primera revisión
                   </dt>
@@ -824,11 +838,11 @@
                   </dt>
                   <dd>Tres desparasitaciones de cachorro</dd>
 
-                  <dt>
-                    <i class="paw material-icons">pets</i>Test FelV/FiV
-                    (Leucemia/<wbr />Inmundeficiencia felina)
-                  </dt>
-                  <dd>Comprobamos que no padece estas graves enfermedades</dd>
+                  <dt><i class="paw material-icons">pets</i>Test FelV/FiV</dt>
+                  <dd>
+                    Comprobamos que no padece Leucemia o Inmundeficiencia, dos
+                    graves enfermedades
+                  </dd>
 
                   <dt>
                     <i class="paw material-icons">pets</i>Identificación y
@@ -873,15 +887,13 @@
             </div>
 
             <div class="bloque_doble">
-              <div class="bloque empleado oscuro">
+              <div class="bloque empleado oscuro sombra" id="empleado_raquel">
                 <figure>
                   <figcaption>
                     <h2>Raquel</h2>
                   </figcaption>
-                  <img
-                    src="imagenes/personal/raquel_peq.jpg"
-                    alt="Raquel Hernandez"
-                  />
+                
+                  <div class="foto_empleado"></div>
                 </figure>
 
                 <div>
@@ -916,16 +928,12 @@
                 </div>
               </div>
 
-              <div class="bloque empleado oscuro">
+              <div class="bloque empleado oscuro sombra" id="empleado_alvaro">
                 <figure>
                   <figcaption>
                     <h2>Alvaro</h2>
                   </figcaption>
-                  <img
-                    id="foto_empleado"
-                    src="imagenes/personal/alvaro_peq.jpg"
-                    alt="Alvaro Gonzalo"
-                  />
+                  <div class="foto_empleado"></div>
                 </figure>
 
                 <div>
@@ -962,6 +970,7 @@
             <div class="bloque_doble contacto">
               <iframe
                 id="mapa"
+                class="sombra"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1447.9040279834683!2d-3.796733605986577!3d43.464604297814454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd494bb18caeb8a7%3A0x8f50fdfe88a3ec19!2sCl%C3%ADnica%20Veterinaria%20Puertochico!5e0!3m2!1ses!2ses!4v1629903417188!5m2!1ses!2ses"
                 style="border: 0"
                 allowfullscreen=""
@@ -972,7 +981,7 @@
                   <i class="icono material-icons">location_on</i>Calle Andrés
                   del Río 7 bajo, 39004 Santander
                 </address>
-                <table class="horario">
+                <table class="horario sombra">
                   <tbody>
                     <tr>
                       <th colspan="2">Horario de apertura</th>
@@ -1006,7 +1015,7 @@
                   >
                 </div>
 
-                <div id="cita">
+                <div id="cita" class="sombra">
                   <a href="tel:942050709"
                     ><i class="icono material-icons">phone</i>942 05 07 09 Cita
                     previa</a

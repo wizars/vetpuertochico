@@ -1,3 +1,8 @@
+
+
+/* Importacion de estilos para el boton de whatsapp */
+/* @import "style_whatsapp.css";  */
+
 /*******************************/
 
 /* LAYOUT ESTRUCTURA PRINCIPAL */
@@ -27,7 +32,7 @@ html {
 }
 /* contenido de cada bloque, define los margenes tambien y el ensanchamiento max/min */
 .contenido {
-  max-width: 1440px;
+  max-width: 810px;
   min-width: 270px;
   width: 100%;
   padding: 0px 5px 20px 5px;
@@ -101,10 +106,6 @@ figcaption {
   font-size: large;
 }
 
-.paw {
-  transform: rotate(45deg);
-  padding-right: 6px;
-}
 
 q {
   font-weight: bolder;
@@ -119,6 +120,7 @@ q {
   line-height: 0;
   bottom: -43px;
   right: 0px;
+  
 }
 .cita {
   position: relative;
@@ -313,11 +315,9 @@ span.boton_slide {
 
 /*******************************/
 
-/* SECCIONES  */
+/*   LA CLINICA   -   MOVIL    */
 
 /*******************************/
-
-/* LA CLINICA */
 
 /* la galeria muestra todas las fotos en el cuerpo de la pagina en thumnail */
 
@@ -348,9 +348,9 @@ span.boton_slide {
   flex-wrap: nowrap;
   flex-direction: column;
   position: fixed;
-  z-index: 99;
+  z-index: 9999;
   left: 0;
-  top: 0;
+  top:0px;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -452,8 +452,12 @@ span.boton_slide {
 
 
 
+/*******************************/
 
-/* SERVICIOS PARA MOVIL*/
+/*    SERVICIOS   -    MOVIL   */
+
+/*******************************/
+
 
 
 .servicios dl {
@@ -551,10 +555,14 @@ span.boton_slide {
 #icono_servicio_2 {
   background-image: url("imagenes/servicios/medicina_preventiva.png");
   background-size: 28px;
+  background-position-x: 18px;
+  background-position-y: 12px;
 }
 #icono_servicio_3 {
   background-image: url("imagenes/servicios/diagnostico_imagen.png");
   background-size: 28px;
+  background-position-x: 18px;
+  background-position-y: 12px;
 }
 #icono_servicio_4 {
   background-image: url("imagenes/servicios/analisis.png");
@@ -565,6 +573,8 @@ span.boton_slide {
 #icono_servicio_5 {
   background-image: url("imagenes/servicios/cirugia.png");
   background-size: 28px;
+  background-position-x: 18px;
+  background-position-y: 15px;
 }
 #icono_servicio_6 {
   background-image: url("imagenes/servicios/hospi.png");
@@ -594,7 +604,12 @@ span.boton_slide {
 }
 
 
-/* SERVICIOS PARA TABLETS */
+
+/*******************************/
+
+/*   SERVICIOS   -   TABLETS   */
+
+/*******************************/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .servicios dl {
     display: flex;
@@ -648,7 +663,11 @@ span.boton_slide {
   }
 }
 
-/* SERVICIOS PARA DESKTOP */
+/*******************************/
+
+/*   SERVICIOS   -   DESKTOP   */
+
+/*******************************/
 @media only screen and (min-width: 1025px) {
   /* contiene la lista de los bloques de servicios */
   .servicios dl {
@@ -680,6 +699,8 @@ span.boton_slide {
     border: 0;
     background-color: var(--azul);
     border: 2px white solid;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+
   }
 
 /* contenedor del icono de servicio */
@@ -743,8 +764,11 @@ span.boton_slide {
   }
 }
 
+/*******************************/
 
-/* PLANES y PACKS*/
+/*  PLANES Y PACKS  -  MOVIL   */
+
+/*******************************/
 
 .bloque.packoplan img {
   border-radius: 10px;
@@ -752,7 +776,7 @@ span.boton_slide {
 }
 
 .bloque.bloque.packoplan dl {
-  padding: 10px 20px;
+  padding: 5px 4px;
   list-style: none;
   border: var(--azul) 5px solid;
   border-radius: 10px;
@@ -763,14 +787,18 @@ span.boton_slide {
 
 .bloque.bloque.packoplan dt {
   font-weight: bold;
+  margin: 5px 0 0px 0;
 }
 
 .bloque.bloque.packoplan dd {
   font-size: small;
-  /* padding-inline-start: 2em; */
+  padding-inline-start: 18px;
 }
-.bloque.bloque.packoplan i {
+.packoplan .paw  {
   color: var(--azul);
+  font-size: 16px;
+  padding-right: 2px;
+
 }
 .bloque.bloque.bloque.packoplan h3{
 font-size: x-large;
@@ -783,14 +811,23 @@ padding-top: 15px;;
   padding: 10px 0 ;
 }
 
+.bloque_doble h4{
+  margin: 10px;
+}
 
 
+/*******************************/
 
-/* EQUIPO */
+/*    EQUIPO     -     MOVIL   */
+
+/*******************************/
+
 
 .bloque.empleado img {
   border-radius: 20px;
   width: 100%;
+  border-radius:50%;
+
 }
 
 .bloque.empleado p {
@@ -800,7 +837,6 @@ padding-top: 15px;;
 .bloque.empleado {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
   /* margin: 20px; */
   padding: 0 20px 20px 20px ;
   align-content: center;
@@ -821,12 +857,41 @@ padding-top: 15px;;
   margin: 0.5em;
   font-size: x-large;
 }
+.empleado .paw{
+  /* transform: rotate(45deg); */
+  font-size: 16px;
+  padding-right: 2px;
+
+}
 
 
 
+.foto_empleado{
+  width: 220px;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 5%;
+  background-repeat: no-repeat;
+  background-size: 220px auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
 
+#empleado_raquel .foto_empleado{
+  background-image: url("imagenes/personal/raquel.jpg");
+  background-position-y: -25px;
+}
 
-/* CONTACTO */
+#empleado_alvaro .foto_empleado{
+  background-image: url("imagenes/personal/alvaro_peq.jpg");
+    background-position-y: -10px;
+}
+
+/*******************************/
+
+/*   CONTACTO    -     MOVIL   */
+
+/*******************************/
+
 
 .bloque.contacto {
   display: grid;
@@ -920,7 +985,13 @@ table {
   padding-right: 8px;
 }
 
-/* FOOTER */
+
+/*******************************/
+
+/*    FOOTER     -     MOVIL   */
+
+/*******************************/
+
 
 #copyright {
   text-align: center;
@@ -947,6 +1018,7 @@ table {
   --azul: #1e73be;
   --gris: rgb(89, 89, 89);
   --fuente: "PT Sans", Arial, Helvetica, sans-serif;
+  --burbuja:#25d366
 }
 
 .oscuro {
@@ -957,4 +1029,8 @@ table {
 .claro {
   background-color: white;
   color: var(--gris);
+}
+.sombra{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+
 }
