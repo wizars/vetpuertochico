@@ -1,573 +1,1042 @@
-/* 
-- media queries
-    - diseño para moviles  
-- fuentes
-- formateo y tamaño de las imagenes
--SEO
-    - metadatos html
-    - movidas del tiempo de carga LCP
-sugerencias iris
-                                    X -etiqueta header para secciones en vez de div
-                                    X cambio por completoprecios en vez h3 lista 
-                                    X girar patas 45º 
-                                    X mayusculas en los titulos con css
-                                    X etiqueta time y date
-                                    X - horario como tabla
-                                    X etiqueta telefono llamar
-                                    X - bloques servicios como lista definicioens
-- longitud linea max 90caracteres
-*/
 
 
+/* Importacion de estilos para el boton de whatsapp */
+@import "reset.css";
+@import "style_whatsapp.css"; 
+@import "style_header.css";
 /*******************************/
-
-
-/* COLORES Y VARIABLES */
-
-
-/*******************************/
-
-:root {
-    --azul: #1e73be;
-    --gris: rgb(89, 89, 89);
-}
-
-.color_claro {
-    background-color: white;
-    color: var(--gris);
-}
-
-.color_oscuro {
-    background-color: var(--azul);
-    color: white;
-}
-
-.paw {
-    transform: rotate(45deg);
-    padding-right: 6px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-/*******************************/
-
 
 /* LAYOUT ESTRUCTURA PRINCIPAL */
 
-
 /*******************************/
 
-* {
-    box-sizing: border-box;
+/* Contiene todo el cuerpo */
+body > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
-
-/* Formato general para todo el documento */
-
-
-body>div{
-      display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: auto;
-    max-width: 1400px;
-    min-width: 400px;
-    width: 100vw;
-    align-items: stretch;
-   /* background-color: red; */
-   border:5px green solid;
+html {
+  scroll-behavior: smooth;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    border-top: 5px var(--azul) solid;
-    padding-bottom: 50px;
+/* contenedor para cada bloque, este define el fondo azul/blanco */
+.contenedor {
+  min-height: 50px;
+  height: fit-content;
+  width: 100%;
+  z-index: 0;
+  border-top: 5px var(--azul) solid;
+  background-color: white;
+}
+/* contenido de cada bloque, define los margenes tambien y el ensanchamiento max/min */
+.contenido {
+  max-width: 810px;
+  min-width: 270px;
+  width: 100%;
+  padding: 0px 5px 20px 5px;
+  margin: 0 auto;
+  z-index: 1;
 }
 
+/* contenedor para distribuir en dos columnas bloques de contenido, usado en planes, packs y empleados*/
 .bloque_doble {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-.bloque{
-    min-width: 350px;
-}
-.empleado {
-    width: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 30px;
 }
 
-dt,
-dd {
-    margin: 0;
-    ;
+.bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border-width: 0px;
+  border-radius: 20px;
+  border-style: solid;
+  min-width: 270px;
+  max-width: 350px;
 }
 
-dl {
-    list-style: none;
+.ancla {
+  /* display: none; */
+  position: relative;
+  top: -90px;
+  left: 10px;
+  width: 0;
+  height: 0;
 }
-
-
 /*******************************/
-
 
 /* TEXTO */
-
 
 /*******************************/
 
 body {
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: var(--fuente);
+  color: var(--gris);
 }
 
 .texto_seccion {
-    text-align: justify;
-    font-family: Arial, Helvetica, sans-serif, sans;
-    text-align: center;
+  text-align: justify;
+  text-align: justify;
+  margin: 0 5px;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
 }
 
 .condiciones {
-    margin-top: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.bloque.empleado>p {
-    text-align: right;
+figcaption {
+  margin-top: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+q {
+  font-weight: bolder;
+  font-size: larger;
+}
+.cita::after {
+  position: absolute;
+  content: "”";
+  color: var(--azul);
+  opacity: 0.5;
+  font-size: 10rem;
+  line-height: 0;
+  bottom: -43px;
+  right: 0px;
+  
+}
+.cita {
+  position: relative;
+  font-weight: 800;
+  padding: 15px 0;
+  width: 100%;
+  max-width: 90%;
+  z-index: 1;
+  margin: 0px auto 50px auto;
+  border-top: var(--azul) solid 1px;
+  border-bottom: var(--azul) solid 1px;
+  align-self: center;
+}
+.cita h2 {
+  position: relative;
+  font-size: larger;
+  font-weight: 800;
+  line-height: 1;
+  font-style: italic;
 }
 
 
 /*******************************/
 
-
 /* TITULOS */
-
 
 /*******************************/
 
 section header {
-    position: relative;
-    z-index: 99;
-    top: -53px;
-    /*  */
-    padding: 2px 10px;
-    margin-top: 25px;
-    margin-bottom: -50px;
-    margin-right: auto;
-    margin-left: auto;
-    width: fit-content;
-    /*  */
-    border: 5px solid var(--azul);
-    border-radius: 25px;
-    /*  */
-    text-align: center;
-    font-size: 34px;
-    font-weight: bold;
-    color: var(--azul);
-    background-color: white;
-    text-transform: uppercase;
+  z-index: 2;
+  position: relative;
+  height: 37px;
+  top: -20px;
+  padding: 4px 10px;
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+  /*   */
+  border: 5px solid var(--azul);
+  border-radius: 25px;
+  /*  */
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  color: var(--azul);
+  background-color: white;
+  text-transform: uppercase;
 }
-
 
 /*******************************/
-
-
-/*       MENU SUPERIOR         */
-
-
-/*******************************/
-
-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* align-items: stretch; */
-    /* height: auto; */
-    margin-top: 20px;
-    /* min-width: 80vw; */
-    /* width: 100%; */
-    /* overflow:hidden; */
-
-}
-
-nav img {
-    flex-basis: 200px;
-    flex-grow: 1;
-    flex-shrink: 1;
-
-    max-height: 100px;
-
-    object-fit: contain;
-    /* border: red 2px solid; */
-}
-nav ul {
-    flex-basis: 30%;
-    flex-grow: 9999;
-    flex-shrink: 0;
-    min-width: fit-content;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    align-items: center;
-    justify-content: center;
-
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    /* background-color: rgb(245, 245, 94); */
-}
-
-nav .separador {
-    flex-basis: 1%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    
-    /* background-color: rgb(241, 10, 10); */
-}
-
-
-nav a {
-    display: block;
-    padding: 5px 10px;
-    color: #1e73be !important;
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    border-bottom: 4px solid #1e73be !important;
-    transition: 0.5s ease;
-}
-
-nav a:visited {
-    text-decoration: none;
-    outline: none;
-}
-
-
-/*******************************/
-
 
 /*            SLIDE            */
 
-
 /*******************************/
 
-.carro {
-    animation-duration: 30s;
-    animation-name: carrusel;
+.contenedor:nth-of-type(3) {
+  border-top: 0;
 }
 
-.boton_slide {
-    background-color: white;
-    border: 0;
-    color: var(--azul);
-    font-size: 50px;
-    padding: 0 20px;
+.contenido.sld {
+  padding-bottom: 0;
+  border-top:0;
+  border-bottom: 0;  
+  position: relative;
 }
-
-.boton_slide:hover {
-    text-shadow: 5px 5px grey;
-    cursor: pointer;
-}
-
-.container.slide {
-    display: flex;
-    padding: 25px 50px 25px 50px;
-    justify-content: center;
-    align-items: center;
+.slide {
+  border-bottom: 5px solid var(--azul);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 70vh;
 }
 
 .slide img {
-    /* max-height: 500px; */
-    /* height: auto; */
-    /* max-width: 100%; */
-    width: 85%;
-    height: 100%;
+  flex: 9999 0 200px;
+  max-height: 60vh;
+  object-fit: cover;
+  z-index: -99;
 }
+span.boton_slide {
+  flex: 1 0 auto;
+  padding: 0;
+  margin: 10px;
+  color: white;
+  opacity: 80%;
+  font-size: 70px;
+  position: absolute;
+  cursor: pointer;
+}
+.boton_slide.atras {
+  left: 0px;
+}
+.boton_slide.alante {
+  right: 0;
+}
+
+.boton_slide:hover {
+  /* text-shadow: 5px 5px var(--azul); */
+  cursor: pointer;
+}
+
+/* bolitas de progreso */
+.progreso {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+  left: auto;
+}
+.contprogreso input {
+  /*Oculta el verdadero formulario*/
+  opacity: 0;
+  cursor: pointer;
+}
+
+.bolita {
+  display: block;
+  background: transparent;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 3px;
+  border: 1px white solid;
+  opacity: 80%;
+  cursor: pointer;
+}
+.bolita:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.contprogreso input:checked ~ .bolita {
+  background-color: var(--azul);
+  border: 0;
+}
+
+.frases {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  /* font-size: xx-large; */
+  font-style: italic;
+  color: white;
+  /* background: rgba(48, 78, 160, 0.5); */
+  background-color: transparent;
+  /* border: 1px darkgray solid; */
+  /* box-shadow: 08px 8px 32px 40px rgba(48, 78, 160, 0.97); */
+  text-shadow: 08px 8px 32px 40px rgba(48, 78, 160, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(40px);
+  border-radius: 5px;
+  height: 15%;
+  /* width: 100%; */
+  line-height: 100%;
+}
+
+#frase1 {
+  top: 25%;
+  left: 5%;
+}
+#frase2 {
+  top: 10%;
+  left: 5%;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
+  color: black;
+}
+#frase3 {
+  top: 35%;
+  left: 65%;
+}
+#frase4 {
+  text-shadow: 08px 8px 32px 40px rgba(48, 78, 160, 0.97);
+
+  top: 20%;
+  left: 15%;
+  width: auto;
+}
+#frase5 {
+  align-content: center;
+  justify-content: center;
+}
+#frase5 span {
+  vertical-align: middle;
+  padding-top: auto;
+  padding-bottom: 50%;
+  height: 100%;
+  line-height: 100px;
+}
+.frases span {
+  line-height: 100%;
+  font-size: 4vw;
+  display: none;
+}
+
+/*******************************/
+
+/*   LA CLINICA   -   MOVIL    */
+
+/*******************************/
+
+/* la galeria muestra todas las fotos en el cuerpo de la pagina en thumnail */
+
+.galeria {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+
+.galeria img {
+  margin: 4px;
+  width: 80px;
+  transition: 0.5s;
+}
+
+.galeria img:hover {
+  border: var(--azul) solid 4px;
+  padding: 2px;
+  opacity: 0.6;
+}
+
+/* el visor se abre al clickear una foto y ocupa toda la pantalla */
+#visor {
+  display: none;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top:0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* contiene el titulo de la foto y los botones*/
+.barra_visor {
+  display: flex;
+  width: 100%;
+  /* height: 60px; */
+  background-color: var(--azul);
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 15px;
+}
+
+#titulo_foto {
+  width: 100vw;
+  font-size: xx-large;
+  text-align: center;
+}
+
+/* botones para pasar de foto*/
+.boton_visor {
+  /* margin-top: -10px; */
+  color: white;
+  opacity: 80%;
+  cursor: pointer;
+  font-size: 40px !important;
+
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: top;
+  margin: 5px 0 5px 0;
+}
+.boton_visor:focus,
+.boton_visor:hover {
+  color: var(--azul);
+  text-decoration: none;
+  background-color: white;
+}
+.boton_visor.atras {
+  left: 10px;
+}
+.boton_visor.alante {
+  right: 10px;
+}
+
+/* contenedor que nos ayuda a centrar la foto y sobretodo a detectar los clicks fuera de la barra_visor */
+.contenedor_foto {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  display: flex;
+}
+
+#foto_completa {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* animacion al abrir el visor */
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* boton para cerrar el visor */
+.contenedor_foto .close {
+  position: absolute;
+  top: 60px;
+  right: 8px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  border-radius: 50%;
+}
+.contenedor_foto .close:hover,
+.contenedor_foto .close:focus {
+  color: var(--azul);
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+}
+
 
 
 /*******************************/
 
-
-/* SECCIONES  */
-
+/*    SERVICIOS   -    MOVIL   */
 
 /*******************************/
 
 
-/* LA CLINICA */
 
-.carrusel_fotos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-self: center;
+.servicios dl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto auto;
+  padding: 0 10px;
+  min-width: 250px;
+  max-width: 500px;
 }
-
-.carrusel_fotos img {
-    border-radius: 10px;
-    margin: 4px;
-    border: transparent solid 6px;
+.servicios dd {
+  /* display: none; */
+  background-color: var(--azul);
+  height: 0;
+  overflow-y: hidden;
+  transition: 0.7s;
+  text-align: justify;
+  padding: 0;
 }
-
-.carrusel_fotos img:hover {
-    border: var(--azul) solid 4px;
-    padding: 2px;
-    opacity: 0.6;
-}
-
-
-/* SERVICIOS */
-
-#sec_servicios dl {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-}
-
 .bloque_servicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 250px;
-    min-width: 100px;
-    margin: 20px;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-.bloque_servicio img {
-    width: 60px;
-    border-radius: 40%;
+  margin: 0 50px;
+  width: 100%;
+  flex: 999 1 20px;
+
+  border-color: white;
+  border-width: 2px 2px 0 2px;
+  border-style: solid;
+  background-color: white;
+
+  /* transition: height 7s; */
+}
+.bloque_servicio:last-child {
+  border-bottom: 2px white solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.bloque_servicio:first-child {
+  border-bottom: 2px white solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .bloque_servicio h3 {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+  font-size: larger;
+  font-weight: bold;
+  color: var(--azul);
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* cuando se despliega el conteido */
+.bloque_servicio.abierto dd {
+  height: initial;
+  padding: 10px;
+  /* transition: height 2s; */
+}
+
+.bloque_servicio.abierto span::before {
+  content: "expand_more";
+}
+.bloque_servicio span::before {
+  content: "chevron_right";
+}
+.bloque_servicio span {
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  top: 4px;
+}
+
+/* creamos los iconos de los servicios */
+.icono_servicio {
+  display: none;
+  width: 60px;
+  filter: brightness(100);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}
+
+/* cargamos cada icono de servicio y lo ajustamos en su posicion */
+#icono_servicio_1 {
+  background-image: url("imagenes/servicios/medicina_general.png");
+  background-size: 28px;
+}
+#icono_servicio_2 {
+  background-image: url("imagenes/servicios/medicina_preventiva.png");
+  background-size: 28px;
+  background-position-x: 18px;
+  background-position-y: 12px;
+}
+#icono_servicio_3 {
+  background-image: url("imagenes/servicios/diagnostico_imagen.png");
+  background-size: 28px;
+  background-position-x: 18px;
+  background-position-y: 12px;
+}
+#icono_servicio_4 {
+  background-image: url("imagenes/servicios/analisis.png");
+  background-size: 28px;
+  background-position-x: 18px;
+  background-position-y: 10px;
+}
+#icono_servicio_5 {
+  background-image: url("imagenes/servicios/cirugia.png");
+  background-size: 28px;
+  background-position-x: 18px;
+  background-position-y: 15px;
+}
+#icono_servicio_6 {
+  background-image: url("imagenes/servicios/hospi.png");
+  background-size: 28px;
+
+  background-position-x: 16px;
+  background-position-y: 13px;
+}
+#icono_servicio_7 {
+  background-image: url("imagenes/servicios/odonto.png");
+  background-size: 28px;
+}
+#icono_servicio_8 {
+  background-image: url("imagenes/servicios/gato.png");
+  background-size: 28px;
+  background-position-y: 12px;
+  background-position-x: 18px;
+}
+#icono_servicio_9 {
+  background-image: url("imagenes/servicios/nutricion.png");
+  background-size: 28px;
+  background-position-y: 12px;
+}
+#icono_servicio_10 {
+  background-image: url("imagenes/servicios/tienda.png");
+  background-size: 28px;
 }
 
 
-/* PLANES y PACKS*/
 
-.bloque {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 40%;
-    padding: 0 10px;
-    border-width: 0px;
-    border-radius: 20px;
-    border-style: solid;
-    /* border-color: rgb(184, 19, 19); */
-    /* padding: 20px; */
-    margin-bottom: 20px;
-}
+/*******************************/
 
-.bloque h3 {
-    font-size: x-large;
-    text-transform: uppercase;
-}
+/*   SERVICIOS   -   TABLETS   */
 
-.bloque h4 {
-    font-size: xx-large;
-    margin: 0.5em 0;
-}
-
-.bloque dl {
-    padding: 10px 20px;
-    list-style: none;
-    border: var(--azul) 5px solid;
-    border-radius: 10px;
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
-.bloque dt {
-    font-weight: bold;
-}
-
-.bloque dd {
-    font-size: small;
-    padding-inline-start: 2em;
-}
-
-.bloque i {
-    color: var(--azul);
-}
-
-.bloque img {
-    border-radius: 10px;
-    width: 80%;
-}
-
-
-/* EMPLEADOS */
-
-.empleado img {
-    border-radius: 20px;
-}
-
-figcaption {
-    margin-top: 5px;
-    text-align: center;
-    font-weight: bold;
-    font-size: large;
-}
-
-.empleado {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 20px;
-    align-content: center;
-    border-radius: 20px;
-    
-}
-
-.empleado ul {
-    list-style: none;
-    padding-inline-start: 0px;
-    margin-top: 0;
-}
-.empleado p{
-    text-align: center;
-}
-.empleado li {
-    padding-bottom: 10px;
-}
-
-.empleado h2 {
-    margin: 0.5em;
-}
-
-
-/* CONTACTO */
-
-#sec_contacto .contenido {
+/*******************************/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .servicios dl {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-self: stretch;
-    align-items: stretch;
     justify-content: center;
-    margin-top: 20px;
-    row-gap: 20px;
+    align-items: flex-start;
+    text-align: center;
+    /* background-color: red; */
+    max-width: 100%;
+    min-width: 700px;
+  }
+  .servicios dd {
+    /* display: none; */
+    background-color: var(--azul);
+    height: initial;
+    overflow-y: hidden;
+    transition: 0.7s;
+    text-align: center;
+    padding: 0;
+  }
+  .bloque_servicio img {
+    display: block;
+  }
+  .bloque_servicio.bloque_servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    max-width: 250px;
+    flex: 999 0 250px;
+    margin: 10px;
+    height: initial;
+    /*  */
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+    /* border:1px black solid; */
+  }
+
+  .bloque_servicio h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 15px 0;
+    /* font-size: 18px; */
+  }
+
+  .bloque_servicio span {
+    display: none;
+  }
+}
+
+/*******************************/
+
+/*   SERVICIOS   -   DESKTOP   */
+
+/*******************************/
+@media only screen and (min-width: 1025px) {
+  /* contiene la lista de los bloques de servicios */
+  .servicios dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    /* background-color: red; */
+    max-width: 100%;
+    min-width: 700px;
+  }
+
+  /* estilo de cada bloque completo */
+  .bloque_servicio.bloque_servicio {
+    display: grid;
+    grid-template-rows: 40px auto;
+    grid-template-areas: "logo  titulo" "logo texto";
+    align-items: start;
+    /*  */
+    min-width: 370px;
+    max-width: 370px;
+    margin: 10px;
+    height: 205px;
+    min-height: 160px;
+    /*  */
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--azul);
+    border: 2px white solid;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+
+  }
+
+/* contenedor del icono de servicio */
+  .cont_icono {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 60px;
+    background-color: white;
+    margin: 0 auto;
+    grid-area: logo;
+  }
+
+  /* desactiva el filtro q cambia de color */
+  .icono_servicio {
+    filter: none;
+  }
+
+  /* logo del servicio */
+  .bloque_servicio img {
+    display: block;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    /* border: 2px solid white; */
+    border: 0;
+    object-fit: contain;
+    overflow: hidden;
+  }
+  /* titulos */
+  .bloque_servicio h3 {
+    grid-area: titulo;
+    padding: 10px 0;
+    margin: 0 auto;
+    min-width: 150px;
+    /*  */
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: initial;
+    border-bottom: 1px white solid;
+    width: fit-content;
+  }
+
+  /* texto de la descripcion */
+  .bloque_servicio.bloque_servicio dd {
+    grid-area: texto;
+    grid-template-rows: auto;
+    background-color: transparent;
+    height: auto;
+    padding: 10px;
+    /*  */
+    color: white;
+    transition: 0.7s;
+    text-align: left;
+  }
+
+  /* oculta el marcador del menu acordeon*/
+  .bloque_servicio span {
+    display: none;
+  }
+}
+
+/*******************************/
+
+/*  PLANES Y PACKS  -  MOVIL   */
+
+/*******************************/
+
+.bloque.packoplan img {
+  border-radius: 10px;
+  width: 90%;
+}
+
+.bloque.bloque.packoplan dl {
+  padding: 5px 4px;
+  list-style: none;
+  border: var(--azul) 5px solid;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.bloque.bloque.packoplan dt {
+  font-weight: bold;
+  margin: 5px 0 0px 0;
+}
+
+.bloque.bloque.packoplan dd {
+  font-size: small;
+  padding-inline-start: 18px;
+}
+.packoplan .paw  {
+  color: var(--azul);
+  font-size: 16px;
+  padding-right: 2px;
+
+}
+.bloque.bloque.bloque.packoplan h3{
+font-size: x-large;
+font-weight: bolder;
+padding-top: 15px;;
+}
+.bloque.bloque.bloque.packoplan h4{
+  font-size: x-large;
+  font-weight: bolder;
+  padding: 10px 0 ;
+}
+
+.bloque_doble h4{
+  margin: 10px;
+}
+
+
+/*******************************/
+
+/*    EQUIPO     -     MOVIL   */
+
+/*******************************/
+
+
+.bloque.empleado img {
+  border-radius: 20px;
+  width: 100%;
+  border-radius:50%;
 
 }
 
-.bloque_contacto {
-    display: grid;
-    grid-template-columns: 49% 49%;
-    grid-template-rows: auto;
-    grid-template-areas: " direcc direcc" "horario horario" "email email" "facebook facebook" "cita cita";
-    width: 40%;
-    min-width: 300px;
-    font-size: larger;
+.bloque.empleado p {
+  text-align: justify;
+}
+
+.bloque.empleado {
+  display: flex;
+  flex-direction: column;
+  /* margin: 20px; */
+  padding: 0 20px 20px 20px ;
+  align-content: center;
+  border-radius: 20px;
+}
+
+.bloque.empleado ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin: 15px 0;
+}
+
+.empleado li {
+  padding-bottom: 10px;
+}
+
+.empleado h2 {
+  margin: 0.5em;
+  font-size: x-large;
+}
+.empleado .paw{
+  /* transform: rotate(45deg); */
+  font-size: 16px;
+  padding-right: 2px;
+
+}
+
+
+
+.foto_empleado{
+  width: 220px;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 5%;
+  background-repeat: no-repeat;
+  background-size: 220px auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+#empleado_raquel .foto_empleado{
+  background-image: url("imagenes/personal/raquel.jpg");
+  background-position-y: -25px;
+}
+
+#empleado_alvaro .foto_empleado{
+  background-image: url("imagenes/personal/alvaro_peq.jpg");
+    background-position-y: -10px;
+}
+
+/*******************************/
+
+/*   CONTACTO    -     MOVIL   */
+
+/*******************************/
+
+
+.bloque.contacto {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-template-rows: auto;
+  grid-template-areas: " direcc direcc" "horario horario" "email email" "facebook facebook" "cita cita";
+  /* width: 40%; */
+  min-width: 300px;
+  max-width: 350px;
+  font-size: larger;
+  row-gap: 0.5em;
+  flex: 1 0 auto;
 }
 
 #mapa {
-    min-width: 300px;
-    min-height: 300px;
-    width: 40%;
+  flex: 1 0 auto;
+  margin: 20px;
+  align-self: center;
+  min-width: 300px;
+  max-width: 350px;
+  min-height: 300px;
+  /* width: 40%; */
 }
 
 address {
-    grid-area: direcc;
-    text-align: center;
-    font-style: normal;
-    margin-bottom: 20px;
+  grid-area: direcc;
+  text-align: center;
+  font-style: normal;
+  margin-bottom: 20px;
 }
 
-.bloque_contacto table {
-    grid-area: horario;
-    justify-self: center;
-    border: white 4px solid;
-    border-radius: 10px;
-    width: 325px;
-    margin-bottom: 10px;
-    padding: 10px;
+table {
+  grid-area: horario;
+  justify-self: center;
+  border: rgb(255, 255, 255) 4px solid;
+  border-radius: 10px;
+  min-width: 300px;
+  margin: 0 20px 10px 20px;
+  padding: 10px;
+  border-collapse: initial;
+  border-spacing: initial;
 }
 
-.bloque_contacto td {
-    vertical-align: top;
-    padding-top: 15px
+.bloque.contacto td {
+  vertical-align: top;
+  padding-top: 15px;
 }
 
-.bloque_contacto td:last-child {
-    text-align: right;
+.bloque.contacto td:last-child {
+  text-align: right;
 }
 
 #email {
-    grid-area: email;
-    text-align: center;
-    padding-top: 15px;
+  grid-area: email;
+  text-align: center;
 }
 
 #cita {
-    grid-area: cita;
-    text-align: center;
-    padding-left: 10px;
-    font-size: larger;
-    font-weight: bolder;
-    color: var(--azul);
-    background-color: white;
-    padding: 5px 0;
-    border-radius: 10px;
-    width: 350px;
-    justify-self: center;
-    margin-bottom: 20px;
+  grid-area: cita;
+  text-align: center;
+  padding-left: 10px;
+  font-size: larger;
+  font-weight: bolder;
+  color: var(--azul);
+  background-color: white;
+  padding: 5px 0;
+  border-radius: 10px;
+  min-width: 300px;
+  justify-self: center;
 }
 
 #facebook {
-    grid-area: facebook;
-    text-align: center;
+  grid-area: facebook;
+  text-align: center;
+}
+.contacto a,.contacto a:visited {
+  color: white;
+  text-decoration-line: none;
 }
 
-#sec_contacto a {
-    color: white;
-    text-decoration-line: none;
+
+#cita .icono, #cita a {
+  color: var(--azul);
 }
 
-#sec_contacto a:visited {
-    color: white;
-    text-decoration-line: none;
-}
-
-#cita .icono {
-    font-size: larger;
-    color: var(--azul);
-}
-
-#cita a {
-    color: var(--azul);
-}
 
 .icono {
-    color: white;
-    vertical-align: middle;
-    padding-right: 8px;
+
+  color: white;
+  vertical-align: middle;
+  padding-right: 8px;
 }
 
 
-/* FOOTER */
+/*******************************/
+
+/*    FOOTER     -     MOVIL   */
+
+/*******************************/
+
 
 #copyright {
-    text-align: center;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************/
+
+/* VARIABLES */
+
+/*******************************/
+
+:root {
+  --azul: #1e73be;
+  --gris: rgb(89, 89, 89);
+  --fuente: "PT Sans", Arial, Helvetica, sans-serif;
+  --burbuja:#25d366
+}
+
+.oscuro {
+  background-color: var(--azul);
+  color: white;
+}
+
+.claro {
+  background-color: white;
+  color: var(--gris);
+}
+.sombra{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+
 }

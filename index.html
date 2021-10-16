@@ -1,547 +1,1038 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-
-<head>
-
+  <head>
     <!-- CONFIGURACION -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- DATOS PROPIOS -->
-    <meta name="description" content="Clinica veterinaria Puertochico">
+    <meta name="description" content="Clinica veterinaria Puertochico" />
     <title>Clinica veterinaria Puertochico</title>
-    <link rel="icon" href="imagenes/marca/icono.png" type="image/x-icon">
+    <link rel="icon" href="imagenes/marca/icono.png" type="image/x-icon" />
+    <meta name="theme-color" content="#1e73be" />
 
     <!-- HOJAS DE ESTILO CSS -->
-    <link rel="stylesheet" href="fondos.css">
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- IMPORTACION ICONOS GOOGLE -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
+    <!-- IMPORTACION DE SCRIPTS PARA MENU Y CARRUSEL -->
+  </head>
 
-</head>
+  <!-- CUERPO PRINCIPAL -->
+  <body>
+    <main>
+      <!-- MENU SUPERIOR -->
+      <div class="contenedor">
+        <nav class="contenido">
+          <a
+            id="boton_whatsapp"
+            href="https://wa.me/0034650098245/?text=Hola%20"
+          >
+            <i class="material-icons"> whatsapp</i>
+            <div id="burbuja_whatsapp">Hablamos?</div>
+          </a>
 
-
-<!-- CUERPO PRINCIPAL -->
-
-<body>
-<div>
-
-    <!-- MENU SUPERIOR -->
-    <nav class="container ">
-
-        <img src="imagenes/marca/cabecera.png" alt="Logotipo Clínica Veterinaria Puertochico">
-        <!-- <div class="separador"></div> -->
-        <ul>
-            <li><a href="#sec_laclinica">LA CLINICA</a> </li>
-            <li><a href="#sec_servicios">SERVICIOS</a></li>
-            <li><a href="#sec_planes">PLANES</a></li>
-            <li><a href="#sec_packs">PACKS</a></li>
-            <li><a href="#sec_equipo">EQUIPO</a></li>
-            <li><a href="#sec_contacto">CONTACTO</a></li>
-        </ul>
-    </nav>
-
-    <!-- CABECERA CON FOTO -->
-    <div class="container slide">
-        <button class="boton_slide" onclick="plusDivs(-1)">&#10094</button>
-        <img class="fotos_slide" src="imagenes/slide/SLIDE_-1.jpg">
-        <img class="fotos_slide" src="imagenes/slide/SLIDE_-2.jpg">
-        <img class="fotos_slide" src="imagenes/slide/SLIDE_-3.jpg">
-        <img class="fotos_slide" src="imagenes/slide/SLIDE_-5.jpg">
-        <img class="fotos_slide" src="imagenes/slide/SLIDE_-6.jpg">
-        <button class="boton_slide" onclick="plusDivs(1)">&#10095</button>
-
-        <!-- script para los botones de atras y adelante -->
-        <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
-            carousel();
-
-            function plusDivs(n) {
-                showDivs(slideIndex += n);
-            }
-
-            function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("fotos_slide");
-                if (n > x.length) {
-                    slideIndex = 1
-                }
-                if (n < 1) {
-                    slideIndex = x.length
-                }
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                x[slideIndex - 1].style.display = "block";
-            }
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("fotos_slide");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > x.length) {
-                    slideIndex = 1
-                }
-                x[slideIndex - 1].style.display = "block";
-                setTimeout(carousel, 3000); // Change image every 2 seconds
-            }
-        </script>
-    </div>
-
-
-    <!--------------------------- SECCIONES --------------------------->
-
-    <!-- LA CLINICA -->
-    <section class="color_claro" id="sec_laclinica">
-
-        <div class="container">
-
-            <header>La clínica</header>
-
-            <div class="contenido">
-
-                <div class="texto_seccion ">
-                    <h2>Nuestras mascotas son parte de nuestra familia y se merecen ser tratados como tales.</h2>
-                    <p>Por eso desde la clínica Puertochico trabajamos cada día no solo para ofrecerte un servicio médico completo y de calidad, sino para hacerlo de forma comprensiva y cercana tanto para las mascotas como para sus propietarios.</p>
-                    <p>Nuestro equipo está en formación contínua para mantener la práctica clínica al máximo nivel profesional, permaneciendo al corriente de los últimos avances médicos y técnicos en todo momento.Nos servimos de los equipos más modernos
-                        y los últimos avances en la medicina y farmacia veterinaria para realizar nuestro trabajo ofreciendo así un diagnóstico preciso y una medicina eficaz accesible para la mayoría de los propietarios.</p>
-                </div>
-
-                <div class="carrusel_fotos">
-                    <a title="Escaparate" href="imagenes/clinica/foto_2.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_2-150x150.jpg"></a>
-                    <a title="Vista exterior" href="imagenes/clinica/foto_3.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_3-150x150.jpg"></a>
-                    <a title="Consulta" href="imagenes/clinica/foto_4.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_4-150x150.jpg"></a>
-                    <a title="Recepción" href="imagenes/clinica/foto_5.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_5-150x150.jpg"></a>
-                    <a title="Sala de Rayos X" href="imagenes/clinica/foto_6.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_6-150x150.jpg"></a>
-                    <a title="Laboratorio" href="imagenes/clinica/foto_7.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_7-150x150.jpg"></a>
-                    <a title="Laboratorio" href="imagenes/clinica/foto_8.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_8-150x150.jpg"></a>
-                    <a title="Sala de hospitalización" href="imagenes/clinica/foto_9.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_9-150x150.jpg"></a>
-                    <a title="Quirofano" href="imagenes/clinica/foto_10.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_10-150x150.jpg"></a>
-                    <a title="Juguetes" href="imagenes/clinica/foto_11.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_11-150x150.jpg"></a>
-                    <a title="Juguetes y acceorios" href="imagenes/clinica/foto_12.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_12-150x150.jpg"></a>
-                    <a title="Alimentación" href="imagenes/clinica/foto_13.jpg" target="_blank"><img src="imagenes/clinica/miniaturas/foto_13-150x150.jpg"></a>
-                </div>
+          <div class="cabecera">
+            <div class="cab">
+              <img
+                class="logotipo"
+                src="imagenes/marca/cabecera.png"
+                alt="Logotipo Clínica Veterinaria Puertochico"
+              />
+              <span class="material-icons boton_menu"> menu </span>
             </div>
+
+            <div class="menu" id="menu">
+              <!-- elementos del menu -->
+              <ul class="lista_menu">
+                <li>
+                  <a href="#sec_laclinica" onclick="Cerrar()">LA CLINICA</a>
+                </li>
+                <li>
+                  <a href="#sec_servicios" onclick="Cerrar()">SERVICIOS</a>
+                </li>
+                <li><a href="#sec_planes" onclick="Cerrar()">PLANES</a></li>
+                <li><a href="#sec_packs" onclick="Cerrar()">PACKS</a></li>
+                <li><a href="#sec_equipo" onclick="Cerrar()">EQUIPO</a></li>
+                <li><a href="#sec_contacto" onclick="Cerrar()">CONTACTO</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- CARRUSEL -->
+      <div class="contenedor">
+        <div class="contenido sld">
+          <div class="slide">
+            <span class="boton_slide atras"> &lsaquo; </span>
+
+            <img
+              class="fotos_slide"
+              width="50"
+              src="imagenes/slide/Slide_1.jpg"
+            />
+            <img
+              class="fotos_slide"
+              width="50"
+              src="imagenes/slide/Slide_2.jpg"
+            />
+            <img
+              class="fotos_slide"
+              width="50"
+              src="imagenes/slide/Slide_3.jpg"
+            />
+            <img
+              class="fotos_slide"
+              width="50"
+              src="imagenes/slide/Slide_4.jpg"
+            />
+            <img
+              class="fotos_slide"
+              width="50"
+              src="imagenes/slide/Slide_5.jpg"
+            />
+
+            <span class="boton_slide alante"> &rsaquo; </span>
+
+            <div class="frases" id="frase1">
+              <span>Cuidamos de los tuyos!</span>
+            </div>
+            <div class="frases" id="frase2">
+              <span>Trato personalizado!</span>
+            </div>
+            <div class="frases" id="frase3"><span>Pasión animal!</span></div>
+            <div class="frases" id="frase4"><span>Siempre contigo!</span></div>
+            <div class="frases" id="frase5"><span>Duerme tranquilo!</span></div>
+
+            <form name="pro" class="progreso">
+              <label class="contprogreso">
+                <input
+                  type="radio"
+                  onchange="showDivs(1)"
+                  checked="checked"
+                  name="radio-group"
+                  id="b1"
+                /><span class="bolita"></span>
+              </label>
+              <label class="contprogreso">
+                <input
+                  type="radio"
+                  onchange="showDivs(2)"
+                  name="radio-group"
+                  id="b2"
+                /><span class="bolita"></span> </label
+              ><label class="contprogreso">
+                <input
+                  type="radio"
+                  onchange="showDivs(3)"
+                  name="radio-group"
+                  id="b3"
+                /><span class="bolita"></span> </label
+              ><label class="contprogreso">
+                <input
+                  type="radio"
+                  onchange="showDivs(4)"
+                  name="radio-group"
+                  id="b4"
+                /><span class="bolita"></span> </label
+              ><label class="contprogreso">
+                <input
+                  type="radio"
+                  onchange="showDivs(5)"
+                  name="radio-group"
+                  id="b5"
+                /><span class="bolita"></span>
+              </label>
+            </form>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- SERVICIOS -->
-    <section class="color_oscuro" id="sec_servicios">
+      <!-- LA CLINICA -->
+      <div class="contenedor">
+        <div class="contenido">
+          <div class="ancla" id="sec_laclinica"></div>
 
-        <div class="container">
+          <section>
+            <header>La clínica</header>
+            <div class="texto_seccion">
+              <div class="cita">
+                <h2>
+                  Nuestras mascotas son parte de nuestra familia y se merecen
+                  ser tratados como tales.
+                </h2>
+              </div>
+              <p>
+                Por eso desde la clínica Puertochico trabajamos cada día no solo
+                para ofrecerte un servicio médico completo y de calidad, sino
+                para hacerlo de forma comprensiva y cercana tanto para las
+                mascotas como para sus propietarios.
+              </p>
+              <p>
+                Nuestro equipo está en formación contínua para mantener la
+                práctica clínica al máximo nivel profesional, permaneciendo al
+                corriente de los últimos avances médicos y técnicos en todo
+                momento.Nos servimos de los equipos más modernos y los últimos
+                avances en la medicina y farmacia veterinaria para realizar
+                nuestro trabajo ofreciendo así un diagnóstico preciso y una
+                medicina eficaz accesible para la mayoría de los propietarios.
+              </p>
+            </div>
 
+            <!-- este sera el visro q se abra para mostrar las imagenes en grnade -->
+            <div id="visor">
+              <div class="barra_visor">
+                <span class="material-icons boton_visor" id="visor_atras"
+                  >chevron_left
+                </span>
+
+                <span id="titulo_foto"></span>
+                <span class="material-icons boton_visor" id="visor_alante"
+                  >chevron_right
+                </span>
+              </div>
+
+              <div class="contenedor_foto">
+                <span class="close">&times;</span>
+                <img id="foto_completa" />
+              </div>
+            </div>
+
+            <!-- declaro todas las imagenes en miniatura, tmb cotiene la ruta de la imagen a tamaó real -->
+            <div class="galeria">
+              <img
+                src="imagenes/clinica/miniaturas/foto_1-150x150.jpg"
+                data-src="imagenes/clinica/foto_1.jpg"
+                alt="Recepción"
+                class="sombra"
+              />
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_2-150x150.jpg"
+                data-src="imagenes/clinica/foto_2.jpg"
+                alt="Escaparate"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_3-150x150.jpg"
+                data-src="imagenes/clinica/foto_3.jpg"
+                alt="Vista exterior"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_4-150x150.jpg"
+                data-src="imagenes/clinica/foto_4.jpg"
+                alt="Consulta"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_5-150x150.jpg"
+                data-src="imagenes/clinica/foto_5.jpg"
+                alt="Recepción"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_6-150x150.jpg"
+                data-src="imagenes/clinica/foto_6.jpg"
+                alt="Sala de Rayos X"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_7-150x150.jpg"
+                data-src="imagenes/clinica/foto_7.jpg"
+                alt="Laboratorio"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_8-150x150.jpg"
+                data-src="imagenes/clinica/foto_8.jpg"
+                alt="Laboratorio"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_9-150x150.jpg"
+                data-src="imagenes/clinica/foto_9.jpg"
+                alt="Sala de hospitalización"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_10-150x150.jpg"
+                data-src="imagenes/clinica/foto_10.jpg"
+                alt="Quirofano"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_11-150x150.jpg"
+                data-src="imagenes/clinica/foto_11.jpg"
+                alt="Juguetes"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_12-150x150.jpg"
+                data-src="imagenes/clinica/foto_12.jpg"
+                alt="Juguetes y acceorios"
+              />
+
+              <img
+                class="sombra"
+                src="imagenes/clinica/miniaturas/foto_13-150x150.jpg"
+                data-src="imagenes/clinica/foto_13.jpg"
+                alt="Alimentación"
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- SERVICIOS  -->
+      <div class="ancla" id="sec_servicios"></div>
+      <div class="oscuro contenedor">
+        <div class="contenido oscuro servicios">
+          <section>
             <header>Servicios</header>
 
-            <div class="contenido   ">
+            <dl>
+              <div class="bloque_servicio abierto">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_1"
+                    src="imagenes/marca/cruz.png"
+                    alt="Medicina General"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Medicina general
+                  </h3>
+                </dt>
+                <dd>
+                  Nuestro equipo veterinario atenderá los problemas o síntomas
+                  que observes en tu mascota; mediante una exploración
+                  exhaustiva y las pruebas necesarias llegará a un diagnóstico y
+                  prescribirá el tratamiento más adecuado para tu mascota.
+                </dd>
+              </div>
 
-                <dl>
-                    <div class="bloque_servicio">
-                        <dt>
-                            <img src="imagenes/marca/logo.png" alt="Medicina General">
-                            <h3> MEDICINA GENERAL </h3>
-                        </dt>
-                        <dd> Nuestro equipo veterinario atenderá los problemas o síntomas que observes en tu mascota; mediante una exploración exhaustiva y las pruebas necesarias llegará a un diagnóstico y prescribirá el tratamiento más adecuado para tu mascota.</dd>
-                    </div>
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_2"
+                    src="imagenes/marca/cruz.png"
+                    alt="Medicina Preventiva"
+                  />
+                </div>
 
-                    <div class="bloque_servicio">
-                        <dt>
-                            <img src="imagenes/marca/logo.png" alt="Medicina Preventiva">
-                            <h3>MEDICINA PREVENTIVA </h3>
-                        </dt>
-                        <dd>
-                            La prevención es la mejor forma cuidar de la salud de tu mascota. Protégela mediante vacunas, desparasitaciones y chequeos periódicos. Especialmente importante en el caso de mascotas de edad avanzada.
-                        </dd>
-                    </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Medicina preventiva
+                  </h3>
+                </dt>
 
-                    <div class="bloque_servicio">
-                        <dt>
-                            <img src="imagenes/marca/logo.png" alt="Diagnóstico por Imagen">
-                            <h3>DIAGNOSTICO POR IMAGEN </h3>
-                        </dt>
-                        <dd>
-                            Contamos con servicio de radiología y ecografía para llegar a un diagnóstico acertado en el menor tiempo posible.
-                        </dd>
-                    </div>
+                <dd>
+                  La prevención es la mejor forma cuidar de la salud de tu
+                  mascota. Protégela mediante vacunas, desparasitaciones y
+                  chequeos periódicos. Especialmente importante en el caso de
+                  mascotas de edad avanzada.
+                </dd>
+              </div>
 
-                    <div class="bloque_servicio">
-                        <dt>
-                            <img src="imagenes/marca/logo.png" alt="Ánalisis Clínicos">
-                            <h3>ÁNALISIS CLÍNICOS </h3>
-                        </dt>
-                        <dd>
-                            Disponemos de un laboratorio completamente equipado donde poder realizar analíticas sanguíneas, anális de orina, coprológicos, citologías, raspados, tricogramas y test serológicos.
-                        </dd>
-                    </div>
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_3"
+                    src="imagenes/marca/cruz.png"
+                    alt="Diagnóstico por Imagen"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Diagnóstico por Imagen
+                  </h3>
+                </dt>
+                <dd>
+                  Contamos con servicio de radiología digital y un servicio
+                  externo ecografía para llegar a un diagnóstico acertado en el
+                  menor tiempo posible.
+                </dd>
+              </div>
 
-                    <div class="bloque_servicio">
-                        <dt> 
-                            <img src="imagenes/marca/logo.png" alt="Cirugía General">
-                            <h3>CIRUGÍA GENERAL</h3>
-                        </dt>
-                        <dd>
-                            Disponemos de un quirófano completamente equipado para la realización de todo tipo de cirugías de tejidos blandos manteniendo al paciente monitorizado en todo momento. La seguridad del paciente es nuestra prioridad.
-                        </dd>
-                    </div>
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_4"
+                    src="imagenes/marca/cruz.png"
+                    alt="Ánalisis Clínicos"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Ánalisis clínicos
+                  </h3>
+                </dt>
+                <dd>
+                  Disponemos de un laboratorio completamente equipado donde
+                  poder realizar analíticas sanguíneas, anális de orina,
+                  coprológicos, citologías, raspados, tricogramas y test
+                  serológicos.
+                </dd>
+              </div>
 
-                    <div class="bloque_servicio">
-                        <dt> 
-                            <img src="imagenes/marca/logo.png" alt="Hospitalización de dia">
-                            <h3>HOSPITALIZACIÓN DE DÍA</h3>
-                            </dt>
-                        <dd>
-                            Contamos con una sala de hospitalización donde los pacientes pueden recuperarse y descansar cómodamente mientras estar permanentemente controlados por nuestro personal.
-                        </dd>
-                    </div>
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_5"
+                    src="imagenes/marca/cruz.png"
+                    alt="Cirugía General"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Cirugía general
+                  </h3>
+                </dt>
+                <dd>
+                  Disponemos de un quirófano completamente equipado para la
+                  realización de todo tipo de cirugías de tejidos blandos
+                  manteniendo al paciente monitorizado en todo momento. La
+                  seguridad del paciente es nuestra prioridad.
+                </dd>
+              </div>
 
-                    <div class="bloque_servicio">
-                        <dt> 
-                            <img src="imagenes/marca/logo.png" alt="Odontología">
-                            <h3>ODONTOLOGÍA</h3>
-                        </dt>
-                        <dd>
-                            Ofrecemos una revisión dental gratuita para valorar el estado de salud dental de tu mascota. Contamos con los medios para realizar limpiezas de boca, extracciones, radiografías dentales y cirugía bucodental.
-                        </dd>
-                    </div>
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_6"
+                    src="imagenes/marca/cruz.png"
+                    alt="Hospitalización de dia"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Hospitalización de día
+                  </h3>
+                </dt>
+                <dd>
+                  Contamos con una sala de hospitalización donde los pacientes
+                  pueden recuperarse y descansar cómodamente mientras estar
+                  permanentemente controlados por nuestro personal.
+                </dd>
+              </div>
 
-                    <div class="bloque_servicio">
-                        <dt> 
-                            <img src="imagenes/marca/logo.png" alt="Medicina Felina">
-                            <h3>MEDICINA FELINA </h3>
-                        </dt>
-                        <dd>
-                            Los gatos no son perros pequeños, sabemos lo especiales que son y el estrés que sufren cada vez que salen de casa, nuestro equipo empleará las técnicas adecuadas para su manejo en un entorno lo más relajado posible. Además estamos especialmente formados
-                            en el diagnóstico y tratamiento de las patologías felinas.
-                        </dd>
-                    </div>
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_7"
+                    src="imagenes/marca/cruz.png"
+                    alt="Odontología"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Odontología
+                  </h3>
+                </dt>
+                <dd>
+                  Ofrecemos una revisión dental gratuita para valorar el estado
+                  de salud dental de tu mascota. Contamos con los medios para
+                  realizar limpiezas de boca, extracciones, radiografías
+                  dentales y cirugía bucodental.
+                </dd>
+              </div>
 
-                    <div class="bloque_servicio">
-                        <dt> 
-                            <img src="imagenes/marca/logo.png" alt="Asesoramiento Nutricional">
-                            <h3>ASESORAMIENTO NUTRICIONAL </h3>
-                        </dt>
-                        <dd>
-                            Disponemos de una selección de productos de alimentación de alta gama. Nuestro equipo te asesorará a la hora de decidir cual es el la mejor dieta para tu mascota teniendo en cuenta las características propias de su raza, su estado de salud y sus preferencias.
-                        </dd>
-                    </div>
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_8"
+                    src="imagenes/marca/cruz.png"
+                    alt="Medicina Felina"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Medicina felina
+                  </h3>
+                </dt>
+                <dd>
+                  Los gatos no son perros pequeños, sabemos lo especiales que
+                  son y el estrés que sufren cada vez que salen de casa, nuestro
+                  equipo empleará las técnicas adecuadas para su manejo en un
+                  entorno lo más relajado posible. Además estamos especialmente
+                  formados en el diagnóstico y tratamiento de las patologías
+                  felinas.
+                </dd>
+              </div>
 
-                    <div class="bloque_servicio">
-                        <dt> 
-                            <img src="imagenes/marca/logo.png" alt="Medicina General">
-                            <h3>TIENDA ESPECIALIZADA </h3>
-                        </dt>
-                        <dd>
-                            Disponemos de todo tipo de accesorios para tu mascota así como juguetes, productos de aseo e higiene, golosinas y mucho más. Nuestro equipo te asesorará personalmente en la elección de los productos más adecuados para tu mascota.
-                        </dd>
-                    </div>
-            </div>
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_9"
+                    src="imagenes/marca/cruz.png"
+                    alt="Asesoramiento Nutricional"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Asesoramiento nutricional
+                  </h3>
+                </dt>
+                <dd>
+                  Disponemos de una selección de productos de alimentación de
+                  alta gama. Nuestro equipo te asesorará a la hora de decidir
+                  cual es el la mejor dieta para tu mascota teniendo en cuenta
+                  las características propias de su raza, su estado de salud y
+                  sus preferencias.
+                </dd>
+              </div>
+
+              <div class="bloque_servicio">
+                <div class="cont_icono">
+                  <img
+                    class="icono_servicio"
+                    id="icono_servicio_10"
+                    src="imagenes/marca/cruz.png"
+                    alt="Medicina General"
+                  />
+                </div>
+                <dt>
+                  <h3>
+                    <span class="material-icons"></span>
+                    Tienda especializada
+                  </h3>
+                </dt>
+                <dd>
+                  Disponemos de todo tipo de accesorios para tu mascota así como
+                  juguetes, productos de aseo e higiene, golosinas y mucho más.
+                  Nuestro equipo te asesorará personalmente en la elección de
+                  los productos más adecuados para tu mascota.
+                </dd>
+              </div>
+            </dl>
+          </section>
         </div>
+      </div>
 
-    </section>
+      <!-- PLANES -->
+      <div class="contenedor">
+        <div class="contenido">
+          <div class="ancla" id="sec_planes"></div>
 
-    <!-- PLANES -->
-    <section class="color_claro" id="sec_planes">
-
-        <div class="container">
-
+          <section>
             <header class>Planes de salud</header>
 
-            <div class="contenido">
-
-                <div class="texto_seccion ">
-                    <h2>Duerme tranquilo!</h2>
-                    <p>Ya se sabe que siempre es mejor prevenir que curar, por eso desde la clínica Puertochico presentamos nuestros planes de salud de perro y gato.</p>
-                    <p>Nuestros planes de salud no solo buscan cubrir las necesidades sanitarias básicas de tu mascota, <strong>desparasitaciones y vacunas</strong>, sino que nuestro enfoque en la <strong>prevención</strong> nos ha llevado a incluir también
-                        consultas ilimitadas, analítica sanguínea, análisis coprológicos y de orina (solo gatos). <strong>Podrás acudir a consulta con tu mascota siempre que lo necesites</strong> de esta forma podremos detectar y prevenir cualquier posible
-                        enfermedad anticipadamente para que tu mascota disfrute una mayor esperanza y calidad de vida. Así mismo las <strong>pruebas diagnósticas incluidas</strong> también nos ayudan a valorar el estado general de salud de tu mascota
-                        así como a la detección precoz de diversas enfermedades.
-                    </p>
-                    <p>La salud bucodental de las mascotas suele ser uno de los grandes olvidados a pesar de ser su importancia tanto estética como sanitaria. Por eso nuestro plan incluye una exploración bucodental para evaluar el estado de salud y un descuento
-                        de <strong>20% en limpiezas de boca.</strong></p>
-                    <p>Por si esto fuera poco además podras disfrutar de <strong>descuentos</strong> del 15% en pruebas diagnósticas realizadas en clínica y 10% en cirugías en clínica y alimentación. Para las familias numerosas tenemos descuentos en los
-                        planes a partir de la segunda mascota.</p>
-                </div>
-
-                <div class="bloque_doble ">
-
-                    <div class="color_oscuro bloque">
-
-                        <h3>Plan de Salud Perro</h3>
-
-                        <img src="imagenes/packs_y_planes/plan_perro.png" alt="Plan de Salud Perro">
-
-                        <dl class="color_claro">
-                            <dt><i class="paw material-icons">pets</i>CONSULTAS ILIMITADAS</dt>
-                            <dd>Acude a consulta o revisión simpre que lo necesites</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Todas las vacunas</dt>
-                            <dd> Vacuna polivalente y rabia anuales</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Desparasitaciones internas</dt>
-                            <dd>Las cuatro desparasitaciones recomendadas al año</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Analítica sanguinea básica</dt>
-                            <dd>Nos ayuda a valorar el estado general de salud y a la detección precoz de diversas enfermedades</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Análisis coprologicos</dt>
-                            <dd>Dos análisis coprológicos al año</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Exploración odontológica</dt>
-                            <dd>Evaluamos el estado de salud bucodental</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Descuentos</dt>
-                            <dd>20% en limpiezas bucales, 15% en pruebas en clínica y 10% en cirugías en clínica y alimentación</dd>
-                        </dl>
-                        <h4>Plan Perro: 249€/año</h4>
-
-                    </div>
-
-                    <div class="color_oscuro bloque">
-
-                        <h3>Plan de Salud Gato</h3>
-
-                        <img src="imagenes/packs_y_planes/plan_gato.png" alt="Plan de Salud Gato">
-
-                        <dl class="color_claro">
-                            <dt><i class="paw material-icons">pets</i>CONSULTAS ILIMITADAS</dt>
-                            <dd>Acude a consulta o revisión simpre que lo necesites</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Todas las vacunas</dt>
-                            <dd> Vacuna trivalente y leucemia anuales</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Desparasitaciones internas</dt>
-                            <dd>Las dos desparasitaciones recomendadas al año</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Analítica sanguinea básica</dt>
-                            <dd>Nos ayuda a valorar el estado general de salud y a la detección precoz de diversas enfermedades</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Análisis de orina</dt>
-                            <dd>Fundamental para el diagnostico y detección ptecoz de ciertas enfermedades felinas</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Análisis coprologicos</dt>
-                            <dd>Dos análisis coprológicos al año</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Descuentos</dt>
-                            <dd>20% en limpiezas bucales, 15% en pruebas en clínica y 10% en cirugías en clínica y alimentación</dd>
-                        </dl>
-                        <h4>Plan Gato: 224€/año</h4>
-
-                    </div>
-
-                </div>
-                <div class="condiciones">* Consulta condiciones</div>
+            <div class="texto_seccion">
+              <h2>Duerme tranquilo!</h2>
+              <p>
+                Ya se sabe que siempre es mejor prevenir que curar, por eso
+                desde la clínica Puertochico presentamos nuestros planes de
+                salud de perro y gato.
+              </p>
+              <p>
+                Nuestros planes de salud no solo buscan cubrir las necesidades
+                sanitarias básicas de tu mascota,
+                <strong>desparasitaciones y vacunas</strong>, sino que nuestro
+                enfoque en la <strong>prevención</strong> nos ha llevado a
+                incluir también consultas ilimitadas, analítica sanguínea,
+                análisis coprológicos y de orina (solo gatos).
+                <strong
+                  >Podrás acudir a consulta con tu mascota siempre que lo
+                  necesites</strong
+                >
+                de esta forma podremos detectar y prevenir cualquier posible
+                enfermedad anticipadamente para que tu mascota disfrute una
+                mayor esperanza y calidad de vida. Así mismo las
+                <strong>pruebas diagnósticas incluidas</strong> también nos
+                ayudan a valorar el estado general de salud de tu mascota así
+                como a la detección precoz de diversas enfermedades.
+              </p>
+              <p>
+                La salud bucodental de las mascotas suele ser uno de los grandes
+                olvidados a pesar de ser su importancia tanto estética como
+                sanitaria. Por eso nuestro plan incluye una exploración
+                bucodental para evaluar el estado de salud y un descuento de
+                <strong>20% en limpiezas de boca.</strong>
+              </p>
+              <p>
+                Por si esto fuera poco además podras disfrutar de
+                <strong>descuentos</strong> del 15% en pruebas diagnósticas
+                realizadas en clínica y 10% en cirugías en clínica y
+                alimentación. Para las familias numerosas tenemos descuentos en
+                los planes a partir de la segunda mascota.
+              </p>
             </div>
+
+            <div class="bloque_doble">
+              <div class="bloque packoplan oscuro sombra">
+                <h3>Plan de Salud Perro</h3>
+
+                <img
+                  src="imagenes/packs_y_planes/plan_perro.png"
+                  alt="Plan de Salud Perro"
+                  width="200px"
+                />
+
+                <dl class="claro sombra">
+                  <dt>
+                    <i class="paw material-icons">pets</i>CONSULTAS ILIMITADAS
+                  </dt>
+                  <dd>Acude a consulta o revisión simpre que lo necesites</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Todas las vacunas
+                  </dt>
+                  <dd>Vacuna polivalente y rabia anuales</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Desparasitaciones
+                    internas
+                  </dt>
+                  <dd>Las cuatro desparasitaciones recomendadas al año</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Analítica sanguinea
+                    básica
+                  </dt>
+                  <dd>
+                    Nos ayuda a valorar el estado general de salud y a la
+                    detección precoz de diversas enfermedades
+                  </dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Análisis coprologicos
+                  </dt>
+                  <dd>Dos análisis coprológicos al año</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Exploración
+                    odontológica
+                  </dt>
+                  <dd>Evaluamos el estado de salud bucodental</dd>
+
+                  <dt><i class="paw material-icons">pets</i>Descuentos</dt>
+                  <dd>
+                    20% en limpiezas bucales, 15% en pruebas en clínica y 10% en
+                    cirugías en clínica y alimentación
+                  </dd>
+                </dl>
+                <h4>Plan Perro: 249€/año</h4>
+              </div>
+
+              <div class="bloque packoplan oscuro sombra">
+                <h3>Plan de Salud Gato</h3>
+
+                <img
+                  src="imagenes/packs_y_planes/plan_gato.png"
+                  alt="Plan de Salud Gato"
+                  width="200px"
+                />
+
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+                <dl class="claro sombra">
+                  <dt>
+                    <i class="paw material-icons">pets</i>CONSULTAS ILIMITADAS
+                  </dt>
+                  <dd>Acude a consulta o revisión simpre que lo necesites</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Todas las vacunas
+                  </dt>
+                  <dd>Vacuna trivalente y leucemia anuales</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Desparasitaciones
+                    internas
+                  </dt>
+                  <dd>Las dos desparasitaciones recomendadas al año</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Analítica sanguinea
+                    básica
+                  </dt>
+                  <dd>
+                    Nos ayuda a valorar el estado general de salud y a la
+                    detección precoz de diversas enfermedades
+                  </dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Análisis de orina
+                  </dt>
+                  <dd>
+                    Fundamental para el diagnostico y detección ptecoz de
+                    ciertas enfermedades felinas
+                  </dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Análisis coprologicos
+                  </dt>
+                  <dd>Dos análisis coprológicos al año</dd>
+
+                  <dt><i class="paw material-icons">pets</i>Descuentos</dt>
+                  <dd>
+                    20% en limpiezas bucales, 15% en pruebas en clínica y 10% en
+                    cirugías en clínica y alimentación
+                  </dd>
+                </dl>
+                <h4>Plan Gato: 224€/año</h4>
+              </div>
+            </div>
+            <div class="condiciones">* Consulta condiciones</div>
+          </section>
         </div>
-    </section>
+      </div>
 
-    <!-- PACKS -->
-    <section class="color_oscuro" id="sec_packs">
+      <!-- PACKS -->
+      <div class="contenedor oscuro">
+        <div class="contenido">
+          <div class="ancla" id="sec_packs"></div>
 
-        <div class="container">
-
+          <section>
             <header>Packs de cachorro</header>
 
-            <div class="contenido">
+            <div class="texto_seccion">
+              <h2>Protégele desde el primer día!</h2>
 
-                <div class="texto_seccion ">
-                    <h2>Protégele desde el primer día!</h2>
-
-                    <p>En la clínica Puertochico sabemos que los primeros meses de vida de un cachorro y la llegada a su nueva casa requiere de unos <strong>cuidados especiales.</strong></p>
-                    <p>Por eso presentamos estos packs de cachorro/gatito que cubren las necesidades sanitarias más importantes del nuevo miembro de la familia y te permiten ahorrar más de un 20%. <strong>Revisamos a tu cachorro</strong> para comprobar su
-                        estado de salud y te guiamos por el proceso de <strong>desparasitación y vacunación.</strong> Nos encargamos de que cumpla con la legislación vigente mediante su identificación por <strong>microchip</strong> y la aplicación de
-                        la vacuna de la rabia (solo perros). Además en cada visita te iremos informando sobre cuidados del cachorro, su educación, alimentación, etc.</p>
-                    <p>Por si fuera poco nuestros packs incluyen <strong>descuentos</strong> en esterilización/castración, en alimentación y artículos de tienda (juguetes, correas, collares, productos de higiene, etc.) que podrás utilizar durante todo un
-                        año. Para las familias numerosas tenemos descuentos en los packs a partir del segundo cachorro.</p>
-                </div>
-
-                <div class="bloque_doble">
-
-                    <div class="bloque color_claro">
-
-                        <h3>Pack Cachorro</h3>
-
-                        <img src="imagenes/packs_y_planes/pack_cachorro.png" alt="Pack Cachorro">
-
-                        <dl>
-                            <dt><i class="paw material-icons">pets</i>Primera revisión</dt>
-                            <dd>Nos aseguramos de que todo esa bien cuando llega a casa</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Todas las vacunas de cachorro</dt>
-                            <dd> Puppy DP, vacuna y revacuna polivalente y vacuna de la rabia (con cada vacuna se realiza una exploración física completa)</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Coprológicos</dt>
-                            <dd>Dos análisis coprológicos</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Desparasitaciones</dt>
-                            <dd>Tres desparasitaciones de cachorro</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Identificación y registro</dt>
-                            <dd>Implantación de microchip + pasaporte + registro en el RACIC</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Descuentos</dt>
-                            <dd>15% en esterilización y 10% en alimentación y tienda durante un año</dd>
-                        </dl>
-                        <h4>Pack Cachorro: 189€</h4>
-
-                    </div>
-
-
-                    <div class="bloque color_claro">
-
-                        <h3>Pack Gatito</h3>
-
-                        <img src="imagenes/packs_y_planes/pack_gatito.png" alt="Pack Gatito">
-
-                        <dl>
-                            <dt><i class="paw material-icons">pets</i>Primera revisión</dt>
-                            <dd>Nos aseguramos de que todo esa bien cuando llega a casa</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Todas las vacunas de gatito</dt>
-                            <dd> Trivalente, Leucemia y revacuna de ambas (con cada vacuna se realiza una exploración física completa)</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Coprológicos</dt>
-                            <dd>Dos análisis coprológicos</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Desparasitaciones</dt>
-                            <dd>Tres desparasitaciones de cachorro</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Test FelV/FiV (Leucemia/inmundeficiencia felina)</dt>
-                            <dd>Comprobamos que no padece estas graves enfermedades</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Identificación y registro</dt>
-                            <dd>Implantación de microchip + pasaporte + registro en el RACIC</dd>
-
-                            <dt><i class="paw material-icons">pets</i>Descuentos</dt>
-                            <dd>15% en esterilización y 10% en alimentación y tienda durante un año</dd>
-                        </dl>
-                        <h4>Pack Gatito: 179€</h>
-
-                    </div>
-
-                </div>
-                <div class="condiciones">* Consulta condiciones</div>
+              <p>
+                En la clínica Puertochico sabemos que los primeros meses de vida
+                de un cachorro y la llegada a su nueva casa requiere de unos
+                <strong>cuidados especiales.</strong>
+              </p>
+              <p>
+                Por eso presentamos estos packs de cachorro/gatito que cubren
+                las necesidades sanitarias más importantes del nuevo miembro de
+                la familia y te permiten ahorrar más de un 20%.
+                <strong>Revisamos a tu cachorro</strong> para comprobar su
+                estado de salud y te guiamos por el proceso de
+                <strong>desparasitación y vacunación.</strong> Nos encargamos de
+                que cumpla con la legislación vigente mediante su identificación
+                por <strong>microchip</strong> y la aplicación de la vacuna de
+                la rabia (solo perros). Además en cada visita te iremos
+                informando sobre cuidados del cachorro, su educación,
+                alimentación, etc.
+              </p>
+              <p>
+                Por si fuera poco nuestros packs incluyen
+                <strong>descuentos</strong> en esterilización/castración, en
+                alimentación y artículos de tienda (juguetes, correas, collares,
+                productos de higiene, etc.) que podrás utilizar durante todo un
+                año. Para las familias numerosas tenemos descuentos en los packs
+                a partir del segundo cachorro.
+              </p>
             </div>
+
+            <div class="bloque_doble">
+              <div class="bloque packoplan claro sombra">
+                <h3>Pack Cachorro</h3>
+
+                <img
+                  src="imagenes/packs_y_planes/pack_cachorro.png"
+                  alt="Pack Cachorro"
+                />
+
+                <dl class="sombra">
+                  <dt>
+                    <i class="paw material-icons">pets</i>Primera revisión
+                  </dt>
+                  <dd>
+                    Nos aseguramos de que todo esa bien cuando llega a casa
+                  </dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Todas las vacunas de
+                    cachorro
+                  </dt>
+                  <dd>
+                    Puppy DP, vacuna y revacuna polivalente y vacuna de la rabia
+                    (con cada vacuna se realiza una exploración física completa)
+                  </dd>
+
+                  <dt><i class="paw material-icons">pets</i>Coprológicos</dt>
+                  <dd>Dos análisis coprológicos</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Desparasitaciones
+                  </dt>
+                  <dd>Tres desparasitaciones de cachorro</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Identificación y
+                    registro
+                  </dt>
+                  <dd>
+                    Implantación de microchip + pasaporte + registro en el RACIC
+                  </dd>
+
+                  <dt><i class="paw material-icons">pets</i>Descuentos</dt>
+                  <dd>
+                    15% en esterilización y 10% en alimentación y tienda durante
+                    un año
+                  </dd>
+                </dl>
+                <h4>Pack Cachorro: 189€</h4>
+              </div>
+
+              <div class="bloque packoplan claro sombra">
+                <h3>Pack Gatito</h3>
+
+                <img
+                  src="imagenes/packs_y_planes/pack_gatito.png"
+                  alt="Pack Gatito"
+                />
+
+                <dl class="sombra">
+                  <dt>
+                    <i class="paw material-icons">pets</i>Primera revisión
+                  </dt>
+                  <dd>
+                    Nos aseguramos de que todo esa bien cuando llega a casa
+                  </dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Todas las vacunas de
+                    gatito
+                  </dt>
+                  <dd>
+                    Trivalente, Leucemia y revacuna de ambas (con cada vacuna se
+                    realiza una exploración física completa)
+                  </dd>
+
+                  <dt><i class="paw material-icons">pets</i>Coprológicos</dt>
+                  <dd>Dos análisis coprológicos</dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Desparasitaciones
+                  </dt>
+                  <dd>Tres desparasitaciones de cachorro</dd>
+
+                  <dt><i class="paw material-icons">pets</i>Test FelV/FiV</dt>
+                  <dd>
+                    Comprobamos que no padece Leucemia o Inmundeficiencia, dos
+                    graves enfermedades
+                  </dd>
+
+                  <dt>
+                    <i class="paw material-icons">pets</i>Identificación y
+                    registro
+                  </dt>
+                  <dd>
+                    Implantación de microchip + pasaporte + registro en el RACIC
+                  </dd>
+
+                  <dt><i class="paw material-icons">pets</i>Descuentos</dt>
+                  <dd>
+                    15% en esterilización y 10% en alimentación y tienda durante
+                    un año
+                  </dd>
+                </dl>
+                <h4>Pack Gatito: 179€</h4>
+              </div>
+            </div>
+            <div class="condiciones">* Consulta condiciones</div>
+          </section>
         </div>
-    </section>
+      </div>
 
-    <!-- EQUIPO -->
-    <section class="color_claro" id="sec_equipo">
+      <!-- EQUIPO -->
+      <div class="contenedor">
+        <div class="contenido equipo">
+          <div class="ancla" id="sec_equipo"></div>
 
-        <div class="container">
-
+          <section>
             <header>Equipo</header>
 
-            <div class="contenido">
-
-                <div class="texto_seccion">
-
-                    <p>La Clínica Veterinaria Puertochico está formada por un equipo joven de tres personas, dos veterinarias y un auxiliar. Nuestra pasión son los animales, por eso cada día nos esforzamos para cuidar de la salud de vuestras mascotas atendiendo
-                        a las necesidades y particularidades de cada una. Nuestro equipo te ofrecerá un trato cercano y personalizado estando siempre dispuestos a resolver todas tus dudas.</p>
-                </div>
-
-                <div class="bloque_doble ">
-
-                    <div class="bloque empleado color_oscuro">
-                        <img src="imagenes/personal/raquel.jpg" alt="Raquel Hernandez">
-                        <figcaption>
-                            <h2>Raquel</h2>
-                        </figcaption>
-                        <div>
-                            <ul>
-                                <li> <i class=" material-icons paw">pets</i>Fundadora y directora veterinaria de la clínica </li>
-                                <li> <i class=" material-icons paw">pets</i>Licenciada en Veterinaria por la Universidad de León en 2006 </li>
-                                <li> <i class=" material-icons paw">pets</i>Postgrado clínica veterinaria pequeños animales por la UAB 2011 </li>
-                                <li> <i class=" material-icons paw">pets</i>Miembro de AVEPA </li>
-                            </ul>
-                            <p>Antes de fundar la clínica Puertochico en 2013 trabajó en varios centros veterinarios por todo el país. En especial en el Hospital veterinario Avenida, en Bilbao, centro de referencia en el norte de España, donde se formó como
-                                especialista en dermatología, neurología, urgencias y cuidados intensivos. Desde 2005 asiste regularmente a cursos de especialización así como congresos y ponencias veterinarias con el objetivo de mantener una formación
-                                continua.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bloque empleado color_oscuro">
-                        <img id="foto_empleado" src="imagenes/personal/alvaro.jpg" alt="Alvaro Gonzalo">
-                        <figcaption>
-                            <h2> Alvaro</h2>
-                        </figcaption>
-
-                        <div>
-                            <ul>
-                                <li> <i class="material-icons paw">pets</i>Auxiliar Veterinario
-                                    <li> <i class="material-icons paw">pets</i>Resposable de Gestión y administración del centro veterinario
-                            </ul>
-                            <p>Aunque se formó como ingeniero desde 2013 cambió de rumbo y se implicó de lleno en el proyecto de la clínica Puertochico. Desde entonces se ha formado ampliamente como gestor y administrador así como auxiliar veterinario bajo
-                                la tutela de Raquel y con la realización de numerosos cursos.</p>
-
-                        </div>
-                    </div>
-
-                </div>
+            <div class="texto_seccion">
+              <p>
+                La Clínica Veterinaria Puertochico está formada por un equipo
+                joven de tres personas, dos veterinarias y un auxiliar. Nuestra
+                pasión son los animales, por eso cada día nos esforzamos para
+                cuidar de la salud de vuestras mascotas atendiendo a las
+                necesidades y particularidades de cada una. Nuestro equipo te
+                ofrecerá un trato cercano y personalizado estando siempre
+                dispuestos a resolver todas tus dudas.
+              </p>
             </div>
 
-    </section>
+            <div class="bloque_doble">
+              <div class="bloque empleado oscuro sombra" id="empleado_raquel">
+                <figure>
+                  <figcaption>
+                    <h2>Raquel</h2>
+                  </figcaption>
+                
+                  <div class="foto_empleado"></div>
+                </figure>
 
-    <!-- CONTACTO -->
-    <section class="color_oscuro" id="sec_contacto">
-
-        <div class="container">
-
-            <header>Contacto</header>
-
-            <div class="contenido">
-
-
-                <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1447.9040279834683!2d-3.796733605986577!3d43.464604297814454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd494bb18caeb8a7%3A0x8f50fdfe88a3ec19!2sCl%C3%ADnica%20Veterinaria%20Puertochico!5e0!3m2!1ses!2ses!4v1629903417188!5m2!1ses!2ses"
-                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <div class="bloque_contacto">
-                    <address><i class="icono material-icons">location_on</i>Calle Andrés del Río 7 bajo, 39004 Santander</address>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th colspan="2">Horario de apertura</th>
-                            </tr>
-                            <th></th>
-                            <tr>
-                                <td> Lun, Mie, Vie: </td>
-                                <td> <time datetime="10:30">10:30</time> - <time datetime="14:00">14:00</time></td>
-                            </tr>
-                            <tr>
-                                <td>Martes y Jueves:</td>
-                                <td><time datetime="10:30">10:30</time> - <time datetime="14:00">14:00</time> <br><time datetime="17:00">17:00</time> - <time datetime="20:00">20:00</time></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div id="email">
-                        <a href="mailto:contacto@vetpuertochico.com"><i class="icono material-icons">email</i>contacto@vetpuertochico.com</a>
-                    </div>
-
-                    <div id="cita">
-                        <a href="tel:942050709"><i class="icono material-icons">phone</i>942 05 07 09 Cita previa</a>
-                    </div>
-
-
-                    <p id="facebook"><a href="http://facebook.com/vetpuertochico" target="_blank"><i class="icono material-icons">facebook</i>facebook.com/vetpuertochico</a></p>
-
-
+                <div>
+                  <ul>
+                    <li>
+                      <i class="material-icons paw">pets</i>Fundadora y
+                      directora veterinaria de la clínica
+                    </li>
+                    <li>
+                      <i class="material-icons paw">pets</i>Licenciada en
+                      Veterinaria por la Universidad de León en 2006
+                    </li>
+                    <li>
+                      <i class="material-icons paw">pets</i>Postgrado clínica
+                      veterinaria pequeños animales por la UAB 2011
+                    </li>
+                    <li>
+                      <i class="material-icons paw">pets</i>Miembro de AVEPA
+                    </li>
+                  </ul>
+                  <p>
+                    Antes de fundar la clínica Puertochico en 2013 trabajó en
+                    varios centros veterinarios por todo el país. En especial en
+                    el Hospital veterinario Avenida, en Bilbao, centro de
+                    referencia en el norte de España, donde se formó como
+                    especialista en dermatología, neurología, urgencias y
+                    cuidados intensivos. Desde 2005 asiste regularmente a cursos
+                    de especialización así como congresos y ponencias
+                    veterinarias con el objetivo de mantener una formación
+                    continua.
+                  </p>
                 </div>
+              </div>
 
+              <div class="bloque empleado oscuro sombra" id="empleado_alvaro">
+                <figure>
+                  <figcaption>
+                    <h2>Alvaro</h2>
+                  </figcaption>
+                  <div class="foto_empleado"></div>
+                </figure>
+
+                <div>
+                  <ul>
+                    <li>
+                      <i class="material-icons paw">pets</i>Auxiliar Veterinario
+                    </li>
+                    <li>
+                      <i class="material-icons paw">pets</i>Resposable de
+                      Gestión y administración del centro veterinario
+                    </li>
+                  </ul>
+
+                  <p>
+                    Aunque se formó como ingeniero desde 2013 cambió de rumbo y
+                    se implicó de lleno en el proyecto de la clínica
+                    Puertochico. Desde entonces se ha formado ampliamente como
+                    gestor y administrador así como auxiliar veterinario bajo la
+                    tutela de Raquel y con la realización de numerosos cursos.
+                  </p>
+                </div>
+              </div>
             </div>
+          </section>
         </div>
+      </div>
 
-    </section>
-</div>
+      <!--CONTACTO -->
+      <div class="contenedor oscuro">
+        <div class="contenido contacto">
+          <div class="ancla" id="sec_contacto"></div>
+          <section>
+            <header>Contacto</header>
+            <div class="bloque_doble contacto">
+              <iframe
+                id="mapa"
+                class="sombra"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1447.9040279834683!2d-3.796733605986577!3d43.464604297814454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd494bb18caeb8a7%3A0x8f50fdfe88a3ec19!2sCl%C3%ADnica%20Veterinaria%20Puertochico!5e0!3m2!1ses!2ses!4v1629903417188!5m2!1ses!2ses"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+              <div class="bloque contacto">
+                <address>
+                  <i class="icono material-icons">location_on</i>Calle Andrés
+                  del Río 7 bajo, 39004 Santander
+                </address>
+                <table class="horario sombra">
+                  <tbody>
+                    <tr>
+                      <th colspan="2">Horario de apertura</th>
+                    </tr>
+                    <th></th>
+                    <tr>
+                      <td>Lun, Mie, Vie:</td>
+                      <td>
+                        <time datetime="10:30">10:30</time> -
+                        <time datetime="14:00">14:00</time>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Martes y Jueves:</td>
+                      <td>
+                        <time datetime="10:30">10:30</time> -
+                        <time datetime="14:00">14:00</time> <br /><time
+                          datetime="17:00"
+                          >17:00</time
+                        >
+                        - <time datetime="20:00">20:00</time>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
-</body>
+                <div id="email">
+                  <a href="mailto:contacto@vetpuertochico.com"
+                    ><i class="icono material-icons">email</i
+                    >contacto@vetpuertochico.com</a
+                  >
+                </div>
 
-<!-- FOOTER -->
-<footer>
-    <p id="copyright">Copyright © 2021 Clínica Veterinaria Puertochico</p>
-</footer>
+                <div id="cita" class="sombra">
+                  <a href="tel:942050709"
+                    ><i class="icono material-icons">phone</i>942 05 07 09 Cita
+                    previa</a
+                  >
+                </div>
+
+                <p id="facebook">
+                  <a href="http://facebook.com/vetpuertochico" target="_blank"
+                    ><i class="icono material-icons">facebook</i
+                    >facebook.com/vetpuertochico</a
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="scripts.js"></script>
+    </main>
+  </body>
+  <script></script>
+</html>
