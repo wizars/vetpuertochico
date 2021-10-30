@@ -1,65 +1,6 @@
 //# sourceURL=VetScripts.js
 
 
-/*******************************/
-/*         CARRUSEL            */
-/*******************************/
-
-
-// script para los botones de atras y adelante 
-var tiempo = 3000;
-var slideIndex = 1;
-showDivs(slideIndex);
-carousel();
-
-document.querySelector("span.boton_slide.atras").addEventListener('click', () => { showDivs(slideIndex - 1) });
-document.querySelector("span.boton_slide.alante").addEventListener('click', () => { showDivs(slideIndex + 1); });
-
-// muestra la imagen adecuada y oculta las otras
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("fotos_slide");
-  slideIndex = n;
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = x.length;
-  }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-    document.getElementById('b' + (i + 1).toString()).checked = false;
-    document.getElementById('frase' + (i + 1).toString()).style.display = "none";
-
-
-  }
-  x[slideIndex - 1].style.display = "block";
-  document.getElementById('b' + slideIndex.toString()).checked = true;
-  document.getElementById('frase' + slideIndex.toString()).style.display = "block";
-
-
-}
-// Avanza el carrusel con el tiempo
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("fotos_slide");
-  var b = document.getElementsByClassName("bolita");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-    document.getElementById('b' + (i + 1).toString()).checked = false;
-    document.getElementById('frase' + (i + 1).toString()).style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {
-    slideIndex = 1;
-  }
-  x[slideIndex - 1].style.display = "block";
-  document.getElementById('b' + slideIndex.toString()).checked = true;
-  document.getElementById('frase' + slideIndex.toString()).style.display = "block";
-
-  setTimeout(carousel, tiempo); // Change image every 2 seconds
-}
-
 
 
 
@@ -67,71 +8,34 @@ function carousel() {
 /*           MENU              */
 /*******************************/
 
+var btn_menu= document.querySelector("span.boton_menu");
+var menu=document.getElementById("menu");
+
 //Añadimos el evento click al span que forma el boton del menu
-document.querySelector("span.boton_menu").addEventListener('click', ToggleMenu);
+btn_menu.addEventListener('click', ToggleMenu);
 
 /* muestra el icono de menu o el de cerrar */
 function ToggleMenu() {
 
-  // cambiamos el simbolo del boton
-  document.querySelector("span.boton_menu").classList.toggle('btn_cerrar')
 
-  if (window.matchMedia('only screen and  (max-width: 768px)').matches) {
+  if (window.matchMedia('only screen and  (max-width: 1024px)').matches) {
 
     //MODO MOVIL
-    //Menu pequeño desplegable, mostramos u ocultamos cambiando max-height
+    //Menu pequeño desplegable, mostramos u ocultamos cambiando max-height  
+    if(menu.style.maxHeight=="100%"){
+      menu.style.maxHeight="0px";
+      btn_menu.innerHTML='menu';
+    }else{
+      menu.style.maxHeight="100%";
+      btn_menu.innerHTML='close'
 
-    //Nos aseguramos de limpiar lode cambios del modo Tablet
-    document.getElementById("menu").style.maxWidth = "100%";
-
-    if (document.getElementById("menu").style.maxHeight == "100%") {
-      document.querySelector(".menu").style.maxHeight = "0";
-      document.querySelector("span.boton_menu").innerHTML = 'menu';
-
-    } else {
-      document.querySelector("span.boton_menu").innerHTML = 'close';
-      document.getElementById("menu").style.maxHeight = "100%";
-    }
-
-  }
-  else if (window.matchMedia('only screen and (min-width: 768px) and (max-width: 1024px)').matches) {
-
-    //MODO TABLET    
-    //Menu lateral desplegabe,  mostramos u ocultamos cambiando max-width
-
-    //Nos aseguramos de limpiar los cambios del modo movil
-    document.getElementById("menu").style.maxHeight = "100%";
-
-    if (document.getElementById("menu").style.maxWidth == "250px") {
-      document.getElementById("menu").style.maxWidth = "0";
-      document.querySelector("span.boton_menu").innerHTML = 'menu';
-
-    } else {
-      document.getElementById("menu").style.maxWidth = "250px";
-      document.querySelector("span.boton_menu").innerHTML = 'close';
-
-    }
-
+}
+      
 
   }
 }
 
 
-
-/*******************************/
-/*         ACORDEON            */
-/*******************************/
-
-// Menu acordeon desplegable   
-
-const accordion = document.getElementsByClassName('bloque_servicio');
-
-for (i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener('click', function () {
-    this.classList.toggle('abierto')
-
-  })
-}
 
 
 /*******************************/

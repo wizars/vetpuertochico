@@ -29,20 +29,16 @@ to give the animation a nicer effect. */
   position: fixed;
   bottom: 3%;
   right: 3%;
-  margin: 5px;
-  padding: 2px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background-color: #25d366;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+  background-color: transparent;
+  /* drop-shadow: 0 10px 20px rgba(0, 0, 0, 1); */
+  filter: drop-shadow(0 0 2px black);
 }
 
-#boton_whatsapp i {
-  margin-left: 0.07em;
-  color: white;
-  font-size: 2em;
-  text-align: center;
+#boton_whatsapp img {
+width: 40px;
 }
 #burbuja_whatsapp {
   position: absolute;

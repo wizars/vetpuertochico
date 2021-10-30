@@ -27,20 +27,23 @@
   <body>
     <main>
       <!-- MENU SUPERIOR -->
-      <div class="contenedor">
+      <div class="contenedor sombra">
         <nav class="contenido">
-          <a
-            id="boton_whatsapp"
-            href="https://wa.me/0034650098245/?text=Hola%20"
-          >
-            <i class="material-icons"> whatsapp</i>
+          <a id="boton_whatsapp" href="https://wa.me/34601399798">
+            <img
+              src="/imagenes/otros/WhatsApp_Logo.png"
+              alt="Contacta por WhatsApp"
+            />
             <div id="burbuja_whatsapp">Hablamos?</div>
           </a>
 
           <div class="cabecera">
+            
+            
             <div class="cab">
               <img
                 class="logotipo"
+                height="70px"
                 src="imagenes/marca/cabecera.png"
                 alt="Logotipo Clínica Veterinaria Puertochico"
               />
@@ -51,105 +54,24 @@
               <!-- elementos del menu -->
               <ul class="lista_menu">
                 <li>
-                  <a href="#sec_laclinica" onclick="Cerrar()">LA CLINICA</a>
+                  <a href="#sec_laclinica" onclick="ToggleMenu()">La Clínica</a>
                 </li>
                 <li>
-                  <a href="#sec_servicios" onclick="Cerrar()">SERVICIOS</a>
+                  <a href="#sec_servicios" onclick="ToggleMenu()">Servicios</a>
                 </li>
-                <li><a href="#sec_planes" onclick="Cerrar()">PLANES</a></li>
-                <li><a href="#sec_packs" onclick="Cerrar()">PACKS</a></li>
-                <li><a href="#sec_equipo" onclick="Cerrar()">EQUIPO</a></li>
-                <li><a href="#sec_contacto" onclick="Cerrar()">CONTACTO</a></li>
+                <li><a href="#sec_planes" onclick="ToggleMenu()">Planes</a></li>
+                <li><a href="#sec_packs" onclick="ToggleMenu()">Packs</a></li>
+                <li><a href="#sec_equipo" onclick="ToggleMenu()">Equipo</a></li>
+                <li><a href="#sec_contacto" onclick="ToggleMenu()">Contacto</a></li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
-      <!-- CARRUSEL -->
+      <!-- PORTADA -->
       <div class="contenedor">
-        <div class="contenido sld">
-          <div class="slide">
-            <span class="boton_slide atras"> &lsaquo; </span>
-
-            <img
-              class="fotos_slide"
-              width="50"
-              src="imagenes/slide/Slide_1.jpg"
-            />
-            <img
-              class="fotos_slide"
-              width="50"
-              src="imagenes/slide/Slide_2.jpg"
-            />
-            <img
-              class="fotos_slide"
-              width="50"
-              src="imagenes/slide/Slide_3.jpg"
-            />
-            <img
-              class="fotos_slide"
-              width="50"
-              src="imagenes/slide/Slide_4.jpg"
-            />
-            <img
-              class="fotos_slide"
-              width="50"
-              src="imagenes/slide/Slide_5.jpg"
-            />
-
-            <span class="boton_slide alante"> &rsaquo; </span>
-
-            <div class="frases" id="frase1">
-              <span>Cuidamos de los tuyos!</span>
-            </div>
-            <div class="frases" id="frase2">
-              <span>Trato personalizado!</span>
-            </div>
-            <div class="frases" id="frase3"><span>Pasión animal!</span></div>
-            <div class="frases" id="frase4"><span>Siempre contigo!</span></div>
-            <div class="frases" id="frase5"><span>Duerme tranquilo!</span></div>
-
-            <form name="pro" class="progreso">
-              <label class="contprogreso">
-                <input
-                  type="radio"
-                  onchange="showDivs(1)"
-                  checked="checked"
-                  name="radio-group"
-                  id="b1"
-                /><span class="bolita"></span>
-              </label>
-              <label class="contprogreso">
-                <input
-                  type="radio"
-                  onchange="showDivs(2)"
-                  name="radio-group"
-                  id="b2"
-                /><span class="bolita"></span> </label
-              ><label class="contprogreso">
-                <input
-                  type="radio"
-                  onchange="showDivs(3)"
-                  name="radio-group"
-                  id="b3"
-                /><span class="bolita"></span> </label
-              ><label class="contprogreso">
-                <input
-                  type="radio"
-                  onchange="showDivs(4)"
-                  name="radio-group"
-                  id="b4"
-                /><span class="bolita"></span> </label
-              ><label class="contprogreso">
-                <input
-                  type="radio"
-                  onchange="showDivs(5)"
-                  name="radio-group"
-                  id="b5"
-                /><span class="bolita"></span>
-              </label>
-            </form>
-          </div>
+        <div class="contenido portada">
+          <img src="/imagenes/slide/portada_movil.jpg" id="foto_portada" />
         </div>
       </div>
 
@@ -160,13 +82,13 @@
 
           <section>
             <header>La clínica</header>
+            <div class="cita" id="cita1">
+              <h2>
+                Nuestras mascotas son parte de nuestra familia y se merecen ser
+                tratados como tales.
+              </h2>
+            </div>
             <div class="texto_seccion">
-              <div class="cita">
-                <h2>
-                  Nuestras mascotas son parte de nuestra familia y se merecen
-                  ser tratados como tales.
-                </h2>
-              </div>
               <p>
                 Por eso desde la clínica Puertochico trabajamos cada día no solo
                 para ofrecerte un servicio médico completo y de calidad, sino
@@ -209,337 +131,126 @@
                 src="imagenes/clinica/miniaturas/foto_1-150x150.jpg"
                 data-src="imagenes/clinica/foto_1.jpg"
                 alt="Recepción"
-                class="sombra"
               />
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_2-150x150.jpg"
                 data-src="imagenes/clinica/foto_2.jpg"
                 alt="Escaparate"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_3-150x150.jpg"
                 data-src="imagenes/clinica/foto_3.jpg"
                 alt="Vista exterior"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_4-150x150.jpg"
                 data-src="imagenes/clinica/foto_4.jpg"
                 alt="Consulta"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_5-150x150.jpg"
                 data-src="imagenes/clinica/foto_5.jpg"
                 alt="Recepción"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_6-150x150.jpg"
                 data-src="imagenes/clinica/foto_6.jpg"
                 alt="Sala de Rayos X"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_7-150x150.jpg"
                 data-src="imagenes/clinica/foto_7.jpg"
                 alt="Laboratorio"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_8-150x150.jpg"
                 data-src="imagenes/clinica/foto_8.jpg"
                 alt="Laboratorio"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_9-150x150.jpg"
                 data-src="imagenes/clinica/foto_9.jpg"
                 alt="Sala de hospitalización"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_10-150x150.jpg"
                 data-src="imagenes/clinica/foto_10.jpg"
                 alt="Quirofano"
               />
 
               <img
-                class="sombra"
-                src="imagenes/clinica/miniaturas/foto_11-150x150.jpg"
-                data-src="imagenes/clinica/foto_11.jpg"
-                alt="Juguetes"
-              />
-
-              <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_12-150x150.jpg"
                 data-src="imagenes/clinica/foto_12.jpg"
                 alt="Juguetes y acceorios"
               />
 
               <img
-                class="sombra"
                 src="imagenes/clinica/miniaturas/foto_13-150x150.jpg"
                 data-src="imagenes/clinica/foto_13.jpg"
                 alt="Alimentación"
               />
             </div>
-          </section>
+
+<!-- 
+            <span class="boton_slide atras"> &lsaquo; </span>
+            <div class="slide">
+      
+              <img
+                class="fotos_slide"
+                src="imagenes/slide/Slide_1.jpg"
+              />
+              <img
+                class="fotos_slide"
+                src="imagenes/slide/Slide_2.jpg"
+              />
+              <img
+                class="fotos_slide"
+                src="imagenes/slide/Slide_3.jpg"
+              />
+              <img
+                class="fotos_slide"
+                src="imagenes/slide/Slide_4.jpg"
+              />
+              <img
+                class="fotos_slide"
+                src="imagenes/slide/Slide_5.jpg"
+              />
+      
+              
+              
+            </div>
+            <span class="boton_slide alante"> &rsaquo; </span>
+          </section> -->
         </div>
       </div>
 
       <!-- SERVICIOS  -->
       <div class="ancla" id="sec_servicios"></div>
-      <div class="oscuro contenedor">
-        <div class="contenido oscuro servicios">
+      <div class="contenedor">
+        <div class="contenido">
           <section>
             <header>Servicios</header>
 
-            <dl>
-              <div class="bloque_servicio abierto">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_1"
-                    src="imagenes/marca/cruz.png"
-                    alt="Medicina General"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Medicina general
-                  </h3>
-                </dt>
-                <dd>
-                  Nuestro equipo veterinario atenderá los problemas o síntomas
-                  que observes en tu mascota; mediante una exploración
-                  exhaustiva y las pruebas necesarias llegará a un diagnóstico y
-                  prescribirá el tratamiento más adecuado para tu mascota.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_2"
-                    src="imagenes/marca/cruz.png"
-                    alt="Medicina Preventiva"
-                  />
-                </div>
-
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Medicina preventiva
-                  </h3>
-                </dt>
-
-                <dd>
-                  La prevención es la mejor forma cuidar de la salud de tu
-                  mascota. Protégela mediante vacunas, desparasitaciones y
-                  chequeos periódicos. Especialmente importante en el caso de
-                  mascotas de edad avanzada.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_3"
-                    src="imagenes/marca/cruz.png"
-                    alt="Diagnóstico por Imagen"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Diagnóstico por Imagen
-                  </h3>
-                </dt>
-                <dd>
-                  Contamos con servicio de radiología digital y un servicio
-                  externo ecografía para llegar a un diagnóstico acertado en el
-                  menor tiempo posible.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_4"
-                    src="imagenes/marca/cruz.png"
-                    alt="Ánalisis Clínicos"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Ánalisis clínicos
-                  </h3>
-                </dt>
-                <dd>
-                  Disponemos de un laboratorio completamente equipado donde
-                  poder realizar analíticas sanguíneas, anális de orina,
-                  coprológicos, citologías, raspados, tricogramas y test
-                  serológicos.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_5"
-                    src="imagenes/marca/cruz.png"
-                    alt="Cirugía General"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Cirugía general
-                  </h3>
-                </dt>
-                <dd>
-                  Disponemos de un quirófano completamente equipado para la
-                  realización de todo tipo de cirugías de tejidos blandos
-                  manteniendo al paciente monitorizado en todo momento. La
-                  seguridad del paciente es nuestra prioridad.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_6"
-                    src="imagenes/marca/cruz.png"
-                    alt="Hospitalización de dia"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Hospitalización de día
-                  </h3>
-                </dt>
-                <dd>
-                  Contamos con una sala de hospitalización donde los pacientes
-                  pueden recuperarse y descansar cómodamente mientras estar
-                  permanentemente controlados por nuestro personal.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_7"
-                    src="imagenes/marca/cruz.png"
-                    alt="Odontología"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Odontología
-                  </h3>
-                </dt>
-                <dd>
-                  Ofrecemos una revisión dental gratuita para valorar el estado
-                  de salud dental de tu mascota. Contamos con los medios para
-                  realizar limpiezas de boca, extracciones, radiografías
-                  dentales y cirugía bucodental.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_8"
-                    src="imagenes/marca/cruz.png"
-                    alt="Medicina Felina"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Medicina felina
-                  </h3>
-                </dt>
-                <dd>
-                  Los gatos no son perros pequeños, sabemos lo especiales que
-                  son y el estrés que sufren cada vez que salen de casa, nuestro
-                  equipo empleará las técnicas adecuadas para su manejo en un
-                  entorno lo más relajado posible. Además estamos especialmente
-                  formados en el diagnóstico y tratamiento de las patologías
-                  felinas.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_9"
-                    src="imagenes/marca/cruz.png"
-                    alt="Asesoramiento Nutricional"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Asesoramiento nutricional
-                  </h3>
-                </dt>
-                <dd>
-                  Disponemos de una selección de productos de alimentación de
-                  alta gama. Nuestro equipo te asesorará a la hora de decidir
-                  cual es el la mejor dieta para tu mascota teniendo en cuenta
-                  las características propias de su raza, su estado de salud y
-                  sus preferencias.
-                </dd>
-              </div>
-
-              <div class="bloque_servicio">
-                <div class="cont_icono">
-                  <img
-                    class="icono_servicio"
-                    id="icono_servicio_10"
-                    src="imagenes/marca/cruz.png"
-                    alt="Medicina General"
-                  />
-                </div>
-                <dt>
-                  <h3>
-                    <span class="material-icons"></span>
-                    Tienda especializada
-                  </h3>
-                </dt>
-                <dd>
-                  Disponemos de todo tipo de accesorios para tu mascota así como
-                  juguetes, productos de aseo e higiene, golosinas y mucho más.
-                  Nuestro equipo te asesorará personalmente en la elección de
-                  los productos más adecuados para tu mascota.
-                </dd>
-              </div>
-            </dl>
+            <ul class="lista_servicios">
+              <li><h3 id="servicio_1">Medicina general</h3></li>
+              <li><h3 id="servicio_2">Medicina preventiva</h3></li>
+              <li><h3 id="servicio_3">Diagnóstico por Imagen</h3></li>
+              <li><h3 id="servicio_4">Ánalisis clínicos</h3></li>
+              <li><h3 id="servicio_5">Cirugía general</h3></li>
+              <li><h3 id="servicio_6">Hospitalización de día</h3></li>
+              <li><h3 id="servicio_7">Odontología</h3></li>
+              <li><h3 id="servicio_8">Medicina felina</h3></li>
+              <li><h3 id="servicio_9">Asesoramiento nutricional</h3></li>
+              <li><h3 id="servicio_10">Tienda especializada</h3></li>
+            </ul>
           </section>
         </div>
       </div>
@@ -553,12 +264,14 @@
             <header class>Planes de salud</header>
 
             <div class="texto_seccion">
-              <h2>Duerme tranquilo!</h2>
               <p>
                 Ya se sabe que siempre es mejor prevenir que curar, por eso
                 desde la clínica Puertochico presentamos nuestros planes de
                 salud de perro y gato.
               </p>
+              <div class="cita" id="cita2">
+                <h2>Duerme tranquilo!</h2>
+              </div>
               <p>
                 Nuestros planes de salud no solo buscan cubrir las necesidades
                 sanitarias básicas de tu mascota,
@@ -594,7 +307,7 @@
             </div>
 
             <div class="bloque_doble">
-              <div class="bloque packoplan oscuro sombra">
+              <div class="bloque packoplan sombra">
                 <h3>Plan de Salud Perro</h3>
 
                 <img
@@ -603,7 +316,7 @@
                   width="200px"
                 />
 
-                <dl class="claro sombra">
+                <dl>
                   <dt>
                     <i class="paw material-icons">pets</i>CONSULTAS ILIMITADAS
                   </dt>
@@ -649,7 +362,7 @@
                 <h4>Plan Perro: 249€/año</h4>
               </div>
 
-              <div class="bloque packoplan oscuro sombra">
+              <div class="bloque packoplan sombra">
                 <h3>Plan de Salud Gato</h3>
 
                 <img
@@ -658,8 +371,7 @@
                   width="200px"
                 />
 
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
-                <dl class="claro sombra">
+                <dl>
                   <dt>
                     <i class="paw material-icons">pets</i>CONSULTAS ILIMITADAS
                   </dt>
@@ -713,7 +425,7 @@
       </div>
 
       <!-- PACKS -->
-      <div class="contenedor oscuro">
+      <div class="contenedor">
         <div class="contenido">
           <div class="ancla" id="sec_packs"></div>
 
@@ -721,13 +433,14 @@
             <header>Packs de cachorro</header>
 
             <div class="texto_seccion">
-              <h2>Protégele desde el primer día!</h2>
-
               <p>
                 En la clínica Puertochico sabemos que los primeros meses de vida
                 de un cachorro y la llegada a su nueva casa requiere de unos
                 <strong>cuidados especiales.</strong>
               </p>
+              <div class="cita" id="cita3">
+                <h2>Protégele desde el primer día!</h2>
+              </div>
               <p>
                 Por eso presentamos estos packs de cachorro/gatito que cubren
                 las necesidades sanitarias más importantes del nuevo miembro de
@@ -752,7 +465,7 @@
             </div>
 
             <div class="bloque_doble">
-              <div class="bloque packoplan claro sombra">
+              <div class="bloque packoplan sombra">
                 <h3>Pack Cachorro</h3>
 
                 <img
@@ -760,7 +473,7 @@
                   alt="Pack Cachorro"
                 />
 
-                <dl class="sombra">
+                <dl>
                   <dt>
                     <i class="paw material-icons">pets</i>Primera revisión
                   </dt>
@@ -810,7 +523,7 @@
                   alt="Pack Gatito"
                 />
 
-                <dl class="sombra">
+                <dl>
                   <dt>
                     <i class="paw material-icons">pets</i>Primera revisión
                   </dt>
@@ -886,11 +599,14 @@
             <div class="bloque_doble">
               <div class="bloque empleado oscuro sombra" id="empleado_raquel">
                 <figure>
+                  <img
+                    class="foto_empleado"
+                    src="/imagenes/personal/raquel2.jpg"
+                    alt=" Raquel Hernandez, Veterinaria"
+                  />
                   <figcaption>
                     <h2>Raquel</h2>
                   </figcaption>
-                
-                  <div class="foto_empleado"></div>
                 </figure>
 
                 <div>
@@ -927,10 +643,14 @@
 
               <div class="bloque empleado oscuro sombra" id="empleado_alvaro">
                 <figure>
+                  <img
+                    class="foto_empleado"
+                    src="/imagenes/personal/alvaro.jpg"
+                    alt=" Alvaro Gonzalo, Auxiliar Veterinario"
+                  />
                   <figcaption>
                     <h2>Alvaro</h2>
                   </figcaption>
-                  <div class="foto_empleado"></div>
                 </figure>
 
                 <div>
@@ -959,7 +679,7 @@
       </div>
 
       <!--CONTACTO -->
-      <div class="contenedor oscuro">
+      <div class="contenedor">
         <div class="contenido contacto">
           <div class="ancla" id="sec_contacto"></div>
           <section>
@@ -967,7 +687,6 @@
             <div class="bloque_doble contacto">
               <iframe
                 id="mapa"
-                class="sombra"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1447.9040279834683!2d-3.796733605986577!3d43.464604297814454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd494bb18caeb8a7%3A0x8f50fdfe88a3ec19!2sCl%C3%ADnica%20Veterinaria%20Puertochico!5e0!3m2!1ses!2ses!4v1629903417188!5m2!1ses!2ses"
                 style="border: 0"
                 allowfullscreen=""
@@ -981,7 +700,7 @@
                 <table class="horario sombra">
                   <tbody>
                     <tr>
-                      <th colspan="2">Horario de apertura</th>
+                      <th colspan="2"> Horario de apertura</th>
                     </tr>
                     <th></th>
                     <tr>
@@ -1019,12 +738,12 @@
                   >
                 </div>
 
-                <p id="facebook">
+                <div id="facebook">
                   <a href="http://facebook.com/vetpuertochico" target="_blank"
                     ><i class="icono material-icons">facebook</i
                     >facebook.com/vetpuertochico</a
                   >
-                </p>
+                </div>
               </div>
             </div>
           </section>

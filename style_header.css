@@ -11,8 +11,10 @@
     z-index: 999;
     margin-top: 0;
     display: flex;
+    min-height: 70px;
+
     flex-direction: column;
-    border-bottom: 5px var(--azul) solid;
+    /* border-bottom: 5px var(--azul) solid; */
     border-top: 0;
   }
   .contenedor:nth-of-type(2) {
@@ -20,9 +22,13 @@
   }
   
   nav.contenido {
+    max-width: 1810px;
+    width: 100%;
     border-top: 0;
     max-height: 80px;
     padding-bottom: 0;
+    background-color: white;
+
   }
   
   /* contenedor principal del la cabecera y el menu*/
@@ -41,7 +47,8 @@
   /* logo */
   .logotipo {
     object-fit: contain;
-    max-height: 50px;
+    max-height: 70px;
+    min-height: 70px;
     max-width: 90%;
   }
   
@@ -56,38 +63,44 @@
     content: "menu";
   }
   
-  /* cambia el texto del span boton menu para mostrar el simbolo de menu o la X en version movil */
-  .btn_cerrar {
-    content: "close";
-  }
+
   
   /* menu desplegable */
   .menu {
-    max-height: 100%; /* quitar esto al final!!!!!*/
-    height: auto;
-    max-width: 0%;
-    width: auto;
-  
-    position: fixed;
-    right: 0;
-    top: 55px;
-    transition: max-height 0.8s;
-    overflow-y: hidden;
-    z-index: 9;
+      z-index: 9;
+      position: fixed;
+      right: 0;
+      top: 70px;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 0px;
+
+      background-color:var(--azul);
+      opacity: 0.85;
+      transition: .5s;
+      display: flex ;
+      overflow: hidden;
+    
   }
-  
+  .lista_menu{
+      min-height: 100%;
+      margin: auto;
+      margin-top: 20%;
+      
+  }
   
   /* enlaces del menu */
   .lista_menu li {
-    padding: 5px 10px;
+    padding: 16px 10px;
     color: var(--azul);
-    background-color: var(--azul);
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
-    font-size: 16px;
-  
+    background-color: transparent;
+    margin: auto;
+    font-size: 24px;
+    font-weight: bolder;
+  ;
     text-decoration: none;
-    text-transform: uppercase;
-    border: 1px white solid;
+    
   }
   .lista_menu a {
     color: white;
@@ -99,60 +112,9 @@
   .lista_menu a:visited {
     color: white;
   }
-  
-  /*******************************/
-  
-  /*  CABECERA   -    TABLET    */
-  
-  /*******************************/
-  
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* formato del menu */
-    .menu {
-      max-height: auto;
-      height: 100%;
-      max-width: 250px;
-      width: 100%;
-      left: 0;
-      transition: max-width 0.8s;
-      background-color: var(--azul);
-      border-right: 2px white solid;
-      background-color: var(azul);
-      /* background: transparent; */
-      /* background: linear-gradient(
-        90deg,
-        rgba(30, 115, 190, 1) 0%,
-        transparent 100% */
-    }
-  
-    /* Boton de whatsapp */
-    .whatsapp img {
-      margin: 0;
-      width: 3em;
-    }
-    /* enlaces del menu */
-    .lista_menu li {
-      padding: 5px 10px;
-      /* background-color: var(--azul); */
-      background-color: transparent;
-      font-family: "PT Sans", Arial, Helvetica, sans-serif;
-      font-size: 16px;
-  
-      text-decoration: none;
-      text-transform: uppercase;
-      border: 0;
-    }
-    .lista_menu a {
-      color: white;
-    }
-    .lista_menu a:hover {
-      border-bottom: 4px solid var(--azul) !important;
-      transition: 0.5s ease;
-    }
-    .lista_menu a:visited {
-      color: white;
-    }
-  }
+
+
+
   
   /*******************************/
   
@@ -160,47 +122,49 @@
   
   /*******************************/
   @media only screen and (min-width: 1025px) {
+    
     /* cabecera */
-  
-    .cabecera {
+     .cabecera {
       display: flex;
-      position: static;
+      position: fixed;
       justify-content: space-between;
-      border-bottom: 0;
-    }
-    .cab {
-      width: fit-content;
+      align-items: center;
+      padding: 0 20px;
+      flex-flow: row nowrap;
+      
+    } 
+    
+    nav.contenido {
+        padding:0;
+        margin: 0;
+        min-height: fit-content;
     }
   
-    /* oculto los botones de cerrar y de menu */
-  
+    /* oculto los botones de cerrar y de menu */  
     span.boton_menu {
       display: none;
     }
   
-    /* logo */
-    .logotipo {
-      object-fit: contain;
-      max-height: 80px;
-      max-width: 90%;
-    }
+    
   
     /* Menu */
-    .menu {
-      position: static;
+    #menu {
+      position:static;
       overflow-y: visible;
-      width: auto;
-      max-height: fit-content;
-      max-width: fit-content;
-      margin: auto 0 auto 0;
-      display: flex;
-      justify-content: flex-end;
+      background-color: white;
       align-items: center;
+      justify-content: flex-end;
+      display: flex;
+      min-width: fit-content;
+      max-height: fit-content;
+      margin-right:0 ;
+
     }
     .lista_menu {
+        margin: 0 auto  0 auto;
       display: flex;
       flex-direction: row;
-      margin-right: 20px;
+      margin:0;
     }
   
     /* Boton de whatsapp */
@@ -218,7 +182,7 @@
       font-size: 16px;
   
       text-decoration: none;
-      text-transform: uppercase;
+      
       border: 0;
       min-width: fit-content;
     }
