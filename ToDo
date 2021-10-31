@@ -1,33 +1,14 @@
 
+- COMPATIBILIDAD
+    + Asegurarse de que funciona en mac y en microsoft y esas mierdas el fallback
 
+- SEO
 
-- NUEVO
-    + cambiar galeria por carrusel q va pasando pero con animaciones
+ni idea de por donde empezar
 
-    + cerrar menu al hacer click
-
-
-- ANIMACIONES
-    + hover en los enlaces y botones
-
-- DISEÑO
-    +  font-smoooth aliasing mirar
-    + Cambiar foto de alvaro
-    + que hacer con la foto de portada
-
-- JS
-    + refinar funcionamiento de todos los scripts
-    + añadir carrusel fotos de la galeria que pase automaticamente
-    + Que hacer en modo movil con la burbuja de whatsapp y sacarlo del menu 
-    + revisar funcionamiento visor y animacion al abrir y cerrar
     
-- IMAGENES
-    + Definir resoluciones adecuadas
-    + optimizar carga y lazy loading
 
 - TEXTO
-    + Mejorar legibilidad del texto
     + revisar ortografia y contenido
-    + Elegir fuente adecuado y centrado, alineado izq o justificado?
     + resaltar palabras cable
     + Cambiar a fuente lato, normal 400 y titulos 700 o 900 para la cita 300

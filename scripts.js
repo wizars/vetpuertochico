@@ -2,14 +2,37 @@
 
 
 
+/*******************************/
+/*     BURBUJA WHATSAPP        */
+/*******************************/
+var boton = document.getElementById("boton_whatsapp");
+var burbuja = document.getElementById("burbuja_whatsapp");
+
+boton.addEventListener('mouseover', AbreBurbuja);
+boton.addEventListener('mouseout', CierraBurbuja);
+document.addEventListener('DOMContentLoaded', AbreBurbuja)
+document.addEventListener('click', CierraBurbuja)
+
+function AbreBurbuja(){
+  burbuja.style.animationName = "expand-bounce";
+  burbuja.style.animationDuration = "0.25s"
+}
+
+function CierraBurbuja(){
+
+  burbuja.style.animationName = "shrink";
+  burbuja.style.animationDuration = "0.1s";
+}
+
+
 
 
 /*******************************/
 /*           MENU              */
 /*******************************/
 
-var btn_menu= document.querySelector("span.boton_menu");
-var menu=document.getElementById("menu");
+var btn_menu = document.querySelector("span.boton_menu");
+var menu = document.getElementById("menu");
 
 //Añadimos el evento click al span que forma el boton del menu
 btn_menu.addEventListener('click', ToggleMenu);
@@ -22,16 +45,14 @@ function ToggleMenu() {
 
     //MODO MOVIL
     //Menu pequeño desplegable, mostramos u ocultamos cambiando max-height  
-    if(menu.style.maxHeight=="100%"){
-      menu.style.maxHeight="0px";
-      btn_menu.innerHTML='menu';
-    }else{
-      menu.style.maxHeight="100%";
-      btn_menu.innerHTML='close'
+    if (menu.style.maxHeight == "100%") {
+      menu.style.maxHeight = "0px";
+      btn_menu.innerHTML = 'menu';
+    } else {
+      menu.style.maxHeight = "100%";
+      btn_menu.innerHTML = 'close'
 
-}
-      
-
+    }
   }
 }
 
@@ -78,21 +99,5 @@ function Visor(n) {
   document.querySelector('#titulo_foto').innerHTML = foto_activa.alt;
 }
 
-
-
-/*******************************/
-/*     BURBUJA WHATSAPP        */
-/*******************************/
-var boton = document.getElementById("boton_whatsapp");
-var burbuja = document.getElementById("burbuja_whatsapp");
-
-boton.addEventListener('mouseover', () => {
-  burbuja.style.animationName = "expand-bounce";
-  burbuja.style.animationDuration = "0.25s"
-});
-boton.addEventListener('mouseout', () => {
-  burbuja.style.animationName = "shrink";
-  burbuja.style.animationDuration = "0.1s";
-});
 
 

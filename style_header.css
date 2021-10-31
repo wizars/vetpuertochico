@@ -105,10 +105,7 @@
   .lista_menu a {
     color: white;
   }
-  .lista_menu a:hover {
-    border-bottom: 4px solid var(--azul) !important;
-    transition: 0.5s ease;
-  }
+
   .lista_menu a:visited {
     color: white;
   }
@@ -178,7 +175,6 @@
     .lista_menu li {
       padding: 5px 10px;
       background-color: white;
-      font-family: "PT Sans", Arial, Helvetica, sans-serif;
       font-size: 16px;
   
       text-decoration: none;
@@ -189,10 +185,7 @@
     .lista_menu a {
       color: var(--azul);
     }
-    .lista_menu a:hover {
-      border-bottom: 4px solid var(--azul) !important;
-      transition: 0.5s ease;
-    }
+
     .lista_menu a:visited {
       color: var(--azul);
     }

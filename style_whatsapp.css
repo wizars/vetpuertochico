@@ -1,3 +1,4 @@
+:root {  --burbuja: #25d366;}
 
 
 /* Here the scale changes from 0 to 1. To add the bounciness 
@@ -45,7 +46,7 @@ width: 40px;
   transform-origin: 0% 100%;
   text-align: center;
   background-color: var(--burbuja);
-  color: white;
+  color: black;
   border-radius: 10px;
   width: 120px;
   padding: 10px;
