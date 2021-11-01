@@ -883,8 +883,7 @@ section header {
 /*   CONTACTO    -     MOVIL   */
 
 /*******************************/
-.contacto header {
-}
+
 .bloque.contacto {
   display: grid;
   grid-template-columns: 49% 49%;
