@@ -6,25 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- DATOS PROPIOS -->
+
     <meta name="description" content="Clinica veterinaria Puertochico" />
     <title>Clinica veterinaria Puertochico</title>
     <link rel="icon" href="imagenes/marca/icono.svg" type="image/x-icon" />
     <meta name="theme-color" content="#1e73be" />
 
     <!-- HOJAS DE ESTILO CSS -->
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- IMPORTACION ICONOS GOOGLE -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-
-    <!-- IMPORTACION DE SCRIPTS PARA MENU Y CARRUSEL -->
   </head>
 
   <!-- CUERPO PRINCIPAL -->
-  <body >
+  <body>
     <main>
       <!-- MENU SUPERIOR -->
       <div class="contenedor sombra">
@@ -38,14 +32,15 @@
           </a>
 
           <div class="cabecera">
-            
-            
             <div class="cab">
               <img
                 class="logotipo"
                 height="70px"
                 src="imagenes/marca/cabecera.svg"
                 alt="Logotipo Clínica Veterinaria Puertochico"
+                height="70px"
+                width="295px"
+                
               />
               <span class="material-icons boton_menu"> menu </span>
             </div>
@@ -62,7 +57,9 @@
                 <li><a href="#sec_planes" onclick="ToggleMenu()">Planes</a></li>
                 <li><a href="#sec_packs" onclick="ToggleMenu()">Packs</a></li>
                 <li><a href="#sec_equipo" onclick="ToggleMenu()">Equipo</a></li>
-                <li><a href="#sec_contacto" onclick="ToggleMenu()">Contacto</a></li>
+                <li>
+                  <a href="#sec_contacto" onclick="ToggleMenu()">Contacto</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -71,7 +68,45 @@
       <!-- PORTADA -->
       <div class="contenedor">
         <div class="contenido portada">
-          <img src="/imagenes/clinica/portada.jpg" id="foto_portada" alt="Foto de portada" />
+          <picture>
+            <source
+              srcset="/imagenes/portada/portada_movil.webp"
+              media="(max-width: 425px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/imagenes/portada/portada_movil.jpg"
+              media="(max-width: 425px)"
+              type="image/jpg"
+            />
+            <source
+              srcset="/imagenes/portada/portada_tablet.webp"
+              media="(max-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/imagenes/portada/portada_tablet.jpg"
+              media="(max-width: 768px)"
+              type="image/jpg"
+            />
+            <source
+              srcset="/imagenes/portada/portada.webp"
+              media="(min-width: 769px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/imagenes/portada/portada.jpg"
+              media="(min-width: 769px)"
+              type="image/jpg"
+            />
+            <img
+              src="imagenes/portada/portada.jpg"
+              id="foto_portada"
+              alt="Foto de portada"
+              width="300px"
+              height="275px"
+            />
+          </picture>
         </div>
       </div>
 
@@ -131,75 +166,99 @@
                 src="imagenes/clinica/miniaturas/foto_1-150x150.jpg"
                 data-src="imagenes/clinica/foto_1.jpg"
                 alt="Recepción"
+                width="80px"
+                height="80px"
               />
+
               <img
                 src="imagenes/clinica/miniaturas/foto_2-150x150.jpg"
                 data-src="imagenes/clinica/foto_2.jpg"
                 alt="Escaparate"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_3-150x150.jpg"
                 data-src="imagenes/clinica/foto_3.jpg"
                 alt="Vista exterior"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_4-150x150.jpg"
                 data-src="imagenes/clinica/foto_4.jpg"
                 alt="Consulta"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_5-150x150.jpg"
                 data-src="imagenes/clinica/foto_5.jpg"
                 alt="Recepción"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_6-150x150.jpg"
                 data-src="imagenes/clinica/foto_6.jpg"
                 alt="Sala de Rayos X"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_7-150x150.jpg"
                 data-src="imagenes/clinica/foto_7.jpg"
                 alt="Laboratorio"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_8-150x150.jpg"
                 data-src="imagenes/clinica/foto_8.jpg"
                 alt="Laboratorio"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_9-150x150.jpg"
                 data-src="imagenes/clinica/foto_9.jpg"
                 alt="Sala de hospitalización"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_10-150x150.jpg"
                 data-src="imagenes/clinica/foto_10.jpg"
                 alt="Quirofano"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_12-150x150.jpg"
                 data-src="imagenes/clinica/foto_12.jpg"
                 alt="Juguetes y acceorios"
+                width="80px"
+                height="80px"
               />
 
               <img
                 src="imagenes/clinica/miniaturas/foto_13-150x150.jpg"
                 data-src="imagenes/clinica/foto_13.jpg"
                 alt="Alimentación"
+                width="80px"
+                height="80px"
               />
             </div>
-
-
+          </section>
         </div>
       </div>
 
@@ -280,12 +339,23 @@
             <div class="bloque_doble">
               <div class="bloque packoplan sombra">
                 <h3>Plan de Salud Perro</h3>
-
-                <img
-                  src="imagenes/packs_y_planes/plan_perro.png"
-                  alt="Plan de Salud Perro"
-                  width="200px"
-                />
+                <picture>
+                  <source
+                    srcset="imagenes/packs_y_planes/plan_perro.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="imagenes/packs_y_planes/plan_perro.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="imagenes/packs_y_planes/plan_perro.png"
+                    alt="Plan de Salud Perro"
+                    
+                    width="330px"
+                    height="200px"
+                  />
+                </picture>
 
                 <dl>
                   <dt>
@@ -335,12 +405,22 @@
 
               <div class="bloque packoplan sombra">
                 <h3>Plan de Salud Gato</h3>
-
-                <img
-                  src="imagenes/packs_y_planes/plan_gato.png"
-                  alt="Plan de Salud Gato"
-                  width="200px"
-                />
+                <picture>
+                  <source
+                    srcset="imagenes/packs_y_planes/plan_gato.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="imagenes/packs_y_planes/plan_gato.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="imagenes/packs_y_planes/plan_gato.png"
+                    alt="Plan de Salud Gato"
+                    width="330px"
+                    height="200px"
+                  />
+                </picture>
 
                 <dl>
                   <dt>
@@ -438,11 +518,22 @@
             <div class="bloque_doble">
               <div class="bloque packoplan sombra">
                 <h3>Pack Cachorro</h3>
-
-                <img
-                  src="imagenes/packs_y_planes/pack_cachorro.png"
-                  alt="Pack Cachorro"
-                />
+                <picture>
+                  <source
+                    srcset="imagenes/packs_y_planes/pack_cachorro.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="imagenes/packs_y_planes/pack_cachorro.png"
+                    type="image/png"
+                  />
+                  <img
+                    src="imagenes/packs_y_planes/pack_cachorro.png"
+                    alt="Pack Cachorro"
+                    width="330px"
+                    height="200px"
+                  />
+                </picture>
 
                 <dl>
                   <dt>
@@ -488,11 +579,23 @@
 
               <div class="bloque packoplan claro sombra">
                 <h3>Pack Gatito</h3>
+                <picture>
+                  <source
+                    srcset="imagenes/packs_y_planes/pack_gatito.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="imagenes/packs_y_planes/pack_gatito.png"
+                    type="image/png"
+                  />
 
-                <img
-                  src="imagenes/packs_y_planes/pack_gatito.png"
-                  alt="Pack Gatito"
-                />
+                  <img
+                    src="imagenes/packs_y_planes/pack_gatito.png"
+                    alt="Pack Gatito"
+                    width="330px"
+                    height="200px"
+                  />
+                </picture>
 
                 <dl>
                   <dt>
@@ -570,11 +673,23 @@
             <div class="bloque_doble">
               <div class="bloque empleado oscuro sombra" id="empleado_raquel">
                 <figure>
-                  <img
-                    class="foto_empleado"
-                    src="/imagenes/personal/raquel.jpg"
-                    alt=" Raquel Hernandez, Veterinaria"
-                  />
+                  <picture>
+                    <source
+                      srcset="/imagenes/personal/raquel.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="/imagenes/personal/raquel.jpg"
+                      type="image/jpg"
+                    />
+                    <img
+                      class="foto_empleado"
+                      src="/imagenes/personal/raquel.jpg"
+                      alt=" Raquel Hernandez, Veterinaria"
+                      width="350px"
+                      height="197px"
+                    />
+                  </picture>
                   <figcaption>
                     <h2>Raquel</h2>
                   </figcaption>
@@ -614,11 +729,22 @@
 
               <div class="bloque empleado oscuro sombra" id="empleado_alvaro">
                 <figure>
-                  <img
-                    class="foto_empleado"
-                    src="/imagenes/personal/alvaro.jpg"
-                    alt=" Alvaro Gonzalo, Auxiliar Veterinario"
-                  />
+                  <picture>
+                    <source
+                      srcset="/imagenes/personal/alvaro.webp"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="/imagenes/personal/alvaro.jpg"
+                      type="image/jpg"
+                    />
+                    <img
+                      class="foto_empleado"
+                      src="/imagenes/personal/alvaro.jpg"
+                      alt=" Alvaro Gonzalo, Auxiliar Veterinario"
+                    />
+                  </picture>
                   <figcaption>
                     <h2>Alvaro</h2>
                   </figcaption>
@@ -672,7 +798,7 @@
                 <table class="horario sombra">
                   <tbody>
                     <tr>
-                      <th colspan="2"> Horario de apertura</th>
+                      <th colspan="2">Horario de apertura</th>
                     </tr>
                     <th></th>
                     <tr>
@@ -711,7 +837,10 @@
                 </div>
 
                 <div id="facebook">
-                  <a href="http://facebook.com/vetpuertochico" target="_blank" rel="noopener"
+                  <a
+                    href="http://facebook.com/vetpuertochico"
+                    target="_blank"
+                    rel="noopener"
                     ><i class="icono material-icons">facebook</i
                     >facebook.com/vetpuertochico</a
                   >

@@ -1,8 +1,80 @@
-/* Importacion de estilos para el boton de whatsapp */
-@import "reset.css";
-@import "style_whatsapp.css";
-@import "style_header.css";
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+
+/*******************************/
+
+/* LAYOUT ESTRUCTURA PRINCIPAL */
+
+/*******************************/
+
+/* Material icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+   src: url(https://example.com/MaterialIcons-Regular.eot); /*For IE6-8 */
+  src: local('sans-serif'),      
+    url('/fuentes/material-icons.woff2') format('woff2');
+    font-display: swap;
+
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* lato-300italic - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local(Sans-Serif),
+       url('/fuentes/lato-v20-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fuentes/lato-v20-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       font-display: swap;
+}
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local(Sans-Serif),
+       url('/fuentes/lato-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fuentes/lato-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       font-display: swap;
+
+}
+/* lato-700 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local(Sans-Serif),
+       url('/fuentes/lato-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fuentes/lato-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       font-display: swap;
+      }
+/* lato-900 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local(Sans-Serif),
+       url('/fuentes/lato-v20-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fuentes/lato-v20-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       font-display: swap;
+
+}
+
 /*******************************/
 
 /* LAYOUT ESTRUCTURA PRINCIPAL */
@@ -75,7 +147,7 @@ html {
 
 body {
   
-  font-family: var(--fuente);
+  font-family: 'Lato', sans-serif;
   color: var(--gris);
   font-size: 16px;
   line-height: 22px;
@@ -145,6 +217,280 @@ q {
 
 /*******************************/
 
+/*   CABECERA    -    MOVIL    */
+
+/*******************************/
+
+.contenedor:first-of-type {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin-top: 0;
+  display: flex;
+  min-height: 70px;
+
+  flex-direction: column;
+  /* border-bottom: 5px var(--azul) solid; */
+  border-top: 0;
+}
+.contenedor:nth-of-type(2) {
+  border-top: 0;
+}
+
+nav.contenido {
+  max-width: 1810px;
+  width: 100%;
+  border-top: 0;
+  max-height: 80px;
+  padding-bottom: 0;
+  background-color: white;
+
+}
+
+/* contenedor principal del la cabecera y el menu*/
+.cabecera {
+  width: 100%;
+  background-color: white;
+}
+
+/* contenedor del la cabecera, osea logo y boton */
+.cab {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* logo */
+.logotipo {
+  object-fit: contain;
+  
+  max-height: 70px;
+  min-height: 70px;
+  max-width: 90%;
+}
+
+/* boton desplegar/cerrar menu */
+span.boton_menu {
+  /* background-color: rgb(255, 255, 255); */
+  /* border: var(--azul) 3px solid; */
+  font-size: xx-large;
+  color: var(--azul);
+  margin: auto 5px auto 0;
+  cursor: pointer;
+  content: "menu";
+}
+
+
+
+/* menu desplegable */
+.menu {
+    z-index: 9;
+    position: fixed;
+    right: 0;
+    top: 70px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 0px;
+
+    background-color:var(--azul);
+    opacity: 0.85;
+    transition: .5s;
+    display: flex ;
+    overflow: hidden;
+  
+}
+.lista_menu{
+    min-height: 100%;
+    margin: auto;
+    margin-top: 20%;
+    
+}
+
+/* enlaces del menu */
+.lista_menu li {
+  padding: 16px 10px;
+  color: var(--azul);
+  background-color: transparent;
+  margin: auto;
+  font-size: 24px;
+  font-weight: bolder;
+;
+  text-decoration: none;
+  
+}
+.lista_menu a {
+  color: white;
+}
+
+.lista_menu a:visited {
+  color: white;
+}
+
+
+
+
+/*******************************/
+
+/*  CABECERA   -    DESKTOP    */
+
+/*******************************/
+@media only screen and (min-width: 1025px) {
+  
+  /* cabecera */
+   .cabecera {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-flow: row nowrap;
+    
+  } 
+  
+  nav.contenido {
+      padding:0;
+      margin: 0;
+      min-height: fit-content;
+  }
+
+  /* oculto los botones de cerrar y de menu */  
+  span.boton_menu {
+    display: none;
+  }
+
+  
+
+  /* Menu */
+  #menu {
+    position:static;
+    overflow-y: visible;
+    background-color: white;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    min-width: fit-content;
+    max-height: fit-content;
+    margin-right:0 ;
+
+  }
+  .lista_menu {
+      margin: 0 auto  0 auto;
+    display: flex;
+    flex-direction: row;
+    margin:0;
+  }
+
+  /* Boton de whatsapp */
+  .whatsapp img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 20px rgba(83, 0, 0, 0.8);
+  }
+
+  /* enlaces del menu */
+  .lista_menu li {
+    padding: 5px 10px;
+    background-color: white;
+    
+
+    text-decoration: none;
+    
+    border: 0;
+    min-width: fit-content;
+  }
+  .lista_menu a {
+    color: var(--azul);
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .lista_menu a:visited {
+    color: var(--azul);
+  }
+}
+
+/*******************************/
+
+/*      BOTON WHATSAPP         */
+
+/*******************************/
+
+
+
+
+/* Here the scale changes from 0 to 1. To add the bounciness 
+effect, the scale is set to 1.25 midway through the animation
+to give the animation a nicer effect. */
+@keyframes expand-bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Here the scale simply goes from 1 back to 0 */
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+#boton_whatsapp {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  /* drop-shadow: 0 10px 20px rgba(0, 0, 0, 1); */
+  filter: drop-shadow(0 0 2px black);
+}
+
+#boton_whatsapp img {
+width: 40px;
+}
+#burbuja_whatsapp {
+  position: absolute;
+  transform-origin: 0% 100%;
+  text-align: center;
+  background-color: #25d366;
+  color: black;
+  border-radius: 10px;
+  width: 120px;
+  padding: 10px;
+  right: 60px;
+  top: -45px;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+#burbuja_whatsapp::before {
+  content: "";
+  display: block;
+  width: 0;
+  position: absolute;
+  bottom: -25px;
+  right: -5px;
+  border-style: solid;
+  border-width: 15px;
+  border-color: #25d366 transparent transparent #25d366;
+  border-color: #25d366 #25d366 transparent transparent;
+  transform: rotate(342deg);
+
+}
+
+/*******************************/
+
 /* TITULOS */
 
 /*******************************/
@@ -175,7 +521,7 @@ section header {
   margin: 0 auto 20px auto;
 }
 #foto_portada {
-  width: 100%;
+  width: 100vw;
   height: auto;
   max-height: 300px;
   object-fit: cover;
@@ -193,6 +539,12 @@ section header {
   width: 80%;
 }
 
+@media only screen and (min-width: 810px) {
+
+#foto_portada {
+  width: 810px;
+}
+}
 /*******************************/
 
 /*   LA CLINICA   -   MOVIL    */
@@ -212,9 +564,12 @@ section header {
 .galeria img {
   margin: 4px;
   width: 80px;
+  height: 80px;
   transition: 0.5s;
   flex: 1 0 8px;
   max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
 }
 
 .galeria img:hover {
@@ -332,20 +687,6 @@ section header {
   background-color: white;
 }
 
-/********************************************************/
-.fotos_slide {
-  max-width: 70%;
-  margin: 10px;
-}
-.slide {
-  display: flex;
-  flex-flow: row nowrap;
-  position: relative;
-  overflow: hidden;
-}
-.boton_slide{background-color: red;
-font-size: 40px;}
-
 
 /*******************************/
 
@@ -451,7 +792,8 @@ font-size: 40px;}
 }
 
 .bloque.packoplan img {
-  width: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 .bloque.bloque.packoplan dl {
@@ -501,6 +843,7 @@ font-size: 40px;}
 .foto_empleado {
   max-width: 350px;
   width: 100%;
+  height: 100%;
   margin: 0;
 }
 
@@ -659,7 +1002,7 @@ table {
 :root {
   --azul: #1e73be;
   --gris: rgb(89, 89, 89);
-  --fuente: 'Lato', sans-serif;
+  --fuente: 'Sans-Serif';
 }
 
 .oscuro {

@@ -1,14 +1,22 @@
 
+
+
+
+
+
+
+
+
+- IMAGENES
+    + Imagenes responsive no acaba de funcionar!!!    
+
 - COMPATIBILIDAD
     + Asegurarse de que funciona en mac y en microsoft y esas mierdas el fallback
 
 - SEO
+    + ni idea de por donde empezar
+    + ver donde uso h1,h2,h3 para que tenga sentido e intentar que google lo lea
 
-ni idea de por donde empezar
-
-    
 
 - TEXTO
     + revisar ortografia y contenido
-    + resaltar palabras cable
-    + Cambiar a fuente lato, normal 400 y titulos 700 o 900 para la cita 300
